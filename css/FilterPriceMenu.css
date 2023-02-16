@@ -39,7 +39,15 @@ label {
     font-weight: 500;
 }
 
-p.min-max {
+p #max-value {
+    align: right;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 0 0;
+}
+p #min-value {
+    align: left;
     display: block;
     font-size: 16px;
     font-weight: 600;
