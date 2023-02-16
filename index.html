@@ -111,22 +111,20 @@
                                 </div>
                             </div>
                             <!-- User Input Filter -->
-                            <body>
-                            <div id="selecter">
-                                <select id="mainCategorySelect">
-                                    <option value="">Main Category</option>
-                                </select>
-                                <select id="subCategorySelect">
-                                    <option value="">Sub Category</option>
-                                </select>
-                                <select id="colorSelect">
-                                    <option value="">Color</option>
-                                </select>
-                                <button id="filterButton" onclick="Search(products);">Search</button>
+                            <div>
+                                <div id="selecter">
+                                    <select id="mainCategorySelect">
+                                        <option value="">Main Category</option>
+                                    </select>
+                                    <select id="subCategorySelect">
+                                        <option value="">Sub Category</option>
+                                    </select>
+                                    <select id="colorSelect">
+                                        <option value="">Color</option>
+                                    </select>
+                                    <button id="filterButton" onclick="Search(products);">Search</button>
+                                </div>
                             </div>
-                            <div id="NoResults"></div>
-                            </body>
-
                         </div>
                     </div>
                 </div>
@@ -136,6 +134,7 @@
         
         <section id="shop" class="py-8" border-style="solid">
             <div class="container px-4 mx-auto">
+                <div id="NoResults"></div>
                 <div id="Filtred-Products" class="flex flex-wrap -m-4"></div>
             </div>
         </section>
