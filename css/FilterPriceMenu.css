@@ -42,9 +42,9 @@ p {
 }
 
 .range-slider {
-    width: 90%;
+    width: 100%;
     position: relative;
-    margin: 15px 10px 30px 10px;
+    padding : 10px;
 }
 
 input[type=range] {
@@ -114,9 +114,10 @@ button {
   cursor: pointer;
 }
 
-#NoResult {
+#Results {
     display: flex;
     align-items: center;
+    padding :20px;
 }
 #Shop{
     border-style: solid;
