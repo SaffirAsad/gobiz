@@ -40,15 +40,15 @@ label {
 }
 
 p #max-value {
+    width=50%;
     right : 0px;
-    display: flex;
     font-size: 16px;
     font-weight: 600;
     margin: 0 0 0 0;
 }
 p #min-value {
+    width=50%;
     left: 0px;
-    display: flex;
     font-size: 16px;
     font-weight: 600;
     margin: 0 0 0 0;
