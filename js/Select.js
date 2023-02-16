@@ -85,7 +85,7 @@ function MenuUser(products){
         if (selectedSize) {
             const colors = getUniqueValuesForKey(
                 products,
-                "SubCategory",
+                "Size",
                 selectedSize,
                 "Color"
             );
