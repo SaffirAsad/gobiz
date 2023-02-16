@@ -45,11 +45,14 @@ p.min-max {
     font-weight: 600;
     margin: 0 0 0 0;
 }
-p #max-price {
-    right = 0px;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 0 0 0 0;
+
+div.min-max {
+  width=100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0px 0px 0px 0px;
 }
 
 .range-slider {
