@@ -44,7 +44,7 @@ p {
 .range-slider {
     width: 100%;
     position: relative;
-    margin : "10px 0px 20px 0px";
+    margin : "20px 0px 20px 0px";
 }
 
 input[type=range] {
@@ -96,7 +96,7 @@ h1 {
 select {
   width: 42%;
   height: 40px;
-  margin : "10px 0px 0px 0px";
+  margin : "20px 0px 0px 0px";
   font-size: 16px;
   border-radius: 5px;
   border: 1px solid #ccc;
