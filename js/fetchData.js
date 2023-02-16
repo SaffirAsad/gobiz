@@ -28,8 +28,8 @@ function ProductGrid(products,headers,min, max){
     var ProductName = Object.values(headers)[1];
     var	MainCategory = Object.values(headers)[2];	
     var SubCategory = Object.values(headers)[3];	
-    var company =Object.values(headers)[4];
-    var price=Object.values(headers)[5];
+    var company = Object.values(headers)[4];
+    var price = Object.values(headers)[5];
     var StockQuantity = Object.values(headers)[6];
     var Size = Object.values(headers)[7];	
     var Color = Object.values(headers)[8];
@@ -39,7 +39,7 @@ function ProductGrid(products,headers,min, max){
     let productsHTML = '';
     let count=0;
     products.forEach(product => {
-        let _price = product.price;
+        let _price = product[price];
         
         if(Number( _price ) >= min && Number( _price ) <= max ){
             count+=1;
