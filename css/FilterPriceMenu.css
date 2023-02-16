@@ -46,8 +46,7 @@ p {
     display: flex;
     align-items: center;
     margin: 15px 10px 30px 10px;
-    
-    justify-content: space-between;
+    position: relative;
 }
 
 input[type=range] {
