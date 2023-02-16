@@ -4,6 +4,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     select.style.width="45%";
     select.style.marginTop="10px";
   });
+  document.querySelector("#selecter").style.margin="10px 0px 10px 0";
   document.querySelector("#filterButton").style.margin="10px 0px 10px 0";
   document.querySelector("#filterButton").style.width="100%";
 }
