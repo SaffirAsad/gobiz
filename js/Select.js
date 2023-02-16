@@ -12,7 +12,9 @@ function MenuUser(products){
     const ownerSelect = document.getElementById("owner-select");
     const mainCategorySelect = document.getElementById("mainCategorySelect");
     const subCategorySelect = document.getElementById("subCategorySelect");
+    const sizeSelect = document.getElementById("sizeSelect");
     const colorSelect = document.getElementById("colorSelect");
+
 
     function setOptions(element,Title,SelectList){
         let CodeHTML = '';
@@ -29,6 +31,8 @@ function MenuUser(products){
         const selectedMainCategory = this.value;
         subCategorySelect.innerHTML = "<option value=''>Sub Category</option>";
         subCategorySelect.disabled = true;
+        sizeSelect.innerHTML = "<option value=''>Size</option>";
+        sizeSelect.disabled = true;
         colorSelect.innerHTML = "<option value=''>Color</option>";
         colorSelect.disabled = true;
         filterButton.disabled = true;
@@ -52,6 +56,28 @@ function MenuUser(products){
     });
 
     subCategorySelect.addEventListener("change", function() {
+        const selectedSubCategory = this.value;
+        sizeSelect.innerHTML = "<option value=''>Size</option>";
+        sizeSelect.disabled = true;
+        colorSelect.innerHTML = "<option value=''>Color</option>";
+        colorSelect.disabled = true;
+        filterButton.disabled = true;
+        if (selectedSubCategory) {
+            const colors = getUniqueValuesForKey(
+                products,
+                "SubCategory",
+                selectedSubCategory,
+                "Size"
+            );
+            sizeSelect.innerHTML =
+                "<option value=''>Color</option>" +
+                Sise
+                .map(size => `<option value='${size}'>${size}</option>`)
+                .join("");
+            sizeSelect.disabled = false;
+        }
+    });
+    sizeSelect.addEventListener("change", function() {
         const selectedSubCategory = this.value;
         colorSelect.innerHTML = "<option value=''>Color</option>";
         colorSelect.disabled = true;
