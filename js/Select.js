@@ -59,7 +59,7 @@ function MenuUser(products){
         const selectedSubCategory = this.value;
         sizeSelect.innerHTML = "<option value=''>Size</option>";
         sizeSelect.disabled = true;
-        colorSelect.innerHTML = "<option value=''>Color</option>";
+        colorSelect.innerHTML = "<option value=''>Size</option>";
         colorSelect.disabled = true;
         filterButton.disabled = true;
         if (selectedSubCategory) {
@@ -70,7 +70,7 @@ function MenuUser(products){
                 "Size"
             );
             sizeSelect.innerHTML =
-                "<option value=''>Color</option>" +
+                "<option value=''>Size</option>" +
                 Size
                 .map(size => `<option value='${size}'>${size}</option>`)
                 .join("");
@@ -78,15 +78,15 @@ function MenuUser(products){
         }
     });
     sizeSelect.addEventListener("change", function() {
-        const selectedSubCategory = this.value;
+        const selectedSize = this.value;
         colorSelect.innerHTML = "<option value=''>Color</option>";
         colorSelect.disabled = true;
         filterButton.disabled = true;
-        if (selectedSubCategory) {
+        if (selectedSize) {
             const colors = getUniqueValuesForKey(
                 products,
                 "SubCategory",
-                selectedSubCategory,
+                selectedSize,
                 "Color"
             );
             colorSelect.innerHTML =
