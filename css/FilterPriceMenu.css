@@ -40,14 +40,14 @@ label {
 }
 
 p #max-value {
-    align: right;
+    right : 0px;
     display: block;
     font-size: 16px;
     font-weight: 600;
     margin: 0 0 0 0;
 }
 p #min-value {
-    align: left;
+    left: 0px;
     display: block;
     font-size: 16px;
     font-weight: 600;
@@ -64,7 +64,7 @@ div.min-max {
 }
 
 .range-slider {
-    width: 100%;
+    width: 90%;
     position: relative;
     margin: 0px 0px 0px 0px;
 }
