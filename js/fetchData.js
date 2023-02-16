@@ -59,7 +59,7 @@ function ProductGrid(products,headers,min, max){
                             </div>
                         </div>
                         <div class="w-full mb-1 justify-between items-center">
-                            <h4 class="text-sm mb-3 font-bold"><span id="6257f6f020364_currency">$</span> <span id="6257f6f020364_price">${product[price]}}</span>
+                            <h4 class="text-sm mb-3 font-bold"><span id="6257f6f020364_currency">$</span> <span id="6257f6f020364_price">${product[price]}</span>
                             </h4>
                             <a onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart('6257f6f020364')" 
                             class="py-2 px-4 bg-blue-500 hover:bg-blue-600 rounded text-md text-white transition duration-200">Add			   </a>
