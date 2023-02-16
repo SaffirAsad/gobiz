@@ -43,7 +43,7 @@ function ProductGrid(products,headers,min, max){
         
         if(Number( _price ) >= min && Number( _price ) <= max ){
             count+=1;
-            document.querySelector('#NoResults').innerHTML = `<h4> Availbale Products: </h4>`;
+            document.querySelector('#Results').innerHTML = `<h4 id="res"> Availbale Products: </h4>`;
             productsHTML += `
                 <div class="w-1/1 lg:w-1/3 p-4">
                     <div class="p-4 bg-white shadow-lg rounded-lg">
@@ -74,6 +74,6 @@ function ProductGrid(products,headers,min, max){
     productsGrid.innerHTML = productsHTML;
     //console.log(count);
     if (count == 0){
-        document.querySelector('#NoResults').innerHTML = `<h4> No things to Show!. </h4>`;
+        document.querySelector('#Results').innerHTML = `<h4> No things to Show!. </h4>`;
     }
 }
