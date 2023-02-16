@@ -6,5 +6,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   });
   document.querySelector("#filterButton").style.marginTop="10px";
   document.querySelector("#filterButton").style.width="80%";
-  
+  document.querySelector("#max-value").style.position: absolute;
+  document.querySelector("#max-value").style.right: 0px;
 }
