@@ -44,7 +44,7 @@ p {
 .range-slider {
     width: 100%;
     position: relative;
-    padding : 10px;
+    margin : "20px 0px 20px 0px";
 }
 
 input[type=range] {
@@ -90,7 +90,7 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 20px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 select {
@@ -117,7 +117,7 @@ button {
 #Results {
     display: flex;
     align-items: center;
-    padding :20px;
+    margin : "20px 0px 20px 0px";
 }
 #Shop{
     border-style: solid;
