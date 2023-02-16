@@ -41,14 +41,14 @@ label {
 
 p #max-value {
     right : 0px;
-    display: block;
+    display: flex;
     font-size: 16px;
     font-weight: 600;
     margin: 0 0 0 0;
 }
 p #min-value {
     left: 0px;
-    display: block;
+    display: flex;
     font-size: 16px;
     font-weight: 600;
     margin: 0 0 0 0;
@@ -64,9 +64,9 @@ div.min-max {
 }
 
 .range-slider {
-    width: 90%;
+    width: 100%;
     position: relative;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 10px 0px 10px;
 }
 
 input[type=range] {
