@@ -42,9 +42,9 @@ p {
 }
 
 .range-slider {
-    width: 100%;
+    width: 90%;
     position: relative;
-    margin : "20px 0px 20px 0px";
+    margin: 15px 10px 30px 10px;
 }
 
 input[type=range] {
@@ -90,20 +90,21 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
 }
 
 select {
-  width: 42%;
+  width: 25%;
   height: 40px;
-  margin : "20px 0px 0px 0px";
+  margin-right: 10px;
   font-size: 16px;
+  padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
 button {
-  width: 100%;
+  width: 90%;
   height: 40px;
   font-size: 16px;
   background-color: blue;
@@ -111,13 +112,11 @@ button {
   border-radius: 5px;
   border: none;
   cursor: pointer;
-    margin : "10px 0px 10px 0px";
 }
 
-#Results {
+#Result {
     display: flex;
     align-items: center;
-    margin : "20px 0px 20px 0px";
 }
 #Shop{
     border-style: solid;
