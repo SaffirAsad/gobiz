@@ -124,3 +124,9 @@ button {
 #Shop{
     border-style: solid;
 }
+
+button .navbar-burger .flex items-center
+{
+    width = "60px";
+    marginLeft="10px"
+}
