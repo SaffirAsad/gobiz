@@ -135,11 +135,16 @@ button .navbar-burger .flex items-center
 }
 
 #navbar-burger{
-  width: 50px;
+  align-items: center;
+  width: 40px;
   height: 40px;
 }   
+#navbar-burger span {
+  width: 40px;
+  height: 40px;
+}
 #navbar-burger svg {
-  align: center;
+  margin 
   width: 25px;
   height: 25px;
 }
