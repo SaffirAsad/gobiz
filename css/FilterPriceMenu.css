@@ -134,9 +134,8 @@ button .navbar-burger .flex items-center
     marginLeft="0px"
 }
 
-button #navbar-burger
-{
+button #navbar-burger{
     position: relative;
-    width = "60px";
+    width = "160px";
     marginLeft="200px"
 }
