@@ -139,12 +139,11 @@ button .navbar-burger .flex items-center
   width: 40px;
   height: 40px;
 }   
-#navbar-burger span {
+#navbar-burger span.relative.inline-block {
   width: 40px;
   height: 40px;
 }
 #navbar-burger svg {
-  margin 
   width: 35px;
   height: 35px;
 }
