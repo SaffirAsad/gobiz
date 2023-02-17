@@ -21,10 +21,10 @@ inputElements.forEach((element) => {
   element.addEventListener("change", (e) => {
     let minPrice = parseInt(inputElements[0].value);
     let maxPrice = parseInt(inputElements[1].value);
-    validateRange(inputElements[0].value, inputElements[1].value);
+    validateRange(minPrice,maxPrice);
   });
 });
-validateRange(inputElements[0].value, inputElements[1].value);
+validateRange(parseInt(inputElements[0].value), parseInt(inputElements[1].value));
 MenuUser(products);
 
 function Search(products){
@@ -41,7 +41,7 @@ function Search(products){
     });
     //console.log("price.min,price.max");
     inputEl=document.querySelectorAll("input");
-    price=validateRange(inputEl[0].value, inputEl[1].value);
+    price=validateRange(parseInt(inputEl[0].value), parseInt(inputEl[1].value));
     ProductGrid(FiltedProducts,headers,price.min, price.max)
 }
 
