@@ -133,3 +133,10 @@ button .navbar-burger .flex items-center
     width = "60px";
     marginLeft="0px"
 }
+
+button #navbar-burger
+{
+    position: relative;
+    width = "60px";
+    marginLeft="20px"
+}
