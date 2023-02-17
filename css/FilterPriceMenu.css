@@ -136,9 +136,10 @@ button .navbar-burger .flex items-center
 
 #navbar-burger{
   width: 50px;
-  height: 30px;
+  height: 40px;
 }   
 #navbar-burger svg {
+  align: center;
   width: 25px;
   height: 25px;
 }
