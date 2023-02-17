@@ -9,6 +9,5 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   document.querySelector("#filterButton").style.width="100%";
   
   document.querySelector("body > div > section:nth-child(1) > nav > div > div > button").style.width = "60px"
-  document.querySelector("body > div > section:nth-child(1) > nav > div > div > button > span > svg").style.width = "100%"
   document.querySelector("body > div > section:nth-child(1) > nav > div > div > button > span > svg").style.marginLeft="10px"
 }
