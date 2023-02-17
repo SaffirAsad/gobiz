@@ -134,7 +134,11 @@ button .navbar-burger .flex items-center
     marginLeft="0px"
 }
 
-button #navbar-burger{
-    width = "160px";
-    marginLeft="200px"
+#navbar-burger{
+  width: 50px;
+  height: 30px;
+}   
+#navbar-burger svg {
+  width: 25px;
+  height: 25px;
 }
