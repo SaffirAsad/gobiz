@@ -38,14 +38,14 @@ label {
 p {
     font-size: 16px;
     font-weight: 600;
-    margin: 10px 0 10px 0;
+    margin: 0px 0px 0px 0px;
 }
 
 .range-slider {
     width: 100%;
     display: flex;
     align-items: center;
-    margin: 15px 0px 25px 0px;
+    margin: 20px 0px 20px 0px;
     position: relative;
 }
 
