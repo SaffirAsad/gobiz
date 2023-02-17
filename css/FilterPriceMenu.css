@@ -108,7 +108,7 @@ select {
 }
 
 button {
-  width: 19%;
+  width: 15%;
   height: 40px;
   margin-top: 20px;
   font-size: 16px;
@@ -129,6 +129,7 @@ button {
 
 button .navbar-burger .flex items-center
 {
+    position: relative;
     width = "60px";
-    marginLeft="10px"
+    marginLeft="0px"
 }
