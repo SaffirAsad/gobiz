@@ -21,7 +21,7 @@ inputElements.forEach((element) => {
   element.addEventListener("change", (e) => {
     let minPrice = parseInt(inputElements[0].value);
     let maxPrice = parseInt(inputElements[1].value);
-    validateRange(inputElements[0].value, inputElements[1].value,products);
+    validateRange(inputElements[0].value, inputElements[1].value);
   });
 });
 validateRange(inputElements[0].value, inputElements[1].value);
