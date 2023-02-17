@@ -99,6 +99,7 @@ h1 {
 select {
   width: 25%;
   height: 40px;
+  margin-top: 10px;
   margin-right: 10px;
   font-size: 16px;
   padding: 10px;
