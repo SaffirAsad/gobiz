@@ -59,14 +59,15 @@ fixedDiv.style.backgroundColor = "gray";
 fixedDiv.style.width = "300px";
 fixedDiv.style.height = "300px";
 imgs.forEach( img =>{
-	var imgWidth = img.width;
+    var imgWidth = img.width;
     var imgHeight = img.height;
     console.log("w,h:",imgWidth,imgHeight);
 	if (imgWidth > imgHeight) {
-        	img.style.width = "300px";
-        	img.style.height = "auto";
-		img.style.marginTop = `${(300-img.height)/2}px`;
-	} else {
+	img.style.width = "300px";
+	img.style.marginTop = `${(300-img.height)/2}px`;
+	img.style.height = "auto";
+	
+	} else{
 		img.style.height = "300px";
 		img.style.width = "auto";
 		img.style.marginLeft = `${(300-img.width)/2}px`
