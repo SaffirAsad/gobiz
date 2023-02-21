@@ -49,3 +49,22 @@ function Search(products){
 var sliderTrack = document.querySelector("div.slider-track");
 sliderTrack.innerHTML = ` <img src="https://cdn.pixabay.com/photo/2022/11/04/19/17/alone-7570547_640.jpg"> `
 
+var imgs = document.querySelectorAll("div.slider-track>img");
+const fixedDiv = document.querySelector("div.slider-track");
+fixedDiv.style.backgroundColor = "gray";
+fixedDiv.style.width = "300px";
+fixedDiv.style.height = "300px";
+imgs.forEach( img =>{
+	var imgWidth = img.width;
+    var imgHeight = img.height;
+    console.log("w,h:",imgWidth,imgHeight);
+	if (imgWidth > imgHeight) {
+		img.style.marginTop = `${(300-img.height)/2}px`;
+        img.style.width = "300px";
+        img.style.height = "auto";
+	} else {
+		img.style.marginLeft = `${(300-img.width)/2}px`;
+		img.style.height = "300px";
+		img.style.width = "auto";
+	}
+});
