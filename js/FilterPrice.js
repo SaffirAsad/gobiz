@@ -48,20 +48,4 @@ function Search(products){
 // slider test
 var sliderTrack = document.querySelector("div.slider-track");
 sliderTrack.innerHTML = ` <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"> `
-var imgs = document.querySelectorAll("div.slider-track>img");
-const fixedDiv = document.querySelector("div.slider-track");
-imgs.forEach(img =>{
-  
-  const imgWidth = img.width;
-  const imgHeight = img.height;
-  console.log("this ><>",imgWidth,imgHeight);
-  if (imgWidth > imgHeight) {
-    img.style.width = "auto";
-    img.style.height = "300px";
-  } else {
-    img.style.width = "300px";
-    img.style.height = "auto";
-  }
-  fixedDiv.style.width = "300px";
-  fixedDiv.style.height = "300px";
-});
+
