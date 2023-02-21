@@ -58,7 +58,9 @@ imgs.forEach(img =>{
   const imgHeight = img.height;
   console.log("this ><>]",imgWidth,imgHeight);
   if (imgWidth > imgHeight) {
-    img.style.width = "300px";
+    //img.style.width = "300px";
+    //img.style.height = "auto";
+    img.style.marginTop = `${(300-img.height)/2}px`;
     
   } else {
     img.style.height = "300px";
