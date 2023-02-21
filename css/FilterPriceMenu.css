@@ -107,7 +107,7 @@ select {
   border: 1px solid #ccc;
 }
 
-button {
+#filterButton  {
   width: 15%;
   height: 40px;
   margin-top: 20px;
@@ -127,7 +127,7 @@ button {
     border-style: solid;
 }
 
-button .navbar-burger .flex items-center
+#filterButton  .navbar-burger .flex items-center
 {
     position: relative;
     width = "60px";
