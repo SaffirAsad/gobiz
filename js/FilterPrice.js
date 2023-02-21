@@ -47,16 +47,11 @@ function Search(products){
 
 // slider test
 var sliderTrack = document.querySelector("div.slider-track");
-sliderTrack.innerHTML = `
-
-<img class="imgSL" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
-`;
+sliderTrack.innerHTML = `<img class="imgSL" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">`;
 //<img src="https://cdn.pixabay.com/photo/2022/11/04/19/17/alone-7570547_640.jpg">
 
 var imgs = document.querySelectorAll("div.slider-track>img");
 const fixedDiv = document.querySelector("div.slider-track");
 fixedDiv.style.backgroundColor = "gray";
-fixedDiv.style.width = "300px";
-fixedDiv.style.height = "300px";
-setTimeout(()=>{imgs[0].style.marginTop = `${(300-imgs[0].height)/2}px`;},2500);
+
 
