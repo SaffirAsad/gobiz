@@ -51,15 +51,16 @@ sliderTrack.innerHTML = ` <img src="https://cdn.pixabay.com/photo/2015/04/23/22/
 var imgs = document.querySelectorAll("div.slider-track>img");
 const fixedDiv = document.querySelector("div.slider-track");
 imgs.forEach(img =>{
-  console.log("this",this);
-  const imgWidth = this.width;
-  const imgHeight = this.height;
+  
+  const imgWidth = img.width;
+  const imgHeight = img.height;
+  console.log("this >>",imgWidth,imgHeight);
   if (imgWidth > imgHeight) {
-    this.style.width = "auto";
-    this.style.height = "100%";
+    img.style.width = "auto";
+    img.style.height = "100%";
   } else {
-    this.style.width = "100%";
-    this.style.height = "auto";
+    img.style.width = "100%";
+    img.style.height = "auto";
   }
   if (imgWidth > 300) {
     this.style.width = "300px";
