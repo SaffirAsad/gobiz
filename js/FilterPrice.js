@@ -63,12 +63,12 @@ imgs.forEach(img =>{
     img.style.height = "auto";
   }
   if (imgWidth > 300) {
-    this.style.width = "300px";
-    this.style.height = "auto";
+    img.style.width = "300px";
+    img.style.height = "auto";
   }
   if (imgHeight > 300) {
-    this.style.width = "auto";
-    this.style.height = "300px";
+    img.style.width = "auto";
+    img.style.height = "300px";
   }
   fixedDiv.style.width = "300px";
   fixedDiv.style.height = "300px";
