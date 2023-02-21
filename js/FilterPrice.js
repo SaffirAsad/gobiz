@@ -48,3 +48,26 @@ function Search(products){
 // slider test
 var sliderTrack = document.querySelector("div.slider-track");
 sliderTrack.innerHTML = ` <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"> `
+var imgs = document.querySelectorAll("div.slider-track>img");
+const fixedDiv = document.querySelector("div.slider-track");
+imgs.forEach(img =>{
+  const imgWidth = this.width;
+  const imgHeight = this.height;
+  if (imgWidth > imgHeight) {
+    this.style.width = "auto";
+    this.style.height = "100%";
+  } else {
+    this.style.width = "100%";
+    this.style.height = "auto";
+  }
+  if (imgWidth > 300) {
+    this.style.width = "300px";
+    this.style.height = "auto";
+  }
+  if (imgHeight > 300) {
+    this.style.width = "auto";
+    this.style.height = "300px";
+  }
+  fixedDiv.style.width = "300px";
+  fixedDiv.style.height = "300px";
+});
