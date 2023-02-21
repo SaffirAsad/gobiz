@@ -58,4 +58,5 @@ const fixedDiv = document.querySelector("div.slider-track");
 fixedDiv.style.backgroundColor = "gray";
 fixedDiv.style.width = "300px";
 fixedDiv.style.height = "300px";
+setTimeout(()=>{imgs[0].style.marginTop = `${(300-img.height)/2}px`;},2500);
 
