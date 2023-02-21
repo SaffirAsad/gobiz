@@ -45,5 +45,6 @@ function Search(products){
     ProductGrid(FiltedProducts,headers,price.min, price.max)
 }
 
-
-
+// slider test
+var sliderTrack = document.querySelector("div.slider-track");
+sliderTrack.innerHTML = ` <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"> `
