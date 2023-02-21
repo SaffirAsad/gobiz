@@ -54,8 +54,8 @@ var imgs = document.querySelectorAll("div.slider-track>img");
 const fixedDiv = document.querySelector("div.slider-track");
 fixedDiv.style.backgroundColor = "gray";
 imgs.forEach(img =>{
-  const imgWidth = img.width;
-  const imgHeight = img.height;
+  var imgWidth = img.width;
+  var imgHeight = img.height;
   console.log("this ><>]",imgWidth,imgHeight);
   if (imgWidth > imgHeight) {
     //img.style.width = "300px";
