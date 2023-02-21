@@ -54,4 +54,19 @@ var imgs = document.querySelectorAll("div.slider-track>img");
 const fixedDiv = document.querySelector("div.slider-track");
 fixedDiv.style.backgroundColor = "gray";
 
-
+var imgs = document.querySelectorAll("div.slider-track>img");
+const fixedDiv = document.querySelector("div.slider-track");
+imgs.forEach(img =>{
+  const imgWidth = img.width;
+  const imgHeight = img.height;
+  //console.log("this ><>",imgWidth,imgHeight);
+  if (imgWidth > imgHeight) {
+    img.style.height = "300px";
+    img.style.width = "auto";
+    img.style.marginTop = "30px";
+  } else {
+    img.style.width = "300px";
+    img.style.height = "auto";
+    img.style.marginLeft = "30px";
+  }
+});
