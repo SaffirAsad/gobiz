@@ -47,7 +47,11 @@ function Search(products){
 
 // slider test
 var sliderTrack = document.querySelector("div.slider-track");
-sliderTrack.innerHTML = `<img src="https://cdn.pixabay.com/photo/2022/11/04/19/17/alone-7570547_640.jpg"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">`;
+sliderTrack.innerHTML = `
+<img src="https://cdn.pixabay.com/photo/2022/11/04/19/17/alone-7570547_640.jpg">
+
+`;
+//<img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
 
 var imgs = document.querySelectorAll("div.slider-track>img");
 const fixedDiv = document.querySelector("div.slider-track");
