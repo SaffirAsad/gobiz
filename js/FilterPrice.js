@@ -54,12 +54,12 @@ imgs.forEach(img =>{
   
   const imgWidth = img.width;
   const imgHeight = img.height;
-  console.log("this >>",imgWidth,imgHeight);
+  console.log("this ><>",imgWidth,imgHeight);
   if (imgWidth > imgHeight) {
     img.style.width = "auto";
-    img.style.height = "100%";
+    img.style.height = "300px";
   } else {
-    img.style.width = "100%";
+    img.style.width = "300px";
     img.style.height = "auto";
   }
   fixedDiv.style.width = "300px";
