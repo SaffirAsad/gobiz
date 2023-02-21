@@ -53,13 +53,10 @@ sliderTrack.innerHTML = `<img src="https://cdn.pixabay.com/photo/2022/11/04/19/1
 var imgs = document.querySelectorAll("div.slider-track>img");
 const fixedDiv = document.querySelector("div.slider-track");
 fixedDiv.style.backgroundColor = "gray";
-
-var imgs = document.querySelectorAll("div.slider-track>img");
-const fixedDiv = document.querySelector("div.slider-track");
 imgs.forEach(img =>{
   const imgWidth = img.width;
   const imgHeight = img.height;
-  //console.log("this ><>",imgWidth,imgHeight);
+  console.log("this ><>",imgWidth,imgHeight);
   if (imgWidth > imgHeight) {
     img.style.height = "300px";
     img.style.width = "auto";
