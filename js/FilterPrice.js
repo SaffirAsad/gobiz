@@ -49,7 +49,7 @@ function Search(products){
 var sliderTrack = document.querySelector("div.slider-track");
 sliderTrack.innerHTML = `
 
-<img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+<img class="imgSL" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
 `;
 //<img src="https://cdn.pixabay.com/photo/2022/11/04/19/17/alone-7570547_640.jpg">
 
