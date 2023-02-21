@@ -51,6 +51,7 @@ sliderTrack.innerHTML = ` <img src="https://cdn.pixabay.com/photo/2015/04/23/22/
 var imgs = document.querySelectorAll("div.slider-track>img");
 const fixedDiv = document.querySelector("div.slider-track");
 imgs.forEach(img =>{
+  console.log("this",this);
   const imgWidth = this.width;
   const imgHeight = this.height;
   if (imgWidth > imgHeight) {
