@@ -54,7 +54,7 @@ sliderTrack.innerHTML = `<img class="imgSL" src="https://cdn.pixabay.com/photo/2
 fixedDiv=document.querySelector("div.slider-track");
 imgs=document.querySelectorAll("div.slider-track>img");
 fixedDiv.style.width="300px";
-fixedDiv.style.height="300px";
+//fixedDiv.style.height="300px";
 fixedDiv.style.border="solid";
 setTimeout(()=>{
   imgs.forEach(img=>{
