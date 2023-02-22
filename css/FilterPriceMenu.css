@@ -148,8 +148,4 @@ select {
   height: 40px;
 }
 
-div.slider-track{
-    display: flex;
-    width:300px;
-    height:300px;
-}
+
