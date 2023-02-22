@@ -61,12 +61,12 @@ imgs.forEach(img =>{
     console.log("Hi");
     img.style.width = "300px";
     img.style.height = "auto";
-    img.style.marginTop = `${pareInt((300-img.height)/2)}px`;
+    img.style.marginTop = `${parseInt((300-img.height)/2)}px`;
     
   } else {
     console.log("Ho");
     img.style.height = "300px";
     img.style.width = "auto";
-    img.style.marginLeft = `${(pareInt(300-img.width)/2)}px`;
+    img.style.marginLeft = `${(parseInt(300-img.width)/2)}px`;
   }
 });
