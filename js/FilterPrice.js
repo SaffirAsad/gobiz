@@ -76,5 +76,5 @@ setTimeout(()=>{
   });
   fixedDiv.style.width="300px";
   fixedDiv.style.height="300px";
-},2100);
+},0);
 
