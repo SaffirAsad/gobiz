@@ -8,6 +8,9 @@ const images = {
 // Get the slider container and slider track elements
 const sliderContainer = document.querySelector(".slider-container");
 const sliderTrack = document.querySelector(".slider-track");
+const slider = document.querySelector(".slider");
+const sliderBtnPrev = document.querySelector(".slider-btn-prev");
+const sliderBtnNext = document.querySelector(".slider-btn-next");
 
 // Loop through the image URLs in the object and create img elements
 for (let image in images) {
@@ -25,12 +28,7 @@ let currentIndex = 0;
 const sliderImgs = sliderTrack.querySelectorAll("img");
 sliderImgs[currentIndex].classList.add("active");
 
-const slider = document.querySelector(".slider");
-const sliderBtnPrev = document.querySelector(".slider-btn-prev");
-const sliderBtnNext = document.querySelector(".slider-btn-next");
-
 let maxIndex = sliderImgs.length - 1;
-
 function slideTo(index) {
   currentIndex = index;
   sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
