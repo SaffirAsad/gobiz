@@ -164,16 +164,14 @@ select {
 }
 
 .slider-track {
-  display: flex;
+  display: inline;
   height: 100%;
   transition: transform 0.5s ease;
 }
 
 .slider img {
-  flex-shrink: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .slider-btn {
