@@ -69,6 +69,7 @@ elementsOnhover.forEach(
 fixedDiv=document.querySelector("div.slider-track");
 imgs=document.querySelectorAll("div.slider-track>img");
 //fixedDiv.style.backgroundColor="gray";
+/*
 setTimeout(()=>{
   imgs.forEach(img=>{
     w=img.width;
@@ -91,3 +92,4 @@ setTimeout(()=>{
   fixedDiv.style.width="300px";
   fixedDiv.style.height="300px";
 },0);
+*/
