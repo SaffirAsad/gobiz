@@ -6,7 +6,7 @@ const images = {
 };
 
 // Get the slider container and slider track elements
-const sliderContainer = document.querySelector(".slider-container");
+const sliderContainer = document.querySelector("div.slider-container");
 const sliderTrack = document.querySelector(".slider-track");
 const slider = document.querySelector(".slider");
 const sliderBtnPrev = document.querySelector(".slider-btn-prev");
