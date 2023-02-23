@@ -54,8 +54,18 @@ sliderBtnNext.addEventListener("click", () => {
 
 slideTo(currentIndex);
 
-slider.addEventListener("mouseenter", () => {   document.querySelectorAll(".slider-btn").forEach(btn=>{btn.style.border='solid';})
-  sliderBtnPrev.style.backgroundColor="white";
-  sliderBtnNext.style.backgroundColor="white";
+elementsOnhover = [slider, sliderBtnPrev, sliderBtnNext];
+elementsOnhover.forEach(
+  elm=>{elm.addEventListener("mouseenter", () => {   
+    document.querySelectorAll(".slider-btn").forEach(btn=>{btn.style.border='solid';})
+    sliderBtnPrev.style.backgroundColor="white";
+    sliderBtnNext.style.backgroundColor="white";
+  });
+  elm.addEventListener("mouseleave", () => {   
+    document.querySelectorAll(".slider-btn").forEach(btn=>{btn.style.border='solid';})
+    sliderBtnPrev.style.backgroundColor="";
+    sliderBtnNext.style.backgroundColor="";
+  });
 });
+                              
 
