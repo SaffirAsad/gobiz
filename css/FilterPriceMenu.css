@@ -164,7 +164,7 @@ select {
 }
 
 .slider-track {
-  display: inline;
+  display: flex;
   height: 100%;
   transition: transform 0.5s ease;
 }
