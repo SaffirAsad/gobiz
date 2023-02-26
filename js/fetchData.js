@@ -102,10 +102,10 @@ function CategoryGrid(){
         categoryImgUrls.forEach(cat=>{
             catHTML+=`
             <div class="w-1/1 lg:w-1/3 p-4">
-                <div>
-                    <h1 style="font-size:40px;">${cat["categories"]}<h1>
-                </div>
                 <div class="p-4 bg-white shadow-lg rounded-lg">
+                    <div>
+                        <h1 style="font-size:40px;">${cat["categories"]}<h1>
+                    </div>
                     <div class="w-full mb-2">
                         <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${cat["categoryUrl"]}" alt="${cat["categories"]}">
                     </div>
