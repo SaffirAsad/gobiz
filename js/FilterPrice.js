@@ -44,3 +44,7 @@ function Search(products){
     price=validateRange(parseInt(inputEl[0].value), parseInt(inputEl[1].value));
     ProductGrid(FiltedProducts,headers,price.min, price.max)
 }
+// Add categories
+CategoryGrid();
+
+
