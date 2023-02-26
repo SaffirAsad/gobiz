@@ -80,6 +80,7 @@ function ProductGrid(products,headers,min, max){
 
 function CategoryGrid(){
     var request = new XMLHttpRequest();
+    let catHTML= ""; 
     url="https://docs.google.com/spreadsheets/d/e/2PACX-1vSXdu2BEMg-HK6vicRYTmIskyAXS4dVKEIzRZFipBBYuwR9k_1bX7Kw_L9jUONWdUSsHhYUZIKDvS6k/pub?gid=983383517&single=true&output=csv";
     request.open('GET', url, false);
     request.send();
