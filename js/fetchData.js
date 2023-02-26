@@ -77,3 +77,45 @@ function ProductGrid(products,headers,min, max){
         document.querySelector('#Results').innerHTML = `<h4> No things to Show!. </h4>`;
     }
 }
+
+function CategoryGrid(){
+    var request = new XMLHttpRequest();
+    url="https://docs.google.com/spreadsheets/d/e/2PACX-1vSXdu2BEMg-HK6vicRYTmIskyAXS4dVKEIzRZFipBBYuwR9k_1bX7Kw_L9jUONWdUSsHhYUZIKDvS6k/pub?gid=983383517&single=true&output=csv";
+    request.open('GET', url, false);
+    request.send();
+    if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText.split('\r\n');
+        headers = data[0].split(',');
+        categoryImgUrls = [];
+        for (var i = 1; i < data.length; i++) {
+            var catData = data[i].split(',');
+            if (catData.length < headers.length) {
+            continue;
+            }
+            var cat = {};
+            for (var j = 0; j < headers.length; j++) {
+            cat[headers[j]] = catData[j];
+            }
+            categoryImgUrls.push(cat);
+        }
+        categoryImgUrls.forEach(cat=>{
+            catHTML+=`
+            <div class="w-1/1 lg:w-1/3 p-4">
+                <div>
+                    <h1 style="font-size:40px;">${cat["categories"]}<h1>
+                </div>
+                <div class="p-4 bg-white shadow-lg rounded-lg">
+                    <div class="w-full mb-2">
+                        <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${cat["categoryUrl"]}" alt="${cat["categories"]}">
+                    </div>
+                </div>
+            </div>
+            `;
+        });
+    }
+    else {
+    console.error('Error while fetching data from Google Sheet');
+    } 
+    categories=document.querySelector("#Categories");
+    categories.innerHTML = catHTML;
+}
