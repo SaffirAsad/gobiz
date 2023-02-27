@@ -4,7 +4,7 @@ function fetchData() {
     request.open('GET', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSXdu2BEMg-HK6vicRYTmIskyAXS4dVKEIzRZFipBBYuwR9k_1bX7Kw_L9jUONWdUSsHhYUZIKDvS6k/pub?output=csv', false);
     request.send();
     if (request.status >= 200 && request.status < 400) {
-      var data = request.responseText.split('\r');
+      var data = request.responseText.split('\r\n');
       headers = data[0].split(',');
       products = [];
       for (var i = 1; i < data.length; i++) {
@@ -33,7 +33,8 @@ function ProductGrid(products,headers,min, max){
     var StockQuantity = Object.values(headers)[6];
     var Size = Object.values(headers)[7];	
     var Color = Object.values(headers)[8];
-    var URLs = Object.values(headers)[9];
+    var	ProductId = Object.values(headers)[9];	
+    var URLs = Object.values(headers)[10];
 
     const productsGrid = document.querySelector('#Filtred-Products');
     let productsHTML = '';
