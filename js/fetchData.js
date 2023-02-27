@@ -41,8 +41,8 @@ function ProductGrid(products,headers,min, max){
     let count=0;
     products.forEach(product => {
         let _price = product[price];
-        
-        if(Number( _price ) >= min && Number( _price ) <= max ){
+        console.log("## price:\n",headers, product[price], price,_price);
+        if(Number( _price ) >= min && Number( _price ) <= max ){console.log("_price:\n",_price);
             count+=1;
             document.querySelector('#Results').innerHTML = `<h4 id="res"> Availbale Products: </h4>`;
             productsHTML += `
@@ -87,16 +87,16 @@ function CategoryGrid(){
     request.send();
     if (request.status >= 200 && request.status < 400) {
         var data = request.responseText.split('\r\n');
-        headers = data[0].split(',');
-        categoryImgUrls = [];
+        let header = data[0].split(',');
+        let categoryImgUrls = [];
         for (var i = 1; i < data.length; i++) {
             var catData = data[i].split(',');
-            if (catData.length < headers.length) {
+            if (catData.length < header.length) {
             continue;
             }
             var cat = {};
-            for (var j = 0; j < headers.length; j++) {
-            cat[headers[j]] = catData[j];
+            for (var j = 0; j < header.length; j++) {
+            cat[header[j]] = catData[j];
             }
             categoryImgUrls.push(cat);
         }
