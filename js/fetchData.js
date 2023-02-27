@@ -42,7 +42,7 @@ function ProductGrid(products,headers,min, max){
     products.forEach(product => {
         let _price = product[price];
         //console.log("## price:\n",headers, product[price], price,_price);
-        if(Number( _price ) >= min && Number( _price ) <= max ){console.log("_price:\n",_price);
+        if(Number( _price ) >= min && Number( _price ) <= max ){
             count+=1;
             document.querySelector('#Results').innerHTML = `<h4 id="res"> Availbale Products: </h4>`;
             productsHTML += `
