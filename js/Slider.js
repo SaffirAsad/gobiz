@@ -71,25 +71,16 @@ imgs=document.querySelectorAll("div.slider-track>img");
 //fixedDiv.style.backgroundColor="gray";
 
 setTimeout(()=>{
+  let rm=0;
   imgs.forEach(img=>{
-    w=img.width;
-    h=img.height;
-    console.log(w,h);
-    if (w>h){
-      img.style.width="300px";
-      img.style.height="auto";
-      if(h!=0){
-        img.style.marginTop = `${parseInt((300-img.height)/2)}px`;
-      }
-    }else{
-      img.style.width="auto";
-      img.style.height="300px"; 
-      if(w!=0){
-        img.style.marginLeft = `${parseInt((300-img.width)/2)}px`;
-      }
-    }
+    w=img.naturalWidth;
+    h=img.naturalHeight;
+    r=h/w;// = hj/wj // hj=wj*r
+    img.style.width="300px";
+    img.style.height="300*r";
+    rm = (r>rm) ? r : rm;
   });
   fixedDiv.style.width="300px";
-  fixedDiv.style.height="300px";
-},0);
+  fixedDiv.style.height=300*rm;
+},500);
 
