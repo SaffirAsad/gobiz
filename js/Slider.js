@@ -58,4 +58,16 @@ function sliderMaker(slider, images){
       sliderBtnNext.style.backgroundColor="";
     });
   });
+
+  imgs= sliderContainer.querySelectorAll("div.slider-track>img");
+  let rm=0;
+  setTimeout(()=>{
+    imgs.forEach(img=>{
+      const aspectRatio = img.naturalWidth/img.naturalHeight;
+      const newHeight = 300/aspectRatio;
+      rm = (newHeight>rm) ? newHeight:rm;
+      sliderContainer.style.width="300px";
+      sliderContainer.style.height=`${rm}px`;
+    });      
+  },900);
 }
