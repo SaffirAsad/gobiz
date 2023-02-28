@@ -43,7 +43,7 @@ function ProductGrid(products,headers,min, max){
     products.forEach(product => {
         let _price = product[price];
         if(Number( _price ) >= min && Number( _price ) <= max ){console.log("_price:\n",_price);
-            document.querySelector('#Results').innerHTML = `<h4 id="res"> Availbale Products: </h4>`;
+            document.querySelector('#Results').innerHTML = `<h4> Availbale Products: </h4>`;
             productsHTML += `
                 <div class="w-1/1 lg:w-1/3 p-4">
                     <div class="p-4 bg-white shadow-lg rounded-lg">
@@ -74,21 +74,21 @@ function ProductGrid(products,headers,min, max){
             count+=1; 
         }
     });
+    if (count == 0){
+        document.querySelector('#Results').innerHTML = `<h4> No things to Show!. </h4>`;
+    }
     
     productsGrid.innerHTML = productsHTML;
-    count=0;
+    count2=0;
     setTimeout(()=>{
         products.forEach(product => {
             let urls=product[URLs].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
             console.log("urls<<",urls);
-            sliderMaker(document.querySelector(`#slider-container-${count}`), urls)
-            count+=1;
+            sliderMaker(document.querySelector(`#slider-container-${count2}`), urls)
+            count2+=1;
         });
     },900);
-    //console.log(count);
-    if (count == 0){
-        document.querySelector('#Results').innerHTML = `<h4> No things to Show!. </h4>`;
-    }
+    
 }
 
 function CategoryGrid(){
