@@ -1,5 +1,6 @@
 // read google sheets database
 let DataBase = "";
+//loading();
 fetchData();
 //console.log(headers)
 let minValue = document.getElementById("min-value");
@@ -39,12 +40,14 @@ function Search(products){
             FiltedProducts.push(product);
         }
     });
-    //console.log("price.min,price.max");
+    
     inputEl=document.querySelectorAll("input");
     price=validateRange(parseInt(inputEl[0].value), parseInt(inputEl[1].value));
+    console.log("FiltedProducts:\n",FiltedProducts,price.min, price.max);
     ProductGrid(FiltedProducts,headers,price.min, price.max)
 }
 // Add categories
 CategoryGrid();
+//SubCategoryGrid();
 
 
