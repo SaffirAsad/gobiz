@@ -1,86 +1,79 @@
-// Define the image URLs in an object
-const images = {
-  "image1": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
-  "image2": "https://cdn.pixabay.com/photo/2017/04/25/06/15/father-and-son-2258681__340.jpg",
-  "image3": "https://cdn.pixabay.com/photo/2022/11/04/19/17/alone-7570547_640.jpg"
-};
-
-// Get the slider container and slider track elements
-const sliderContainer = document.querySelector("div.slider-container");
-const sliderTrack = document.querySelector(".slider-track");
-const slider = document.querySelector(".slider");
-const sliderBtnPrev = document.querySelector(".slider-btn-prev");
-const sliderBtnNext = document.querySelector(".slider-btn-next");
-
-// Loop through the image URLs in the object and create img elements
-for (let image in images) {
-  const img = document.createElement("img");
-  img.setAttribute("src", images[image]);
-  sliderTrack.appendChild(img);
-}
-
-// Set the width of the slider track based on the number of images
-const numImages = Object.keys(images).length;
-sliderTrack.style.width = `${numImages * 100}%`;
-
-// Initialize the slider with the first image
-let currentIndex = 0;
-const sliderImgs = sliderTrack.querySelectorAll("img");
-sliderImgs[currentIndex].classList.add("active");
-
-let maxIndex = sliderImgs.length - 1;
-function slideTo(index) {
-  currentIndex = index;
-  sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-sliderBtnPrev.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    slideTo(currentIndex - 1);
-  } else {
-    slideTo(maxIndex);
+function sliderMaker(slider, images){
+  // Get the slider container and slider track elements
+  const sliderContainer = slider;
+  const sliderTrack = slider.querySelector(".slider-track");
+  const sliderBtnPrev = slider.querySelector(".slider-btn-prev");
+  const sliderBtnNext = slider.querySelector(".slider-btn-next");
+  console.log("slider",slider);
+  // Loop through the image URLs in the object and create img elements
+  for (let image in images) {
+    const img = document.createElement("img");
+    img.setAttribute("src", images[image]);
+    sliderTrack.appendChild(img);
   }
-});
 
-sliderBtnNext.addEventListener("click", () => {
-  if (currentIndex < maxIndex) {
-    slideTo(currentIndex + 1);
-  } else {
-    slideTo(0);
+  // Set the width of the slider track based on the number of images
+  const numImages = Object.keys(images).length;
+  sliderTrack.style.width = `${numImages * 100}%`;
+
+  // Initialize the slider with the first image
+  let currentIndex = 0;
+  const sliderImgs = sliderTrack.querySelectorAll("img");
+  sliderImgs[currentIndex].classList.add("active");
+
+  let maxIndex = sliderImgs.length - 1;
+  function slideTo(index) {
+    currentIndex = index;
+    sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
-});
 
-slideTo(currentIndex);
-
-elementsOnhover = [slider, sliderBtnPrev, sliderBtnNext];
-elementsOnhover.forEach(
-  elm=>{elm.addEventListener("mouseenter", () => {   
-    document.querySelectorAll(".slider-btn").forEach(btn=>{btn.style.border='solid';})
-    sliderBtnPrev.style.backgroundColor="white";
-    sliderBtnNext.style.backgroundColor="white";
+  sliderBtnPrev.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      slideTo(currentIndex - 1);
+    } else {
+      slideTo(maxIndex);
+    }
   });
-  elm.addEventListener("mouseleave", () => {   
-    document.querySelectorAll(".slider-btn").forEach(btn=>{btn.style.border='solid';})
-    sliderBtnPrev.style.backgroundColor="";
-    sliderBtnNext.style.backgroundColor="";
-  });
-});
-                              
-fixedDiv=document.querySelector("div.slider-track");
-imgs=document.querySelectorAll("div.slider-track>img");
-//fixedDiv.style.backgroundColor="gray";
 
-setTimeout(()=>{
+  sliderBtnNext.addEventListener("click", () => {
+    if (currentIndex < maxIndex) {
+      slideTo(currentIndex + 1);
+    } else {
+      slideTo(0);
+    }
+  });
+
+  slideTo(currentIndex);
+
+  let elementsOnhover = [sliderContainer, sliderBtnPrev, sliderBtnNext];
+  elementsOnhover.forEach(
+    elm=>{elm.addEventListener("mouseenter", () => {   
+      document.querySelectorAll(".slider-btn").forEach(btn=>{btn.style.border='solid';})
+      sliderBtnPrev.style.backgroundColor="white";
+      sliderBtnNext.style.backgroundColor="white";
+    });
+    elm.addEventListener("mouseleave", () => {   
+      document.querySelectorAll(".slider-btn").forEach(btn=>{btn.style.border='solid';})
+      sliderBtnPrev.style.backgroundColor="";
+      sliderBtnNext.style.backgroundColor="";
+    });
+  });
+
+  imgs=slider.querySelectorAll("div.slider-track>img");
   let rm=0;
-  imgs.forEach(img=>{
-    w=img.naturalWidth;
-    h=img.naturalHeight;
-    r=h/w;// = hj/wj // hj=wj*r
-    img.style.width="300px";
-    img.style.height="300*r";
-    rm = (r>rm) ? r : rm;
-  });
-  fixedDiv.style.width="300px";
-  fixedDiv.style.height=300*rm;
-},500);
-
+  setTimeout(()=>{
+    imgs.forEach(img=>{
+      const aspectRatio = img.naturalWidth / img.naturalHeight;
+      const newHeight = 300 / aspectRatio;
+      let w=img.naturalWidth;
+      let h=img.naturalHeight;
+      let r=h/w;// = hj/wj // hj=wj*r
+      rm = (r>rm) ? r : rm;
+      //sliderContainer.style.width="300px";
+      sliderContainer.style.height=`${newHeight}px`;
+      //img.style.width="300px";
+      img.style.height= `${newHeight}px`;
+    });      
+  },900);
+  console.log("rms:", rm);
+}
