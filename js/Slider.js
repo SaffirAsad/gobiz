@@ -68,6 +68,11 @@ function sliderMaker(slider, images){
       rm = (newHeight>rm) ? newHeight:rm;
       sliderContainer.style.width="300px";
       sliderContainer.style.height=`${rm}px`;
+      if(aspectRatio<1){
+        img.style.height=`${rm}px`;
+      }
+      img.style.width="300px";
+      
     });      
   },900);
 }
