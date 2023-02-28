@@ -4,23 +4,23 @@ function fetchData() {
     request.open('GET', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSXdu2BEMg-HK6vicRYTmIskyAXS4dVKEIzRZFipBBYuwR9k_1bX7Kw_L9jUONWdUSsHhYUZIKDvS6k/pub?output=csv', false);
     request.send();
     if (request.status >= 200 && request.status < 400) {
-      var data = request.responseText.split('\r\n');
-      headers = data[0].split(',');
-      products = [];
-      for (var i = 1; i < data.length; i++) {
-        var productData = data[i].split(',');
-        if (productData.length < headers.length) {
-          continue;
+        var data = request.responseText.split('\r\n');
+        headers = data[0].split(',');
+        products = [];
+        for (var i = 1; i < data.length; i++) {
+            var productData = data[i].split(',');
+            if (productData.length < headers.length) {
+            continue;
+            }
+            var product = {};
+            for (var j = 0; j < headers.length; j++) {
+            product[headers[j]] = productData[j];
+            }
+            products.push(product);
         }
-        var product = {};
-        for (var j = 0; j < headers.length; j++) {
-          product[headers[j]] = productData[j];
-        }
-        products.push(product);
-      }
-      DataBase = products;
+        DataBase = products;
     } else {
-      console.error('Error while fetching data from Google Sheet');
+        console.error('Error while fetching data from Google Sheet');
     }
 }
 function ProductGrid(products,headers,min, max){
@@ -39,17 +39,20 @@ function ProductGrid(products,headers,min, max){
     const productsGrid = document.querySelector('#Filtred-Products');
     let productsHTML = '';
     let count=0;
+    console.log("products",products);
     products.forEach(product => {
         let _price = product[price];
-        //console.log("## price:\n",headers, product[price], price,_price);
-        if(Number( _price ) >= min && Number( _price ) <= max ){
-            count+=1;
+        if(Number( _price ) >= min && Number( _price ) <= max ){console.log("_price:\n",_price);
             document.querySelector('#Results').innerHTML = `<h4 id="res"> Availbale Products: </h4>`;
             productsHTML += `
                 <div class="w-1/1 lg:w-1/3 p-4">
                     <div class="p-4 bg-white shadow-lg rounded-lg">
-                        <div class="w-full mb-2">
-                            <img class="rounded pb-2" id="6257f6f020364_product_image" src="${product[URLs]}" alt="${product[ProductName]}">
+                        <div id="slider-container-${count}" class="slider-container" style="height: 449.649px;">
+                            <div class="slider">
+                                <div class="slider-track" style="width: 300px; transform: translateX(-100%);"></div>
+                            </div>
+                            <button class="slider-btn slider-btn-prev" style="border: solid;">&lt;</button>
+                            <button class="slider-btn slider-btn-next" style="border: solid;">&gt;</button>
                         </div>
                         <span class="py-1 px-2 bg-red-500 rounded text-xs text-white">Hot</span>
                         <div class="w-full mb-1 mt-1 justify-between items-center">
@@ -68,11 +71,20 @@ function ProductGrid(products,headers,min, max){
                     </div>
                 </div>
             `;
+            count+=1; 
         }
-        
     });
     
     productsGrid.innerHTML = productsHTML;
+    count=0;
+    setTimeout(()=>{
+        products.forEach(product => {
+            let urls=product[URLs].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
+            console.log("urls<<",urls);
+            sliderMaker(document.querySelector(`#slider-container-${count}`), urls)
+            count+=1;
+        });
+    },900);
     //console.log(count);
     if (count == 0){
         document.querySelector('#Results').innerHTML = `<h4> No things to Show!. </h4>`;
@@ -100,12 +112,13 @@ function CategoryGrid(){
             }
             categoryImgUrls.push(cat);
         }
-        categoryImgUrls.forEach(cat=>{
+        categoryImgUrls.forEach(cat =>{
+            //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
             catHTML+=`
-            <div class="w-1/1 lg:w-1/3 p-4">
+            <div class="w-1/1 lg:w-1/3 p-4" onclick="AddDel(this,products);">
                 <div class="p-4 bg-white shadow-lg rounded-lg">
                     <div>
-                        <h1 style="font-size:40px;">${cat["categories"]}<h1>
+                        <h1 id="categoriesName" style="font-size:40px;">${cat["categories"]}<h1>
                     </div>
                     <div class="w-full mb-2">
                         <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${cat["categoryUrl"]}" alt="${cat["categories"]}">
@@ -118,6 +131,27 @@ function CategoryGrid(){
     else {
     console.error('Error while fetching data from Google Sheet');
     } 
-    categories=document.querySelector("#Categories");
+    let categories=document.querySelector("#Categories");
     categories.innerHTML = catHTML;
 }
+
+function loading(){
+    console.log("AddDel!");
+    const img = document.createElement("img");
+    img.setAttribute("src", "images/loading.gif");
+    img.setAttribute("id", "loading");
+    img.setAttribute("style", "padding:20px; width=20px");
+    document.querySelector("#Results").appendChild(img);
+}
+function AddDel(el,products){
+    let Cat=el.querySelector("#categoriesName").textContent;
+    const subCat = getUniqueValuesForKey(
+        products,
+        Object.values(headers)[2],
+        Cat,
+        Object.values(headers)[3]
+    );
+    console.log(Object.values(headers)[2],Cat);
+    console.log("subCat:",subCat);
+    
+};
