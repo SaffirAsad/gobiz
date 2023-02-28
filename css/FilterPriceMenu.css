@@ -152,7 +152,6 @@ select {
 .slider-container {
   position: relative;
   width: 300px;
-  height: auto;
   margin: auto;
   overflow: hidden;
 }
@@ -165,12 +164,11 @@ select {
 
 .slider-track {
   display: flex;
-  height: 100%;
   transition: transform 0.5s ease;
 }
 
 .slider img {
-  width: 100%;
+  width: 300px;
   height: 100%;
   object-fit: contain;
 }
