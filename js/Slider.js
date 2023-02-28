@@ -24,7 +24,7 @@ function sliderMaker(slider, images){
   let maxIndex = sliderImgs.length - 1;
   function slideTo(index) {
     currentIndex = index;
-    sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+    sliderTrack.style.transform = `translateX(-${(currentIndex * 100)/numImages}%)`;
   }
 
   sliderBtnPrev.addEventListener("click", () => {
@@ -58,21 +58,4 @@ function sliderMaker(slider, images){
       sliderBtnNext.style.backgroundColor="";
     });
   });
-
-  imgs= sliderContainer.querySelectorAll("div.slider-track>img");
-  let rm=0;
-  setTimeout(()=>{
-    imgs.forEach(img=>{
-      const aspectRatio = img.naturalWidth / img.naturalHeight;
-      const newHeight = 300 / aspectRatio;
-      let w=img.naturalWidth;
-      let h=img.naturalHeight;
-      let r=h/w;// = hj/wj // hj=wj*r
-      rm = (r>rm) ? r : rm;
-      sliderContainer.style.width="300px";
-      sliderContainer.style.height=`${newHeight}px`;
-      img.style.width="300px";
-    });      
-  },900);
-  console.log("rms:", rm);
 }
