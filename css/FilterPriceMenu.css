@@ -88,7 +88,7 @@ h1 {
 }
 
 #selecter {
-  width = 100%;
+  width : 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,8 +130,8 @@ select {
 #filterButton  .navbar-burger .flex items-center
 {
     position: relative;
-    width = "60px";
-    marginLeft="0px"
+    width : "60px";
+    margin-left:"0px"
 }
 
 #navbar-burger{
@@ -152,7 +152,7 @@ select {
 .slider-container {
   position: relative;
   width: 300px;
-  height: 300px;
+  height: auto;
   margin: auto;
   overflow: hidden;
 }
@@ -183,7 +183,7 @@ select {
   height: 30px;
   padding: 0;
   font-size: 20px;
-  background: transparent;
+  background: grey;
   border: none;
   cursor: pointer;
 }
