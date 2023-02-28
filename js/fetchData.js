@@ -151,7 +151,23 @@ function AddDel(el,products){
         Cat,
         Object.values(headers)[3]
     );
-    console.log(Object.values(headers)[2],Cat);
-    console.log("subCat:",subCat);
-    
+    let subcatHTML="";
+    subCat.forEach(subCat =>{
+        //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
+        subcatHTML+=`
+        <div class="w-1/1 lg:w-1/3 p-4" onclick="AddDel(this,products);">
+            <div class="p-4 bg-white shadow-lg rounded-lg">
+                <div>
+                    <h1 style="font-size:40px;">${subCat}<h1>
+                </div>
+                <div class="w-full mb-2">
+                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="https://www.apple.com/v/iphone-14/d/images/overview/design/gallery_xdr_blue__e1dgjo6d86eu_large.jpg" alt="${subCat}">
+                </div>
+            </div>
+        </div>
+        `;
+        
+    });
+    let SubCategories=document.querySelector("#SubCategories");
+    SubCategories.innerHTML = subcatHTML;
 };
