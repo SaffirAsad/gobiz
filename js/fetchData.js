@@ -174,7 +174,7 @@ function AddDel(el,products){
     let shop=document.querySelector("#shop");
     let SubCategories=document.querySelector("#SubCategories");
     SubCategories.innerHTML = subcatHTML;
-    section_category=document.querySelector("#Categories")
+    section_category=document.querySelector(".Categories")
     section_products=document.querySelector(".Filtred-Products")
     session_subCat=document.querySelector(".SubCategories")
     session_subCat.append(SubCategories);
@@ -207,10 +207,14 @@ function AddDelsub(subCatel,products){
         `;
         
     });
+    let shop=document.querySelector("#shop");
     let prods=document.querySelector("#Filtred-Products");
     prods.innerHTML = subcatHTML;
 
     section_products=document.querySelector(".Filtred-Products")
     section_products.append(prods);
+    shop.append(section_products);
+    section_category=document.querySelector(".Categories")
+    shop.append(section_category);
     //section_products.append(document.querySelector("#Categories"));
 }
