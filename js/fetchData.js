@@ -226,30 +226,28 @@ function AddDelsub(subCatel,products){
     console.log("products",products);
     p.forEach(product => {
         productsHTML += `
-        div class="container px-4 mx-auto">
-            <div class="w-1/1 lg:w-1/3 p-4">
-                <div class="p-4 bg-white shadow-lg rounded-lg">
-                    <div id="slider-container-${count}" class="slider-container" style="height: 449.649px;">
-                        <div class="slider">
-                            <div class="slider-track" style="width: 300px; transform: translateX(-100%);"></div>
-                        </div>
-                        <button class="slider-btn slider-btn-prev" style="border: solid;">&lt;</button>
-                        <button class="slider-btn slider-btn-next" style="border: solid;">&gt;</button>
+        <div class="w-1/1 lg:w-1/3 p-4">
+            <div class="p-4 bg-white shadow-lg rounded-lg">
+                <div id="slider-container-${count}" class="slider-container" style="height: 449.649px;">
+                    <div class="slider">
+                        <div class="slider-track" style="width: 300px; transform: translateX(-100%);"></div>
                     </div>
-                    <span class="py-1 px-2 bg-red-500 rounded text-xs text-white">Hot</span>
-                    <div class="w-full mb-1 mt-1 justify-between items-center">
-                        <div>
-                            <h3 id="6257f6f020364_product_name" class="text-sm font-medium">
-                                ${product[ProductName]}</h3>
-                            <span id="6257f6f020364_subtitle" class="text-xs text-gray-500">${product[company]}</span>
-                        </div>
+                    <button class="slider-btn slider-btn-prev" style="border: solid;">&lt;</button>
+                    <button class="slider-btn slider-btn-next" style="border: solid;">&gt;</button>
+                </div>
+                <span class="py-1 px-2 bg-red-500 rounded text-xs text-white">Hot</span>
+                <div class="w-full mb-1 mt-1 justify-between items-center">
+                    <div>
+                        <h3 id="6257f6f020364_product_name" class="text-sm font-medium">
+                            ${product[ProductName]}</h3>
+                        <span id="6257f6f020364_subtitle" class="text-xs text-gray-500">${product[company]}</span>
                     </div>
-                    <div class="w-full mb-1 justify-between items-center">
-                        <h4 class="text-sm mb-3 font-bold"><span id="6257f6f020364_currency">$</span> <span id="6257f6f020364_price">${product[price]}</span>
-                        </h4>
-                        <a onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart('6257f6f020364')" 
-                        class="py-2 px-4 bg-blue-500 hover:bg-blue-600 rounded text-md text-white transition duration-200">Add			   </a>
-                    </div>
+                </div>
+                <div class="w-full mb-1 justify-between items-center">
+                    <h4 class="text-sm mb-3 font-bold"><span id="6257f6f020364_currency">$</span> <span id="6257f6f020364_price">${product[price]}</span>
+                    </h4>
+                    <a onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart('6257f6f020364')" 
+                    class="py-2 px-4 bg-blue-500 hover:bg-blue-600 rounded text-md text-white transition duration-200">Add			   </a>
                 </div>
             </div>
         </div>
