@@ -45,6 +45,12 @@ function Search(products){
     price=validateRange(parseInt(inputEl[0].value), parseInt(inputEl[1].value));
     console.log("FiltedProducts:\n",FiltedProducts,price.min, price.max);
     ProductGrid(FiltedProducts,headers,price.min, price.max)
+
+    let shop=document.querySelector("#shop");
+    let section_category=document.querySelector(".Categories")
+    let section_products=document.querySelector(".Filtred-Products")
+    shop.append(section_products);
+    shop.append(section_category);
 }
 // Add categories
 CategoryGrid();
