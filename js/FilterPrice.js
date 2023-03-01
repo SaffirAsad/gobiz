@@ -32,11 +32,18 @@ function Search(products){
     const mainCategorySelectValue = document.getElementById("mainCategorySelect").value;
     const subCategorySelectValue = document.getElementById("subCategorySelect").value;
     const colorSelectValue = document.getElementById("colorSelect").value;
+    const sizeSelectValue = document.getElementById("sizeSelect").value;
+    var	mMainCategory = Object.values(headers)[2];	
+    var mSubCategory = Object.values(headers)[3];
+    var mSize = Object.values(headers)[7];	
+    var mColor = Object.values(headers)[8];
     let FiltedProducts = [];
+
     products.forEach(product => {
-        if(product["MainCategory"]==mainCategorySelectValue && 
-        product["SubCategory"]==subCategorySelectValue &&
-        product["Color"]==colorSelectValue){
+        if(product[mMainCategory]==mainCategorySelectValue && 
+        product[mSubCategory]==subCategorySelectValue &&
+        product[mSize] == sizeSelectValue &&
+        product[mColor]==colorSelectValue){
             FiltedProducts.push(product);
         }
     });
