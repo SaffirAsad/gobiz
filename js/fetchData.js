@@ -175,9 +175,11 @@ function AddDel(el,products){
     section_category=document.querySelector(".Categories")
     section_products=document.querySelector(".Filtred-Products")
     session_subCat=document.querySelector(".SubCategories")
-    
     session_subCat.append(SubCategories);
+    
     shop.append(session_subCat);
+    shop.append(section_category);
+    section_products.innerHTML ="";
     shop.append(section_products);
 };
 function AddDelsub(subCatel,products){
@@ -275,5 +277,4 @@ function AddDelsub(subCatel,products){
     section_products.append(productsGrid);
     shop.append(section_products);
     shop.append(section_category);
-    //section_products.append(document.querySelector("#Categories"));
 }
