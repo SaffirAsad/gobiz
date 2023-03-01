@@ -198,6 +198,7 @@ function AddDel(el,products){
             </div>
         </div>
         `;
+        num+=1;
     });
     let shop=document.querySelector("#shop");
     let SubCategories=document.querySelector("#SubCategories");
