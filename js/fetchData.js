@@ -45,7 +45,6 @@ function ProductGrid(products,headers,min, max){
         if(Number( _price ) >= min && Number( _price ) <= max ){console.log("_price:\n",_price);
             document.querySelector('#Results').innerHTML = `<h4> Availbale Products: </h4>`;
             productsHTML += `
-            div class="container px-4 mx-auto">
                 <div class="w-1/1 lg:w-1/3 p-4">
                     <div class="p-4 bg-white shadow-lg rounded-lg">
                         <div id="slider-container-${count}" class="slider-container" style="height: 449.649px;">
@@ -71,7 +70,6 @@ function ProductGrid(products,headers,min, max){
                         </div>
                     </div>
                 </div>
-            </div>
             `;
             count+=1; 
         }
