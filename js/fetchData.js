@@ -147,6 +147,29 @@ function loading(){
     document.querySelector("#Results").appendChild(img);
 }
 function AddDel(el,products){
+    var request = new XMLHttpRequest();
+    url="https://docs.google.com/spreadsheets/d/e/2PACX-1vSXdu2BEMg-HK6vicRYTmIskyAXS4dVKEIzRZFipBBYuwR9k_1bX7Kw_L9jUONWdUSsHhYUZIKDvS6k/pub?gid=325958979&single=true&output=csv";
+    request.open('GET', url, false);
+    request.send();
+    if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText.split('\r\n');
+        let header = data[0].split(',');
+        console.log("header :",header);
+        let subcategoryImgUrls = [];
+        for (var i = 1; i < data.length; i++) {
+            var catData = data[i].split(',');
+            if (catData.length < header.length) {
+            continue;
+            }
+            var cat = {};
+            for (var j = 0; j < header.length; j++) {
+                if(catData[j]!=""){
+                    cat[header[j]] = catData[j];
+                }
+            }
+            subcategoryImgUrls.push(cat);
+        }
+    console.log("subcategoryImgUrls<<:",subcategoryImgUrls);
     let Cat=el.querySelector("#categoriesName").textContent;
     const subCat = getUniqueValuesForKey(
         products,
