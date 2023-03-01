@@ -222,7 +222,7 @@ function AddDelsub(subCatel,products){
 
     const productsGrid = document.querySelector('#Filtred-Products');
     let productsHTML = '';
-    let count=0;
+    let count=1;
     console.log("products",products);
     p.forEach(product => {
         productsHTML += `
