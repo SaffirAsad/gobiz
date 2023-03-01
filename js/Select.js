@@ -68,7 +68,7 @@ function MenuUser(products, headers){
         colorSelect.disabled = true;
         filterButton.disabled = true;
         if (selectedSubCategory) {
-            const Size = getUniqueValuesForKey(
+            const Sizes = getUniqueValuesForKey(
                 products,
                 SubCategory,
                 selectedSubCategory,
@@ -76,7 +76,7 @@ function MenuUser(products, headers){
             );
             sizeSelect.innerHTML =
                 "<option value=''>Size</option>" +
-                Size
+                Sizes
                 .map(size => `<option value='${size}'>${size}</option>`)
                 .join("");
             sizeSelect.disabled = false;
