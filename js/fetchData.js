@@ -175,7 +175,7 @@ function AddDel(el,products){
     SubCategories.innerHTML = subcatHTML;
 
     session_subCat=document.querySelector(".SubCategories")
-    session_subCat.append(document.querySelector("#SubCategories"));
+    session_subCat.append(SubCategories);
 };
 function AddDelsub(subCatel,products){
     CatName=subCatel.querySelector("#Cat").textContent
@@ -204,7 +204,8 @@ function AddDelsub(subCatel,products){
     });
     let prods=document.querySelector("#Filtred-Products");
     prods.innerHTML = subcatHTML;
-    section=document.querySelector(".Filtred-Products")
-    shop.append(section);
-    shop.append(document.querySelector("#Categories"));
+
+    section_products=document.querySelector(".Filtred-Products")
+    section_products.append(prods);
+    //section_products.append(document.querySelector("#Categories"));
 }
