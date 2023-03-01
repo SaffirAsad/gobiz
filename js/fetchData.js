@@ -171,7 +171,7 @@ function AddDel(el,products){
             subcategoryImgUrls.push(cat);
         }
     }
-    console.log("subcategoryImgUrls<< :",subcategoryImgUrls );
+    
     let Cat=el.querySelector("#categoriesName").textContent;
     const subCat = getUniqueValuesForKey(
         products,
@@ -180,7 +180,10 @@ function AddDel(el,products){
         Object.values(headers)[3]
     );
     let subcatHTML="";
+    let num=0;
+    
     subCat.forEach(subCat =>{
+        console.log("subcat :","\n", subCat);
         //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
         subcatHTML+=`
         <div class="w-1/1 lg:w-1/3 p-4" onclick="AddDelsub(this,products);">
@@ -190,7 +193,7 @@ function AddDel(el,products){
                     <h1 id="subCat" style="font-size:40px;">${subCat}<h1>
                 </div>
                 <div class="w-full mb-2">
-                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="https://www.apple.com/v/iphone-14/d/images/overview/design/gallery_xdr_blue__e1dgjo6d86eu_large.jpg" alt="${subCat}">
+                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${subcategoryImgUrls[num][subCat]}" alt="${subCat}">
                 </div>
             </div>
         </div>
