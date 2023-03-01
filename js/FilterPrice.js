@@ -54,9 +54,11 @@ function Search(products){
     ProductGrid(FiltedProducts,headers,price.min, price.max)
 
     let shop=document.querySelector("#shop");
+    let session_subCat=document.querySelector(".SubCategories")
     let section_category=document.querySelector(".Categories")
     let section_products=document.querySelector(".Filtred-Products")
     shop.append(section_products);
+    shop.append(session_subCat);
     shop.append(section_category);
 }
 // Add categories
