@@ -151,10 +151,11 @@ function AddDel(el,products){
     url="https://docs.google.com/spreadsheets/d/e/2PACX-1vSXdu2BEMg-HK6vicRYTmIskyAXS4dVKEIzRZFipBBYuwR9k_1bX7Kw_L9jUONWdUSsHhYUZIKDvS6k/pub?gid=325958979&single=true&output=csv";
     request.open('GET', url, false);
     request.send();
+    let header = {};
     let subcategoryImgUrls = [];
     if (request.status >= 200 && request.status < 400) {
         var data = request.responseText.split('\r\n');
-        let header = data[0].split(',');
+        header = data[0].split(',');
         console.log("header :",header);
         
         for (var i = 1; i < data.length; i++) {
@@ -171,7 +172,7 @@ function AddDel(el,products){
             subcategoryImgUrls.push(cat);
         }
     }
-    
+    let el=document.querySelector("#Categories");
     let Cat=el.querySelector("#categoriesName").textContent;
     const subCat = getUniqueValuesForKey(
         products,
@@ -181,9 +182,9 @@ function AddDel(el,products){
     );
     let subcatHTML="";
     let num=0;
-    
+    let subCatUrl = Object.values(header)[1];
     subCat.forEach(subCat =>{
-        console.log("subcat :","\n", subCat);
+        console.log("subcat :","\n", subCat,"\n",subcategoryImgUrls[num][Object.values(header)[1]]);
         //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
         subcatHTML+=`
         <div class="w-1/1 lg:w-1/3 p-4" onclick="AddDelsub(this,products);">
@@ -193,12 +194,11 @@ function AddDel(el,products){
                     <h1 id="subCat" style="font-size:40px;">${subCat}<h1>
                 </div>
                 <div class="w-full mb-2">
-                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${subcategoryImgUrls[num][subCat]}" alt="${subCat}">
+                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${subcategoryImgUrls[num][subCatUrl]}" alt="${subCat}">
                 </div>
             </div>
         </div>
         `;
-        
     });
     let shop=document.querySelector("#shop");
     let SubCategories=document.querySelector("#SubCategories");
@@ -207,7 +207,6 @@ function AddDel(el,products){
     section_products=document.querySelector(".Filtred-Products")
     session_subCat=document.querySelector(".SubCategories")
     session_subCat.append(SubCategories);
-    
     shop.append(session_subCat);
     shop.append(section_category);
     shop.append(section_products);
