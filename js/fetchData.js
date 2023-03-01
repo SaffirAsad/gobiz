@@ -169,7 +169,7 @@ function AddDel(el,products){
             }
             subcategoryImgUrls.push(cat);
         }
-    console.log("subcategoryImgUrls<<:",subcategoryImgUrls);
+    console.log("subcategoryImgUrls<< :",subcategoryImgUrls );
     let Cat=el.querySelector("#categoriesName").textContent;
     const subCat = getUniqueValuesForKey(
         products,
