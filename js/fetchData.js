@@ -99,6 +99,7 @@ function CategoryGrid(){
     if (request.status >= 200 && request.status < 400) {
         var data = request.responseText.split('\r\n');
         let header = data[0].split(',');
+        console.log("header :",header);
         let categoryImgUrls = [];
         for (var i = 1; i < data.length; i++) {
             var catData = data[i].split(',');
