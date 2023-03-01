@@ -174,8 +174,8 @@ function AddDel(el,products){
     let SubCategories=document.querySelector("#SubCategories");
     SubCategories.innerHTML = subcatHTML;
 
-    shop=document.querySelector("#shop")
-    shop.append(document.querySelector("#SubCategories"));
+    session_subCat=document.querySelector(".SubCategories")
+    session_subCat.append(document.querySelector("#SubCategories"));
 };
 function AddDelsub(subCatel,products){
     CatName=subCatel.querySelector("#Cat").textContent
