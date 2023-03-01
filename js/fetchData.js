@@ -180,6 +180,7 @@ function AddDel(el,products){
     session_subCat.append(SubCategories);
     shop.append(section_products);
     shop.append(section_category);
+    shop.append(section_products);
 };
 function AddDelsub(subCatel,products){
     CatName=subCatel.querySelector("#Cat").textContent
