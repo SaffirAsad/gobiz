@@ -7,13 +7,18 @@ function getUniqueValuesForKey(array, key, value, returnKey) {
         )
     );
 }
-function MenuUser(products){
+function MenuUser(products, headers){
     //console.log("MenuUser");
     const ownerSelect = document.getElementById("owner-select");
     const mainCategorySelect = document.getElementById("mainCategorySelect");
     const subCategorySelect = document.getElementById("subCategorySelect");
     const sizeSelect = document.getElementById("sizeSelect");
     const colorSelect = document.getElementById("colorSelect");
+    var	MainCategory = Object.values(headers)[2];	
+    var SubCategory = Object.values(headers)[3];	
+    var price = Object.values(headers)[5];
+    var Size = Object.values(headers)[7];	
+    var Color = Object.values(headers)[8];
 
 
     function setOptions(element,Title,SelectList){
@@ -22,7 +27,7 @@ function MenuUser(products){
         element.innerHTML =  Title + CodeHTML;
     }
     /* Main category */
-    let mainCategory = products.map(obj => obj["MainCategory"]);
+    let mainCategory = products.map(obj => obj[MainCategory]);
     SelectTitle  = `<option value="">Main Category</option>`;
     setOptions(mainCategorySelect,SelectTitle,[...new Set(mainCategory)]);
 
@@ -39,9 +44,9 @@ function MenuUser(products){
         if (selectedMainCategory) {
             const subCategories = getUniqueValuesForKey(
                 products,
-                "MainCategory",
+                MainCategory,
                 selectedMainCategory,
-                "SubCategory"
+                SubCategory
             );
             subCategorySelect.innerHTML =
                 "<option value=''>Sub Category</option>" +
@@ -65,9 +70,9 @@ function MenuUser(products){
         if (selectedSubCategory) {
             const Size = getUniqueValuesForKey(
                 products,
-                "SubCategory",
+                SubCategory,
                 selectedSubCategory,
-                "Size"
+                Size
             );
             sizeSelect.innerHTML =
                 "<option value=''>Size</option>" +
@@ -85,9 +90,9 @@ function MenuUser(products){
         if (selectedSize) {
             const colors = getUniqueValuesForKey(
                 products,
-                "Size",
+                Size,
                 selectedSize,
-                "Color"
+                Color
             );
             colorSelect.innerHTML =
                 "<option value=''>Color</option>" +

@@ -26,7 +26,7 @@ inputElements.forEach((element) => {
   });
 });
 validateRange(parseInt(inputElements[0].value), parseInt(inputElements[1].value));
-MenuUser(products);
+MenuUser(products,headers);
 
 function Search(products){
     const mainCategorySelectValue = document.getElementById("mainCategorySelect").value;
