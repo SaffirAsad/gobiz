@@ -183,7 +183,7 @@ function AddDel(el,products){
     let num=0;
     let subCatUrl = Object.values(header)[1];
     subCat.forEach(subCat =>{
-        console.log("subcat :","\n", subCat,"\n",subcategoryImgUrls[num][Object.values(header)[1]]);
+        //console.log("subcat :","\n", subCat,"\n",subcategoryImgUrls[num][Object.values(header)[1]]);
         //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
         subcatHTML+=`
         <div class="w-1/1 lg:w-1/3 p-4" onclick="AddDelsub(this,products);">
