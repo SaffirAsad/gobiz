@@ -179,7 +179,6 @@ function AddDel(el,products){
     
     shop.append(session_subCat);
     shop.append(section_category);
-    section_products.innerHTML ="";
     shop.append(section_products);
 };
 function AddDelsub(subCatel,products){
