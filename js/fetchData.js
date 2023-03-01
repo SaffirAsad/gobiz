@@ -256,7 +256,7 @@ function AddDelsub(subCatel,products){
         
     });
     productsGrid.innerHTML = productsHTML;
-    count2=0;
+    count2=1;
     setTimeout(()=>{
         products.forEach(product => {
             let urls=product[URLs].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
