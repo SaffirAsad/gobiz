@@ -155,10 +155,11 @@ function AddDel(el,products){
     subCat.forEach(subCat =>{
         //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
         subcatHTML+=`
-        <div class="w-1/1 lg:w-1/3 p-4" onclick="AddDel(this,products);">
+        <div class="w-1/1 lg:w-1/3 p-4" onclick="AddDelsub(this,products);">
             <div class="p-4 bg-white shadow-lg rounded-lg">
                 <div>
-                    <h1 style="font-size:40px;">${subCat}<h1>
+                    <h4 id="Cat" style="visibility:hidden">${Cat}</h4>
+                    <h1 id="subCat" style="font-size:40px;">${subCat}<h1>
                 </div>
                 <div class="w-full mb-2">
                     <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="https://www.apple.com/v/iphone-14/d/images/overview/design/gallery_xdr_blue__e1dgjo6d86eu_large.jpg" alt="${subCat}">
@@ -170,4 +171,38 @@ function AddDel(el,products){
     });
     let SubCategories=document.querySelector("#SubCategories");
     SubCategories.innerHTML = subcatHTML;
+
+    shop=document.querySelector("#shop")
+    shop.append(document.querySelector("#SubCategories"));
 };
+function AddDelsub(subCatel,products){
+    CatName=subCatel.querySelector("#Cat").textContent
+    subCatName=subCatel.querySelector("#subCat").textContent
+    p = products.filter((item) => item[`${Object.values(headers)[2]}`] === CatName)
+                .filter((item) => item[`${Object.values(headers)[3]}`] === subCatName)
+
+    let subcatHTML='';
+    console.log("P",p);
+    p.forEach(prod =>{
+        //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
+        subcatHTML+=`
+        <div class="w-1/1 lg:w-1/3 p-4">
+            <div class="p-4 bg-white shadow-lg rounded-lg">
+                <div>
+                    <h4 id="Cat" style="visibility:hidden">${CatName}</h4>
+                    <h1 id="subCat" style="font-size:40px;">${prod[Object.values(headers)[1]]}<h1>
+                </div>
+                <div class="w-full mb-2">
+                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="https://www.apple.com/v/iphone-14/d/images/overview/design/gallery_xdr_blue__e1dgjo6d86eu_large.jpg" alt="${prod[Object.values(headers)[1]]}">
+                </div>
+            </div>
+        </div>
+        `;
+        
+    });
+    let prods=document.querySelector("#Filtred-Products");
+    prods.innerHTML = subcatHTML;
+    shop=document.querySelector("#shop")
+    shop.append(prods);
+    shop.append(document.querySelector("#Categories"));
+}
