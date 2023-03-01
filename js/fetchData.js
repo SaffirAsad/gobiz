@@ -169,6 +169,7 @@ function AddDel(el,products){
             }
             subcategoryImgUrls.push(cat);
         }
+    }
     console.log("subcategoryImgUrls<< :",subcategoryImgUrls );
     let Cat=el.querySelector("#categoriesName").textContent;
     const subCat = getUniqueValuesForKey(
@@ -303,5 +304,4 @@ function AddDelsub(subCatel,products){
     shop.append(section_products);
     shop.append(session_subCat);
     shop.append(section_category);
-    
 }
