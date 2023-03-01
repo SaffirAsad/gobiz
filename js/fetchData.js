@@ -171,11 +171,15 @@ function AddDel(el,products){
         `;
         
     });
+    let shop=document.querySelector("#shop");
     let SubCategories=document.querySelector("#SubCategories");
     SubCategories.innerHTML = subcatHTML;
-
+    section_category=document.querySelector("#Categories")
+    section_products=document.querySelector(".Filtred-Products")
     session_subCat=document.querySelector(".SubCategories")
     session_subCat.append(SubCategories);
+    shop.append(section_products);
+    shop.append(section_category);
 };
 function AddDelsub(subCatel,products){
     CatName=subCatel.querySelector("#Cat").textContent
