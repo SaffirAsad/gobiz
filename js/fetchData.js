@@ -177,7 +177,9 @@ function AddDel(el,products){
     section_category=document.querySelector(".Categories")
     section_products=document.querySelector(".Filtred-Products")
     session_subCat=document.querySelector(".SubCategories")
+    
     session_subCat.append(SubCategories);
+    shop.append(session_subCat);
     shop.append(section_products);
 };
 function AddDelsub(subCatel,products){
