@@ -77,7 +77,6 @@ function ProductGrid(products,headers,min, max){
     if (count == 0){
         document.querySelector('#Results').innerHTML = `<h4> No things to Show!. </h4>`;
     }
-    
     productsGrid.innerHTML = productsHTML;
     count2=0;
     setTimeout(()=>{
@@ -108,9 +107,12 @@ function CategoryGrid(){
             }
             var cat = {};
             for (var j = 0; j < header.length; j++) {
-            cat[header[j]] = catData[j];
+                if(catData[j]!=""){
+                    cat[header[j]] = catData[j];
+                }
             }
             categoryImgUrls.push(cat);
+            console.log("cat :",cat);
         }
         categoryImgUrls.forEach(cat =>{
             //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
