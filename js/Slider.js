@@ -1,6 +1,6 @@
 function sliderMaker(slider, images){
   // Get the slider container and slider track elements
-  const sliderContainer = slider;
+  //const sliderContainer = slider;
   const sliderTrack = slider.querySelector(".slider-track");
   const sliderBtnPrev = slider.querySelector(".slider-btn-prev");
   const sliderBtnNext = slider.querySelector(".slider-btn-next");
