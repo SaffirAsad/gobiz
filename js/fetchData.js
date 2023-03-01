@@ -39,7 +39,7 @@ function ProductGrid(products,headers,min, max){
     const productsGrid = document.querySelector('#Filtred-Products');
     let productsHTML = '';
     let count=0;
-    console.log("products",products);
+    //console.log("products",products);
     products.forEach(product => {
         let _price = product[price];
         if(Number( _price ) >= min && Number( _price ) <= max ){console.log("_price:\n",_price);
@@ -83,7 +83,7 @@ function ProductGrid(products,headers,min, max){
     setTimeout(()=>{
         products.forEach(product => {
             let urls=product[URLs].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
-            console.log("urls<<",urls);
+            //console.log("urls<<",urls);
             sliderMaker(document.querySelector(`#slider-container-${count2}`), urls)
             count2+=1;
         });
@@ -187,7 +187,7 @@ function AddDelsub(subCatel,products){
                 .filter((item) => item[`${Object.values(headers)[3]}`] === subCatName)
 
     let subcatHTML='';
-    console.log("P",p);
+    //console.log("P",p);
     p.forEach(prod =>{
         //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
         subcatHTML+=`
@@ -223,7 +223,7 @@ function AddDelsub(subCatel,products){
     const productsGrid = document.querySelector('#Filtred-Products');
     let productsHTML = '';
     let count=1;
-    console.log("products",products);
+    //console.log("products",products);
     p.forEach(product => {
         productsHTML += `
         <div class="w-1/1 lg:w-1/3 p-4">
@@ -260,7 +260,7 @@ function AddDelsub(subCatel,products){
     setTimeout(()=>{
         p.forEach(product => {
             let urls=product[URLs].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
-            console.log("urls<<",urls,"\n",product,count2);
+            //console.log("urls<<",urls,"\n",product,count2);
             sliderMaker(document.querySelector(`#slider-container-${count2}`), urls)
             count2+=1;
         });
