@@ -273,7 +273,7 @@ function AddDelsub(subCatel,products){
     //prods.innerHTML = subcatHTML;
 
     section_products=document.querySelector(".Filtred-Products")
-    section_products.append(prods);
+    section_products.append(productsGrid);
     shop.append(section_products);
     shop.append(section_category);
     //section_products.append(document.querySelector("#Categories"));
