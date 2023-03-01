@@ -227,7 +227,6 @@ function AddDelsub(subCatel,products){
     let count=0;
     console.log("products",products);
     p.forEach(product => {
-        document.querySelector('#Results').innerHTML = `<h4> Availbale Products: </h4>`;
         productsHTML += `
         div class="container px-4 mx-auto">
             <div class="w-1/1 lg:w-1/3 p-4">
@@ -260,12 +259,16 @@ function AddDelsub(subCatel,products){
         count+=1; 
         
     });
-    if (count == 0){
-        document.querySelector('#Results').innerHTML = `<h4> No things to Show!. </h4>`;
-    }
-    
     productsGrid.innerHTML = productsHTML;
-
+    count2=0;
+    setTimeout(()=>{
+        products.forEach(product => {
+            let urls=product[URLs].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
+            console.log("urls<<",urls);
+            sliderMaker(document.querySelector(`#slider-container-${count2}`), urls)
+            count2+=1;
+        });
+    },900);
     //////////////////////////
     let shop=document.querySelector("#shop");
     let prods=document.querySelector("#Filtred-Products");
