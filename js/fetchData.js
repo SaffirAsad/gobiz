@@ -42,7 +42,7 @@ function ProductGrid(products,headers,min, max){
     //console.log("products",products);
     products.forEach(product => {
         let _price = product[price];
-        if(Number( _price ) >= min && Number( _price ) <= max ){console.log("_price:\n",_price);
+        if(Number( _price ) >= min && Number( _price ) <= max ){//console.log("_price:\n",_price);
             document.querySelector('#Results').innerHTML = `<h4> Availbale Products: </h4>`;
             productsHTML += `
                 <div class="w-1/1 lg:w-1/3 p-4">
@@ -99,7 +99,7 @@ function CategoryGrid(){
     if (request.status >= 200 && request.status < 400) {
         var data = request.responseText.split('\r\n');
         let header = data[0].split(',');
-        console.log("header :",header);
+        //console.log("header :",header);
         let categoryImgUrls = [];
         for (var i = 1; i < data.length; i++) {
             var catData = data[i].split(',');
@@ -139,7 +139,7 @@ function CategoryGrid(){
 }
 
 function loading(){
-    console.log("AddDel!");
+    //console.log("AddDel!");
     const img = document.createElement("img");
     img.setAttribute("src", "images/loading.gif");
     img.setAttribute("id", "loading");
@@ -156,7 +156,7 @@ function AddDel(el,products){
     if (request.status >= 200 && request.status < 400) {
         var data = request.responseText.split('\r\n');
         header = data[0].split(',');
-        console.log("header :",header);
+        //console.log("header :",header);
         
         for (var i = 1; i < data.length; i++) {
             var catData = data[i].split(',');
