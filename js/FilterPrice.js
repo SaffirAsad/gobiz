@@ -52,7 +52,6 @@ function Search(products){
     price=validateRange(parseInt(inputEl[0].value), parseInt(inputEl[1].value));
     console.log("FiltedProducts:\n",FiltedProducts,price.min, price.max);
     ProductGrid(FiltedProducts,headers,price.min, price.max)
-
     let shop=document.querySelector("#shop");
     let session_subCat=document.querySelector(".SubCategories")
     let section_category=document.querySelector(".Categories")
