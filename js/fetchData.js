@@ -115,15 +115,15 @@ function CategoryGrid(){
             //console.log("cat :",cat);
         }
         categoryImgUrls.forEach(cat =>{
-            console.log('cat:',cat[header[0]],cat[header[1]]);
+            console.log('cat:',cat[header[0]],header[1]);
             catHTML+=`
             <div class="w-1/1 lg:w-1/3 p-4" onclick="AddDel(this,products);">
                 <div class="p-4 bg-white shadow-lg rounded-lg">
                     <div>
-                        <h1 id="categoriesName" style="font-size:40px;">${cat["categories"]}<h1>
+                        <h1 id="categoriesName" style="font-size:40px;">${cat[header[0]]}<h1>
                     </div>
                     <div class="w-full mb-2">
-                        <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${cat["categoryUrl"]}" alt="${cat["categories"]}">
+                        <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${cat[header[1]]}" alt="${cat[header[0]]}">
                     </div>
                 </div>
             </div>
