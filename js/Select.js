@@ -7,6 +7,7 @@ function getUniqueValuesForKey(array, key, value, returnKey) {
         )
     );
 }
+
 function MenuUser(products){
     //console.log("MenuUser");
     const ownerSelect = document.getElementById("owner-select");
