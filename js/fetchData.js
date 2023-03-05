@@ -112,7 +112,7 @@ function CategoryGrid(){
                 }
             }
             categoryImgUrls.push(cat);
-            //console.log("cat :",cat);
+            console.log("cat :",cat);
         }
         categoryImgUrls.forEach(cat =>{
             console.log('cat["categories"]',cat[header[0]],cat[header[1]]);
