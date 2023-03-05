@@ -151,8 +151,7 @@ function AddDel(el,products){
     request.open('GET', url, false);
     request.send();
     let subCatHeader = {};
-    subcategoryImgUrls = [];
-    var cat = {};
+    subcategoryImgUrls = {};
     if (request.status >= 200 && request.status < 400) {
         var data = request.responseText.split('\r\n');
         subCatHeader = data[0].split(',');
@@ -161,15 +160,14 @@ function AddDel(el,products){
             if (catData.length < subCatHeader.length) {
             continue;
             }
-            
+            var cat = {};
             for (var j = 0; j < subCatHeader.length; j++) {
                 if(catData[j]!=""){
                     cat[subCatHeader[j]] = catData[j];
                 }
             }
-            //subcategoryImgUrls.push(cat);
+            subcategoryImgUrls={...subcategoryImgUrls,...cat};
         }
-        subcategoryImgUrls.push(cat);
     }
     let Cat=el.querySelector("#categoriesName").textContent;
     const subCat = getUniqueValuesForKey(
