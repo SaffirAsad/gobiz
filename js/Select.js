@@ -31,12 +31,17 @@ function MenuUser(products){
 
     /* Sub category */
     let optSubCategory = products.map(obj => obj[mSubCategory]);
-    SelectTitle  = `<option value="">${mMainCategory}</option>`;
-    setOptions(subCategorySelect,SelectTitle,[...new Set(optSubCategory)]);
-  
+    setOptions(size ,SelectTitle,[...new Set(optSubCategory)]);
+    /* Size category */
+    let optSize = products.map(obj => obj[mSize]);
+    setOptions(sizeSelect,SelectTitle,[...new Set(optSize)]);
+    /* Size category */
+    let optColor = products.map(obj => obj[mColor]);
+    setOptions(colorSelect,SelectTitle,[...new Set(optColor)]);
+
     mainCategorySelect.addEventListener("change", function() {
         const selectedMainCategory = this.value;
-        subCategorySelect.innerHTML = "<option value=''>Sub Category</option>";
+        subCategorySelect.innerHTML = `<option value="">${mSubCategory}</option>`;
         subCategorySelect.disabled = true;
         sizeSelect.innerHTML = `<option value=''>${mSize}</option>`;
         sizeSelect.disabled = true;
