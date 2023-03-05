@@ -166,7 +166,10 @@ function AddDel(el,products){
                     cat[subCatHeader[j]] = catData[j];
                 }
             }
+            console.log("cat",cat);
+            
             subcategoryImgUrls={...subcategoryImgUrls,...cat};
+            console.log("subcategoryImgUrls:",subcategoryImgUrls);
         }
     }
     let Cat=el.querySelector("#categoriesName").textContent;
@@ -176,9 +179,8 @@ function AddDel(el,products){
         Cat,
         Object.values(headers)[3]
     );
-    let subcatHTML="";
     let num=0;
-    let subCatUrl = Object.values(subCatHeader)[1];
+    let subcatHTML="";
     console.log("subCat",subCat,"\n","subcategoryImgUrls",subcategoryImgUrls);
     subCat.forEach(subCat =>{
         console.log("subCat", subCat,"\n","subCatUrl:",subcategoryImgUrls[num][subCat])
