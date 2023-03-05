@@ -180,7 +180,7 @@ function AddDel(el,products){
     let subcatHTML="";
     let num=0;
     let subCatUrl = Object.values(header)[1];
-    console.log('Sub categories',subcategoryImgUrls)
+    console.log('Sub categories',subCatUrl,"\n",subCat)
     subCat.forEach(subCat =>{
         //console.log("subcat :","\n", subCat,"\n",subcategoryImgUrls[num][Object.values(header)[1]]);
         //console.log('Sub categories',subcategoryImgUrls,cat["categories"]);
