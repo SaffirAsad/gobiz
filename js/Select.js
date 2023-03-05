@@ -29,7 +29,11 @@ function MenuUser(products){
     SelectTitle  = `<option value="">${mMainCategory}</option>`;
     setOptions(mainCategorySelect,SelectTitle,[...new Set(mainCategory)]);
 
-    
+    /* Sub category */
+    let optSubCategory = products.map(obj => obj[mSubCategory]);
+    SelectTitle  = `<option value="">${mMainCategory}</option>`;
+    setOptions(subCategorySelect,SelectTitle,[...new Set(optSubCategory)]);
+  
     mainCategorySelect.addEventListener("change", function() {
         const selectedMainCategory = this.value;
         subCategorySelect.innerHTML = "<option value=''>Sub Category</option>";
@@ -58,10 +62,6 @@ function MenuUser(products){
         }
     });
 
-    /* Sub category */
-    let optSubCategory = products.map(obj => obj[mSubCategory]);
-    SelectTitle  = `<option value="">${mMainCategory}</option>`;
-    setOptions(subCategorySelect,SelectTitle,[...new Set(optSubCategory)]);
 
     subCategorySelect.addEventListener("change", function() {
         const selectedSubCategory = this.value;
