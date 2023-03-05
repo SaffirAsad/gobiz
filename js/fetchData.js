@@ -97,25 +97,25 @@ function CategoryGrid(){
     request.send();
     if (request.status >= 200 && request.status < 400) {
         var data = request.responseText.split('\r\n');
-        let header = data[0].split(',');
+        let catHeader = data[0].split(',');
         //console.log("header :",header);
         let categoryImgUrls = [];
         for (var i = 1; i < data.length; i++) {
             var catData = data[i].split(',');
-            if (catData.length < header.length) {
+            if (catData.length < catHeader.length) {
             continue;
             }
             var cat = {};
-            for (var j = 0; j < header.length; j++) {
+            for (var j = 0; j < catHeader.length; j++) {
                 if(catData[j]!=""){
-                    cat[header[j]] = catData[j];
+                    cat[catHeader[j]] = catData[j];
                 }
             }
             categoryImgUrls.push(cat);
             //console.log("cat :",cat);
         }
         categoryImgUrls.forEach(cat =>{
-            //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
+            console.log('categories',cat[ catHeader[1] ]);
             catHTML+=`
             <div class="w-1/1 lg:w-1/3 p-4" onclick="AddDel(this,products);">
                 <div class="p-4 bg-white shadow-lg rounded-lg">
@@ -150,22 +150,20 @@ function AddDel(el,products){
     url="https://docs.google.com/spreadsheets/d/e/2PACX-1vSXdu2BEMg-HK6vicRYTmIskyAXS4dVKEIzRZFipBBYuwR9k_1bX7Kw_L9jUONWdUSsHhYUZIKDvS6k/pub?gid=325958979&single=true&output=csv";
     request.open('GET', url, false);
     request.send();
-    let header = {};
+    let subCatHeader = {};
     let subcategoryImgUrls = [];
     if (request.status >= 200 && request.status < 400) {
         var data = request.responseText.split('\r\n');
-        header = data[0].split(',');
-        //console.log("header :",header);
-        
+        subCatHeader = data[0].split(',');
         for (var i = 1; i < data.length; i++) {
             var catData = data[i].split(',');
-            if (catData.length < header.length) {
+            if (catData.length < subCatHeader.length) {
             continue;
             }
             var cat = {};
-            for (var j = 0; j < header.length; j++) {
+            for (var j = 0; j < subCatHeader.length; j++) {
                 if(catData[j]!=""){
-                    cat[header[j]] = catData[j];
+                    cat[subCatHeader[j]] = catData[j];
                 }
             }
             subcategoryImgUrls.push(cat);
@@ -181,6 +179,7 @@ function AddDel(el,products){
     let subcatHTML="";
     let num=0;
     let subCatUrl = Object.values(header)[1];
+    console.log("subCat",subCat);
     subCat.forEach(subCat =>{
         //console.log("subcat :","\n", subCat,"\n",subcategoryImgUrls[num][Object.values(header)[1]]);
         //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
