@@ -115,7 +115,7 @@ function CategoryGrid(){
             //console.log("cat :",cat);
         }
         categoryImgUrls.forEach(cat =>{
-            console.log('categories',cat[ catHeader[1] ]);
+            console.log('category:', cat[catHeader[0]] ,"\n","catUrl:", cat[ catHeader[1] ]);
             catHTML+=`
             <div class="w-1/1 lg:w-1/3 p-4" onclick="AddDel(this,products);">
                 <div class="p-4 bg-white shadow-lg rounded-lg">
