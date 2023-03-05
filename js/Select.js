@@ -28,6 +28,9 @@ function MenuUser(products){
     let mainCategory = products.map(obj => obj[mMainCategory]);
     SelectTitle  = `<option value="">${mMainCategory}</option>`;
     setOptions(mainCategorySelect,SelectTitle,[...new Set(mainCategory)]);
+    subCategorySelect.innerHTML = `<option value="">${mSubCategory}</option>`;
+    sizeSelect.innerHTML = `<option value=''>${mSize}</option>`;
+    colorSelect.innerHTML = `<option value=''>${mColor}</option>`;
 
     mainCategorySelect.addEventListener("change", function() {
         const selectedMainCategory = this.value;
