@@ -151,7 +151,7 @@ function AddDel(el,products){
     request.open('GET', url, false);
     request.send();
     let subCatHeader = {};
-    let subcategoryImgUrls = [];
+    subcategoryImgUrls = [];
     if (request.status >= 200 && request.status < 400) {
         var data = request.responseText.split('\r\n');
         subCatHeader = data[0].split(',');
