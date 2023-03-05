@@ -151,7 +151,7 @@ function AddDel(el,products){
     request.open('GET', url, false);
     request.send();
     let subCatHeader = {};
-    subcategoryImgUrls = {};
+    let subcategoryImgUrls = [];
     if (request.status >= 200 && request.status < 400) {
         var data = request.responseText.split('\r\n');
         subCatHeader = data[0].split(',');
@@ -166,12 +166,10 @@ function AddDel(el,products){
                     cat[subCatHeader[j]] = catData[j];
                 }
             }
-            console.log("cat",cat);
-            
-            subcategoryImgUrls={...subcategoryImgUrls,...cat};
-            console.log("subcategoryImgUrls:",subcategoryImgUrls);
+            subcategoryImgUrls.push(cat)
         }
     }
+
     let Cat=el.querySelector("#categoriesName").textContent;
     const subCat = getUniqueValuesForKey(
         products,
@@ -181,9 +179,13 @@ function AddDel(el,products){
     );
     let num=0;
     let subcatHTML="";
+    
+    subcategoryImgUrls = subcategoryImgUrls.reduce((acc, curr) => {
+        return { ...acc, ...curr };
+      }, {});
     console.log("subCat",subCat,"\n","subcategoryImgUrls",subcategoryImgUrls);
     subCat.forEach(subCat =>{
-        console.log("subCat", subCat,"\n","subCatUrl:",subcategoryImgUrls[num][subCat])
+        console.log("subCat", subCat,"\n","subCatUrl:",subcategoryImgUrls[subCat])
         //console.log("subcat :","\n", subCat,"\n",subcategoryImgUrls[num][Object.values(header)[1]]);
         //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
         subcatHTML+=`
@@ -194,7 +196,7 @@ function AddDel(el,products){
                     <h1 id="subCat" style="font-size:40px;">${subCat}<h1>
                 </div>
                 <div class="w-full mb-2">
-                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${subcategoryImgUrls[num][subCat]}" alt="${subCat}">
+                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${subcategoryImgUrls[subCat]}" alt="${subCat}">
                 </div>
             </div>
         </div>
