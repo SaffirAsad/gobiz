@@ -29,16 +29,6 @@ function MenuUser(products){
     SelectTitle  = `<option value="">${mMainCategory}</option>`;
     setOptions(mainCategorySelect,SelectTitle,[...new Set(mainCategory)]);
 
-    /* Sub category */
-    let optSubCategory = products.map(obj => obj[mSubCategory]);
-    setOptions(size ,SelectTitle,[...new Set(optSubCategory)]);
-    /* Size category */
-    let optSize = products.map(obj => obj[mSize]);
-    setOptions(sizeSelect,SelectTitle,[...new Set(optSize)]);
-    /* Size category */
-    let optColor = products.map(obj => obj[mColor]);
-    setOptions(colorSelect,SelectTitle,[...new Set(optColor)]);
-
     mainCategorySelect.addEventListener("change", function() {
         const selectedMainCategory = this.value;
         subCategorySelect.innerHTML = `<option value="">${mSubCategory}</option>`;
