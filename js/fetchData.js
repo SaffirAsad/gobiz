@@ -166,8 +166,8 @@ function AddDel(el,products){
                     cat[subCatHeader[j]] = catData[j];
                 }
             }
-            subcategoryImgUrls.push(cat);
         }
+        subcategoryImgUrls.push(cat);
     }
     let Cat=el.querySelector("#categoriesName").textContent;
     const subCat = getUniqueValuesForKey(
@@ -181,7 +181,7 @@ function AddDel(el,products){
     let subCatUrl = Object.values(subCatHeader)[1];
     console.log("subCat",subCat,"\n","subcategoryImgUrls",subcategoryImgUrls);
     subCat.forEach(subCat =>{
-        console.log("subCat", subCat,"\n","subCatUrl:",subcategoryImgUrls[subCat])
+        console.log("subCat", subCat,"\n","subCatUrl:",subcategoryImgUrls[num][subCat])
         //console.log("subcat :","\n", subCat,"\n",subcategoryImgUrls[num][Object.values(header)[1]]);
         //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
         subcatHTML+=`
@@ -192,7 +192,7 @@ function AddDel(el,products){
                     <h1 id="subCat" style="font-size:40px;">${subCat}<h1>
                 </div>
                 <div class="w-full mb-2">
-                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${subcategoryImgUrls[subCat]}" alt="${subCat}">
+                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${subcategoryImgUrls[num][subCat]}" alt="${subCat}">
                 </div>
             </div>
         </div>
