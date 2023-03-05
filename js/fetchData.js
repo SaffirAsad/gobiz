@@ -179,7 +179,7 @@ function AddDel(el,products){
     );
     let num=0;
     let subcatHTML="";
-    
+    console.log("subCat",subCat,"\n","subcategoryImgUrls",subcategoryImgUrls);
     subcategoryImgUrls = subcategoryImgUrls.reduce((acc, curr) => {
         return { ...acc, ...curr };
       }, {});
