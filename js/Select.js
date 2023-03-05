@@ -58,6 +58,11 @@ function MenuUser(products){
         }
     });
 
+    /* Sub category */
+    let optSubCategory = products.map(obj => obj[mSubCategory]);
+    SelectTitle  = `<option value="">${mMainCategory}</option>`;
+    setOptions(subCategorySelect,SelectTitle,[...new Set(optSubCategory)]);
+
     subCategorySelect.addEventListener("change", function() {
         const selectedSubCategory = this.value;
         sizeSelect.innerHTML = `<option value=''>${mSize}</option>`;
