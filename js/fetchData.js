@@ -215,6 +215,9 @@ function AddDel(el,products){
     shop.append(session_subCat);
     shop.append(section_category);
     shop.append(section_products);
+
+    // scroll to the sub categories session
+    section_category.scrollIntoViewIfNeeded()
 };
 function AddDelsub(subCatel,products){
     CatName=subCatel.querySelector("#Cat").textContent
@@ -274,16 +277,21 @@ function AddDelsub(subCatel,products){
                 <span class="py-1 px-2 bg-red-500 rounded text-xs text-white">Hot</span>
                 <div class="w-full mb-1 mt-1 justify-between items-center">
                     <div>
-                        <h3 id="6257f6f020364_product_name" class="text-sm font-medium">
+                        <h3 id="${product[ProductId]}_product_name" class="text-sm font-medium">
                             ${product[ProductName]}</h3>
-                        <span id="6257f6f020364_subtitle" class="text-xs text-gray-500">${product[company]}</span>
+                        <span id="${product[ProductId]}_subtitle" class="text-xs text-gray-500">${product[company]}</span>
                     </div>
                 </div>
                 <div class="w-full mb-1 justify-between items-center">
-                    <h4 class="text-sm mb-3 font-bold"><span id="6257f6f020364_currency">$</span> <span id="6257f6f020364_price">${product[price]}</span>
+                    <h4 class="text-sm mb-3 font-bold">
+                        <span id="${product[ProductId]}_currency">$</span> 
+                        <span id="${product[ProductId]}_price">${product[price]}</span>
                     </h4>
-                    <a onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart('6257f6f020364')" 
+                    <a onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart('${product[ProductId]}')" 
                     class="py-2 px-4 bg-blue-500 hover:bg-blue-600 rounded text-md text-white transition duration-200">Add			   </a>
+                    <div class="p-add-fav">
+                        <i id="p-Technology" class="fa-regular fa-heart" onclick="favorite('p-Technology')"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -312,4 +320,5 @@ function AddDelsub(subCatel,products){
     shop.append(section_products);
     shop.append(session_subCat);
     shop.append(section_category);
+    section_products.scrollIntoViewIfNeeded()
 }
