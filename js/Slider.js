@@ -1,4 +1,4 @@
-function sliderMaker(slider, images){
+function sliderMaker(slider, images,pid){
   // Get the slider container and slider track elements
   const sliderContainer = slider;
   const sliderTrack = slider.querySelector(".slider-track");
@@ -6,8 +6,10 @@ function sliderMaker(slider, images){
   const sliderBtnNext = slider.querySelector(".slider-btn-next");
   //console.log("slider",slider);
   // Loop through the image URLs in the object and create img elements
+  let s=0;
   for (let image in images) {
     const img = document.createElement("img");
+    if (s==0){img.setAttribute("id", `${pid}_product_image`);}
     img.setAttribute("src", images[image]);
     sliderTrack.appendChild(img);
   }
