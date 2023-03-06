@@ -56,16 +56,17 @@ function ProductGrid(products,headers,min, max){
                         <span class="py-1 px-2 bg-red-500 rounded text-xs text-white">Hot</span>
                         <div class="w-full mb-1 mt-1 justify-between items-center">
                             <div>
-                                <h3 id="6257f6f020364_product_name" class="text-sm font-medium">
-                                    ${product[ProductName]}</h3>
-                                <span id="6257f6f020364_subtitle" class="text-xs text-gray-500">${product[company]}</span>
+                                <h3 id="${product[ProductId]}_product_name" class="text-sm font-medium">${product[ProductName]}</h3>
+                                <span id="${product[ProductId]}_subtitle" class="text-xs text-gray-500">${product[company]}</span>
                             </div>
                         </div>
                         <div class="w-full mb-1 justify-between items-center">
-                            <h4 class="text-sm mb-3 font-bold"><span id="6257f6f020364_currency">$</span> <span id="6257f6f020364_price">${product[price]}</span>
+                            <h4 class="text-sm mb-3 font-bold">
+                            <span id="${product[ProductId]}_currency">$</span> 
+                            <span id="${product[ProductId]}_price">${product[price]}</span>
                             </h4>
-                            <a onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart('6257f6f020364')" 
-                            class="py-2 px-4 bg-blue-500 hover:bg-blue-600 rounded text-md text-white transition duration-200">Add			   </a>
+                            <a onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart(${product[ProductId]})" 
+                            class="py-2 px-4 bg-blue-500 hover:bg-blue-600 rounded text-md text-white transition duration-200">Add</a>
                         </div>
                     </div>
                 </div>
@@ -123,7 +124,7 @@ function CategoryGrid(){
                         <h1 id="categoriesName" style="font-size:40px;">${cat["categories"]}<h1>
                     </div>
                     <div class="w-full mb-2">
-                        <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${cat["categoryUrl"]}" alt="${cat["categories"]}">
+                        <img class="rounded pb-2" src="${cat["categoryUrl"]}" alt="${cat["categories"]}">
                     </div>
                 </div>
             </div>
@@ -198,7 +199,7 @@ function AddDel(el,products){
                     <h1 id="subCat" style="font-size:40px;">${subCat}<h1>
                 </div>
                 <div class="w-full mb-2">
-                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${FiltredSubCat[subCat]}" alt="${subCat}">
+                    <img class="rounded pb-2" src="${FiltredSubCat[subCat]}" alt="${subCat}">
                 </div>
             </div>
         </div>
