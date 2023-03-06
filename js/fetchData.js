@@ -195,7 +195,7 @@ function AddDel(el,products){
                     <h1 id="subCat" style="font-size:40px;">${subCat}<h1>
                 </div>
                 <div class="w-full mb-2">
-                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${FiltredSubCat[num][subCat]}" alt="${subCat}">
+                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${FiltredSubCat[num][subCatHeader[1]]}" alt="${subCat}">
                 </div>
             </div>
         </div>
