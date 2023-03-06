@@ -181,10 +181,13 @@ function AddDel(el,products){
     let subcatHTML="";
 
     console.log("subCat",subCat,"\n","subcategoryImgUrls",subcategoryImgUrls);
-    const FiltredSubCat = subcategoryImgUrls.filter(item => subCat.includes(item.sub));
+    let FiltredSubCat = subcategoryImgUrls.reduce((acc, { sub, suburls }) => {
+        acc[sub] = suburls;
+        return acc;
+    }, {});
     console.log("FiltredSubCat",FiltredSubCat);
     subCat.forEach(subCat =>{
-        console.log("subCat", subCat,"\n","subCatUrl:",FiltredSubCat[num][subCat])
+        console.log("subCat", subCat,"\n","subCatUrl:",FiltredSubCat[subCat])
         //console.log("subcat :","\n", subCat,"\n",subcategoryImgUrls[num][Object.values(header)[1]]);
         //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
         subcatHTML+=`
@@ -195,7 +198,7 @@ function AddDel(el,products){
                     <h1 id="subCat" style="font-size:40px;">${subCat}<h1>
                 </div>
                 <div class="w-full mb-2">
-                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${FiltredSubCat[num][subCatHeader[1]]}" alt="${subCat}">
+                    <img class="rounded pb-2" id="6257f6f01d1e1_product_image" src="${FiltredSubCat[subCatHeader[1]]}" alt="${subCat}">
                 </div>
             </div>
         </div>
