@@ -217,7 +217,7 @@ function AddDel(el,products){
     shop.append(section_products);
 
     // scroll to the sub categories session
-    setTimeout(()=>{ section_category.scrollIntoView() },300)
+    setTimeout(()=>{ section_category.scrollIntoView() },900)
 };
 function AddDelsub(subCatel,products){
     CatName=subCatel.querySelector("#Cat").textContent
@@ -320,5 +320,5 @@ function AddDelsub(subCatel,products){
     shop.append(section_products);
     shop.append(session_subCat);
     shop.append(section_category);
-    setTimeout(()=>{ section_products.scrollIntoView() },300)
+    setTimeout(()=>{ section_products.scrollIntoView() },900)
 }
