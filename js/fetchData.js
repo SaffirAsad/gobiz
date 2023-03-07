@@ -218,7 +218,7 @@ function AddDel(el,products){
     shop.append(section_products);
 
     // scroll to the sub categories session
-    Interval = setInterval(()=>{scrollFromTo(".SubCategories",".Filtred-Products");clearInterval(Interval)},1500)
+    setTimeout(()=>{scrollFromTo(".SubCategories",".Filtred-Products");},1500);
     
 };
 function AddDelsub(subCatel,products){
@@ -319,7 +319,7 @@ function AddDelsub(subCatel,products){
     shop.append(section_products);
     shop.append(session_subCat);
     shop.append(section_category);
-    Interval = setInterval(()=>{scrollFromTo(".SubCategories",".Filtred-Products");clearInterval(Interval)},1500) 
+    setTimeout(()=>{scrollFromTo(".SubCategories",".Filtred-Products");},1500);
 }
 function scrollFromTo(FromEl, ToEl){
     $(document).ready(function() {
