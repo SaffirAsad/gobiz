@@ -55,13 +55,17 @@ function ProductGrid(products,headers,min, max){
                         </div>
                         <span class="py-1 px-2 bg-red-500 rounded text-xs text-white">Hot</span>
                         
-                        <div class="w-full mb-1 justify-between items-center">
-                            <h4 class="text-sm mb-3 font-bold">
-                            <span id="${product[ProductId]}_currency">$</span> 
-                            <span id="${product[ProductId]}_price">${product[price]}</span>
+                        <div class="p-card-footer">
+                            <div class="p-add-shop">
+                                <button class="btn" onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart('${product[ProductId]}')">Add</button>
+                            </div>
+                            <h4 style="display: flex; width:auto">
+                                <span id="${product[ProductId]}_currency">$</span>
+                                <div id="${product[ProductId]}_price">${product[price]}</div>
                             </h4>
-                            <a onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart(${product[ProductId]})" 
-                            class="py-2 px-4 bg-blue-500 hover:bg-blue-600 rounded text-md text-white transition duration-200">Add</a>
+                            <div class="p-add-fav">
+                                <i id="${product[ProductId]}_favorite" class="fa-regular fa-heart" onclick="favorite('${product[ProductId]}_favorite')"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -276,25 +280,15 @@ function AddDelsub(subCatel,products){
                         <span id="${product[ProductId]}_subtitle" class="text-xs text-gray-500">${product[company]}</span>
                     </div>
                 </div>
-                <div class="w-full mb-1 justify-between items-center">
-                    <h4 class="text-sm mb-3 font-bold">
-                        <span id="${product[ProductId]}_currency">$</span> 
-                        <span id="${product[ProductId]}_price">${product[price]}</span>
-                    </h4>
-                    <a onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart('${product[ProductId]}')" 
-                    class="py-2 px-4 bg-blue-500 hover:bg-blue-600 rounded text-md text-white transition duration-200">Add			   </a>
-                    <div class="p-add-fav">
-                        <i id="p-Technology" class="fa-regular fa-heart" onclick="favorite('p-Technology')"></i>
-                    </div>
-                </div>
+                
                 <div class="p-card-footer">
                     <div class="p-add-shop">
-                        <button class="btn" onclick="addToCart('${product[ProductId]}')">Add</button>
+                        <button class="btn" onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart('${product[ProductId]}')">Add</button>
                     </div>
-                    <div style="display: flex;width:auto">
-                        <span id="pid_0000002_currency">$</span>
-                        <div class="p-price">80</div>
-                    </div>
+                    <h4 style="display: flex; width:auto">
+                        <span id="${product[ProductId]}_currency">$</span>
+                        <div id="${product[ProductId]}_price">${product[price]}</div>
+                    </h4>
                     <div class="p-add-fav">
                         <i id="${product[ProductId]}_favorite" class="fa-regular fa-heart" onclick="favorite('${product[ProductId]}_favorite')"></i>
                     </div>
