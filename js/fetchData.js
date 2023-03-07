@@ -220,7 +220,7 @@ function AddDel(el,products){
     // scroll to the sub categories session
     let scrollh = session_subCat.scrollHeight
     console.log("scrollh",scrollh);
-    setTimeout(()=>{ window.scrollTo(0,session_subCat.scrollHeight) },900)
+    a = setInterval(()=>{ session_subCat.scrollIntoView();clearInterval(a) },500);
 };
 function AddDelsub(subCatel,products){
     CatName=subCatel.querySelector("#Cat").textContent
