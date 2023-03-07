@@ -54,12 +54,7 @@ function ProductGrid(products,headers,min, max){
                             <button class="slider-btn slider-btn-next" style="border: solid;">&gt;</button>
                         </div>
                         <span class="py-1 px-2 bg-red-500 rounded text-xs text-white">Hot</span>
-                        <div class="w-full mb-1 mt-1 justify-between items-center">
-                            <div>
-                                <h3 id="${product[ProductId]}_product_name" class="text-sm font-medium">${product[ProductName]}</h3>
-                                <span id="${product[ProductId]}_subtitle" class="text-xs text-gray-500">${product[company]}</span>
-                            </div>
-                        </div>
+                        
                         <div class="w-full mb-1 justify-between items-center">
                             <h4 class="text-sm mb-3 font-bold">
                             <span id="${product[ProductId]}_currency">$</span> 
