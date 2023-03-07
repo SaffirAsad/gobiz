@@ -48,7 +48,7 @@ function ProductGrid(products,headers,min, max){
                     <div class="p-4 bg-white shadow-lg rounded-lg">
                         <div id="slider-container-${count}" class="slider-container" style="height: 449.649px;">
                             <div class="slider">
-                                <div class="slider-track" style="width: 300px; transform: translateX(-100%);"></div>
+                                <div class="slider-track" style="display: flex; justify-content: center; align-items: center; width: 300px; transform: translateX(-100%);"></div>
                             </div>
                             <button class="slider-btn slider-btn-prev" style="border: solid;">&lt;</button>
                             <button class="slider-btn slider-btn-next" style="border: solid;">&gt;</button>
@@ -268,7 +268,7 @@ function AddDelsub(subCatel,products){
             <div class="p-4 bg-white shadow-lg rounded-lg">
                 <div id="slider-container-${count}" class="slider-container" style="height: 449.649px;">
                     <div class="slider">
-                        <div class="slider-track" style="width: 300px; transform: translateX(-100%);"></div>
+                        <div class="slider-track" style="display: flex; justify-content: center; align-items: center; width: 300px; transform: translateX(-100%);"></div>
                     </div>
                     <button class="slider-btn slider-btn-prev" style="border: solid;">&lt;</button>
                     <button class="slider-btn slider-btn-next" style="border: solid;">&gt;</button>
@@ -321,11 +321,11 @@ function AddDelsub(subCatel,products){
     shop.append(section_category);
     setTimeout(()=>{scrollFromTo(".SubCategories",".Filtred-Products");},1500);
 }
-function scrollFromTo(FromEl, ToEl){
+function scrollFromTo(el1, el2){
     $(document).ready(function() {
-        $(FromEl).click(function() {
+        $(el1).click(function() {
           $('html, body').animate({
-              scrollTop: $(ToEl).offset().top
+              scrollTop: $(el2).offset().top
           }, 1000);
         });
     });
