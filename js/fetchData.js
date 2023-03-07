@@ -291,6 +291,7 @@ function AddDelsub(subCatel,products){
                     <div class="p-add-shop">
                         <button class="btn" onclick="addToCart('${product[ProductId]}')">Add</button>
                     </div>
+                    <span id="${product[ProductId]}_currency">$</span> 
                     <div class="p-price">${product[price]}</div>
                     <div class="p-add-fav">
                         <i id="${product[ProductId]}_favorite" class="fa-regular fa-heart" onclick="favorite('${product[ProductId]}_favorite')"></i>
