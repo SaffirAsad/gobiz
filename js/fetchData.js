@@ -218,9 +218,8 @@ function AddDel(el,products){
     shop.append(section_products);
 
     // scroll to the sub categories session
-    let scrollh = session_subCat.scrollHeight
-    console.log("scrollh",scrollh);
-    scrollFromTo(section_category,session_subCat)
+    scrollFromTo(".Categories",".SubCategories")
+    
 };
 function AddDelsub(subCatel,products){
     CatName=subCatel.querySelector("#Cat").textContent
@@ -247,9 +246,6 @@ function AddDelsub(subCatel,products){
         `;
         
     });
-
-    //////////////////
-
     var Owner = Object.values(headers)[0];	
     var ProductName = Object.values(headers)[1];
     var	MainCategory = Object.values(headers)[2];	
@@ -323,14 +319,14 @@ function AddDelsub(subCatel,products){
     shop.append(section_products);
     shop.append(session_subCat);
     shop.append(section_category);
-    scrollFromTo(session_subCat,section_products)
+    scrollFromTo(".SubCategories",".Filtred-Products")
 }
-function scrollFromTo(From, To){
+function scrollFromTo(FromEl, ToEl){
     $(document).ready(function() {
-        From.click(function() {
+        $(FromEl).click(function() {
           $('html, body').animate({
-              scrollTop: To.offset().top
-          }, 1000); // The animation will take 1000ms (1 second)
+              scrollTop: $(ToEl).offset().top
+          }, 1500);
         });
     });
 }
