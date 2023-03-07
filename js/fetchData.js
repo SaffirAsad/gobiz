@@ -319,7 +319,7 @@ function AddDelsub(subCatel,products){
     shop.append(section_products);
     shop.append(session_subCat);
     shop.append(section_category);
-    setTimeout(()=>{scrollFromTo(".SubCategories",".Filtred-Products");},1500);
+
 }
 function scrollFromTo(el1, el2){
     $(document).ready(function() {
@@ -330,3 +330,9 @@ function scrollFromTo(el1, el2){
         });
     });
 }
+setTimeout(()=>{
+    scrollFromTo(".Categories",".SubCategories")
+},1500);
+setTimeout(()=>{
+    scrollFromTo(".SubCategories",".Filtred-Products")
+},1500);
