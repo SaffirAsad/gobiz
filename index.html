@@ -5,79 +5,63 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://apis.google.com/js/api.js"></script>
     <script>
-      // Client ID and API key from the Developer Console
-      var CLIENT_ID = '110414588798816752291';
-      var API_KEY = '159cfafa1f542557ed32d5e71d9f4f3fc37ddc2d';
-
-      // Array of API discovery doc URLs for APIs used by the application
-      var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
-
-      // Authorization scopes required by the API; multiple scopes can be
-      // included, separated by spaces.
-      var SCOPES = "https://www.googleapis.com/auth/spreadsheets";
+      var CLIENT_EMAIL = 'goobiz@goobiz.iam.gserviceaccount.com';
+      var PRIVATE_KEY = '091c70bf31e06aca8f6c53e14146ff8c6eae1d5d';
+      var SPREADSHEET_ID = '1ywCRiYUUUTRF1RiwQ7XMt2-4IiQpceQTlKzOO1l_3kc';
 
       var authorizeButton = $('#authorize-button');
-      var signoutButton = $('#signout-button');
 
       function handleClientLoad() {
-        gapi.load('client:auth2', initClient);
-      }
-
-      function initClient() {
         gapi.client.init({
-          apiKey: API_KEY,
-          clientId: CLIENT_ID,
-          discoveryDocs: DISCOVERY_DOCS,
-          scope: SCOPES
-        }).then(function () {
-          // Listen for sign-in state changes.
-          gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-
-          // Handle the initial sign-in state.
-          updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-          authorizeButton.click(handleAuthClick);
-          signoutButton.click(handleSignoutClick);
-        }, function(error) {
-          console.log(JSON.stringify(error, null, 2));
+          apiKey: '',
+          clientId: '',
+          discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
+          scope: 'https://www.googleapis.com/auth/spreadsheets'
+        }).then(function() {
+          gapi.auth2.getAuthInstance().signIn({
+            'mode': 'SERVER',
+            'client_id': '',
+            'ux_mode': 'redirect',
+            'redirect_uri': '',
+            'login_hint': '',
+            'prompt': '',
+            'scope': '',
+            'response_type': '',
+            'access_type': ''
+          }).then(function() {
+            authorizeButton.hide();
+          });
         });
       }
 
-      function updateSigninStatus(isSignedIn) {
-        if (isSignedIn) {
-          authorizeButton.hide();
-          signoutButton.show();
-        } else {
-          authorizeButton.show();
-          signoutButton.hide();
-        }
-      }
-
-      function handleAuthClick(event) {
-        gapi.auth2.getAuthInstance().signIn();
-      }
-
-      function handleSignoutClick(event) {
-        gapi.auth2.getAuthInstance().signOut();
-      }
-
       function appendRow() {
-        gapi.client.sheets.spreadsheets.values.append({
-          spreadsheetId: '<YOUR_SPREADSHEET_ID>',
-          range: 'Sheet1!A1:E1',
-          valueInputOption: 'USER_ENTERED',
-          insertDataOption: 'INSERT_ROWS',
-          resource: { values: [['input1', 'input2', 'input3', 'input4']] },
-        }).then(function(response) {
-          console.log(response.result);
-        }, function(error) {
-          console.log(JSON.stringify(error, null, 2));
+        gapi.client.init({
+          'apiKey': '',
+          'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+          'clientId': '',
+          'scope': 'https://www.googleapis.com/auth/spreadsheets'
+        }).then(function() {
+          gapi.client.setToken({
+            'access_token': ''
+          });
+
+          gapi.client.sheets.spreadsheets.values.append({
+            spreadsheetId: SPREADSHEET_ID,
+            range: 'Sheet1!A1:E1',
+            valueInputOption: 'USER_ENTERED',
+            insertDataOption: 'INSERT_ROWS',
+            resource: { values: [['input1', 'input2', 'input3', 'input4']] },
+          }).then(function(response) {
+            console.log(response.result);
+          }, function(error) {
+            console.log(JSON.stringify(error, null, 2));
+          });
         });
       }
     </script>
   </head>
   <body>
     <button id="authorize-button">Authorize</button>
-    <button id="signout-button" style="display: none;">Sign Out</button>
     <button onclick="appendRow()">Append Row</button>
     <script async defer src="https://apis.google.com/js/api.js"
         onload="this.onload=function(){};handleClientLoad()"
