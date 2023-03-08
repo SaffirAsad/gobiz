@@ -8,7 +8,9 @@
       var CLIENT_EMAIL = 'goobiz@goobiz.iam.gserviceaccount.com';
       var PRIVATE_KEY = '091c70bf31e06aca8f6c53e14146ff8c6eae1d5d';
       var SPREADSHEET_ID = '1ywCRiYUUUTRF1RiwQ7XMt2-4IiQpceQTlKzOO1l_3kc';
-
+      fetch('./credentials.json')
+        .then((response) => response.json())
+        .then((json) => myKey=json);
       var authorizeButton = $('#authorize-button');
 
       function handleClientLoad() {
