@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Sheets API Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+
+      fetch('./credentials.json')
+        .then((response) => response.json())
+        .then((json) => myKey=json);
+      var CLIENT_EMAIL = myKey.client_email;
+      var PRIVATE_KEY = myKey.private_key;
+      var SPREADSHEET_ID = '1ywCRiYUUUTRF1RiwQ7XMt2-4IiQpceQTlKzOO1l_3kc';
+
+      
+      var authorizeButton = $('#authorize-button');
+
+      function handleClientLoad() {
+        gapi.client.init({
+          apiKey: '',
+          clientId: '',
+          discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
+          scope: 'https://www.googleapis.com/auth/spreadsheets'
+        }).then(function() {
+          gapi.auth2.getAuthInstance().signIn({
+            'mode': 'SERVER',
+            'client_id': '',
+            'ux_mode': 'redirect',
+            'redirect_uri': '',
+            'login_hint': '',
+            'prompt': '',
+            'scope': '',
+            'response_type': '',
+            'access_type': ''
+          }).then(function() {
+            authorizeButton.hide();
+          });
+        });
+      }
+
+      function appendRow() {
+        gapi.client.init({
+          'apiKey': '',
+          'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+          'clientId': '',
+          'scope': 'https://www.googleapis.com/auth/spreadsheets'
+        }).then(function() {
+          gapi.client.setToken({
+            'access_token': ''
+          });
+
+          gapi.client.sheets.spreadsheets.values.append({
+            spreadsheetId: SPREADSHEET_ID,
+            range: 'Sheet1!A1:E1',
+            valueInputOption: 'USER_ENTERED',
+            insertDataOption: 'INSERT_ROWS',
+            resource: { values: [['input1', 'input2', 'input3', 'input4']] },
+          }).then(function(response) {
+            console.log(response.result);
+          }, function(error) {
+            console.log(JSON.stringify(error, null, 2));
+          });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <button id="authorize-button">Authorize</button>
+    <button onclick="appendRow()">Append Row</button>
+    <script async defer src="https://apis.google.com/js/api.js"
+        onload="this.onload=function(){};handleClientLoad()"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+  </body>
+</html>
