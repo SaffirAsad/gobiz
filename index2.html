@@ -10,19 +10,18 @@
       <input type="tel" name="phone" placeholder="Phone">
       <textarea name="message" placeholder="Message"></textarea>
       <button type="submit">Submit</button>
-    </form>    
+    </form>
     <script>
       document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the form from submitting normally
         var form = event.target;
-        var url = "https://script.google.com/macros/s/AKfycbwYPU8Ch4B-moYrEKhMhf9mUGh7Rw2kSkH4BszN1yScEtgOvljTmLuP4n_5mAiTzEg-Cg/exec";
+        var url = "https://your-web-app-url";
         var xhr = new XMLHttpRequest();
         xhr.open("GET", url + "?" + new FormData(form).toString());
         xhr.send();
         alert("Data saved successfully.");
         form.reset(); // Clear the form inputs
       });
-
     </script>
   </body>
 </html>
