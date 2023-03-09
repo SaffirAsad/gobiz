@@ -66,7 +66,7 @@ CategoryGrid();
 
 // Form submit and save Data to google sheets
 function saveData(name,phone,email){
-  console.log(name,email,phone);
+  console.log("saveData:",name,email,phone);
   var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
   var form = new FormData();
   form.append("name", name);
