@@ -453,13 +453,14 @@
                 }
             })
             $("#cus_name").change(function(){
-                $("#contact-form>input[name='name']").value = $("#cus_name").value
+                $("#contact-form>input[name='name']").value = $("#cus_name").value;
+                console.log("changed!")
             });
             $("#cus_mobile").change(function(){
-                $("#contact-form>input[name='email']").value = $("#cus_mobile").value
+                $("#contact-form>input[name='email']").value = $("#cus_mobile").value;
             });
             $("#cus_address").change(function(){
-                $("#contact-form>input[name='phone']").value = $("#cus_address").value
+                $("#contact-form>input[name='phone']").value = $("#cus_address").value;
             });
         }
 
