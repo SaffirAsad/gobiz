@@ -11,6 +11,23 @@
       <textarea name="message" placeholder="Message"></textarea>
       <button type="submit">Submit</button>
     </form>
-    
+    <form id="contact-form" method="get">
+      <input type="text" name="name" placeholder="Name">
+      <input type="email" name="email" placeholder="Email">
+      <input type="tel" name="phone" placeholder="Phone">
+      <textarea name="message" placeholder="Message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      $("#contact-form").submit(function(event) {
+        event.preventDefault();
+        var form = $(this);
+        var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
+        $.get(url, form.serialize(), function(data) {
+          alert("Data saved successfully 2.");
+          form.trigger("reset");
+        });
+      });
+    </script>    
   </body>
 </html>
