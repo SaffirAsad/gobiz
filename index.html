@@ -442,7 +442,6 @@
                         document.getElementById('cus_mobile').value,
                         document.getElementById('cus_address').value
                     ];
-                    console.log("Logs",customerDetails[0],customerDetails[1],customerDetails[2]);
                     saveData(customerDetails[0],customerDetails[1],customerDetails[2]);
                     createWhatsAppLink(customerDetails);
 
@@ -454,20 +453,7 @@
 
         function createWhatsAppLink(cusDetails) {
             "use strict";
-            $("#contact-form").submit(function(event) {
-                event.preventDefault();
-                var form = $(this);
-                var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
-                $.get(url, form.serialize(), function(data) {
-                  console.log("Data saved successfully.",data,"\n",this);
-                  form.trigger("reset");
-                });
-            });
             if (cusDetails[0].length >= 3 && cusDetails[0].length >= 4 && cusDetails[0].length >= 3) {
-                //save data to google Sheets
-                $("#contact-form>input[name='name']").value = $("#cus_name").value;
-                $("#contact-form>input[name='email']").value = $("#cus_mobile").value;
-                $("#contact-form>input[name='phone']").value = $("#cus_address").value;
 
                 var productsList = "\n- - - - - - - - - - - - - - - - - - - -\n";
                 productsList += "📦 *`Order Details:`* \n";

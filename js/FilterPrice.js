@@ -50,7 +50,7 @@ function Search(products){
     
     inputEl=document.querySelectorAll("input");
     price=validateRange(parseInt(inputEl[0].value), parseInt(inputEl[1].value));
-    console.log("FiltedProducts:\n",FiltedProducts,price.min, price.max);
+    //console.log("FiltedProducts:\n",FiltedProducts,price.min, price.max);
     ProductGrid(FiltedProducts,headers,price.min, price.max)
     let shop=document.querySelector("#shop");
     let session_subCat=document.querySelector(".SubCategories")
@@ -66,7 +66,6 @@ CategoryGrid();
 
 // Form submit and save Data to google sheets
 function saveData(name,phone,email){
-  
   var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
   var form = new FormData();
   form.append("name", name);
@@ -74,17 +73,7 @@ function saveData(name,phone,email){
   form.append("phone", email);
   /// jquery post
   data = `name=${name}&phone=${phone}&email=${email}`
-  console.log("saveData:",name,email,phone,"\n",form.toString(),form);
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url + "?" + data);
   xhr.send();
 }
-$("#contact-form").click(function(event) {
-  event.preventDefault();
-  var form = $(this);
-  var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
-  $.get(url, form.serialize(), function(data) {
-    console.log("Data saved successfully 2.");
-    form.trigger("reset");
-  });
-});
