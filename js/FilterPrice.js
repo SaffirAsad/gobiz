@@ -72,8 +72,7 @@ function saveData(name,phone,email){
   form.append("email", phone);
   form.append("phone", email);
   /// jquery post
-  $.get(url, form, function(responseData) {
-    alert("Data saved successfully.",responseData);
-    //form.trigger("reset");
-  });
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", url);
+  xhr.send(form);
 }
