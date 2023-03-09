@@ -487,7 +487,7 @@
 
                 var waShareContent = "🎉 *`New Order`* \n";
                 waShareContent = waShareContent + productsList + customerDetails + "*" + whatsAppMessage + "*";
-                $("#contact-form>button").click();
+                //$("#contact-form>button").click();
                 console.log("Click submit!")
                 var link = "https://api.whatsapp.com/send/?phone=" + whatsAppNumber + "&text=" + encodeURI(waShareContent);
                 //window.open(link, '_blank');
