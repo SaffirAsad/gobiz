@@ -73,6 +73,6 @@ function saveData(name,phone,email){
   form.append("phone", email);
   /// jquery post
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", url);
-  xhr.send(form);
+  xhr.open("GET", url + "?" + form.toString());
+  xhr.send();
 }
