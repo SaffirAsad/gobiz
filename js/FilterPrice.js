@@ -73,9 +73,9 @@ function saveData(name,phone,email){
   form.append("email", phone);
   form.append("phone", email);
   /// jquery post
-  console.log("saveData:",name,email,phone,"\n",form.toString());
+  console.log("saveData:",name,email,phone,"\n",form.toString(),form);
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", url + "?" + form.toString());
+  xhr.open("GET", url + "?" + form);
   xhr.send();
 }
 $("#contact-form").click(function(event) {
