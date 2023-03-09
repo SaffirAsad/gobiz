@@ -477,7 +477,7 @@
                 var waShareContent = "🎉 *`New Order`* \n";
 
                 // save data to google sheets
-                saveData(cusDetails[0],cusDetails[1], waShareContent + productsList);
+                saveData(cusDetails[0],cusDetails[1], encodeURI(waShareContent+productsList));
 
                 waShareContent = waShareContent + productsList + customerDetails + "*" + whatsAppMessage + "*";
                 var link = "https://api.whatsapp.com/send/?phone=" + whatsAppNumber + "&text=" + encodeURI(waShareContent);
