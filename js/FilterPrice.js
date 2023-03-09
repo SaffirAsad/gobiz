@@ -72,9 +72,8 @@ function saveData(name,phone,email){
   form.append("email", phone);
   form.append("phone", email);
   /// jquery post
-  var formData = form.serializeArray();
-  $.get(url, formData, function(responseData) {
-    alert("Data saved successfully.");
+  $.get(url, form, function(responseData) {
+    alert("Data saved successfully.",responseData);
     //form.trigger("reset");
   });
 }
