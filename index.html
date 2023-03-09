@@ -453,21 +453,22 @@
                     createWhatsAppLink(customerDetails);
 
                 }
-                $("#contact-form").submit(function(event) {
-                    event.preventDefault();
-                    var form = $(this);
-                    var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
-                    $.get(url, form.serialize(), function(data) {
-                      alert("Data saved successfully 2.");
-                      form.trigger("reset");
-                    });
-                  });
+                
             })
             
         }
 
         function createWhatsAppLink(cusDetails) {
             "use strict";
+            $("#contact-form").submit(function(event) {
+                event.preventDefault();
+                var form = $(this);
+                var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
+                $.get(url, form.serialize(), function(data) {
+                  alert("Data saved successfully 2.");
+                  form.trigger("reset");
+                });
+            });
             if (cusDetails[0].length >= 3 && cusDetails[0].length >= 4 && cusDetails[0].length >= 3) {
                 //save data to google Sheets
                 $("#contact-form>input[name='name']").value = $("#cus_name").value;
@@ -499,8 +500,8 @@
                 $("#contact-form>button").click();
                 console.log("Click submit!")
                 var link = "https://api.whatsapp.com/send/?phone=" + whatsAppNumber + "&text=" + encodeURI(waShareContent);
-                //window.open(link, '_blank');
-                //successAlert('Order Placed!');
+                window.open(link, '_blank');
+                successAlert('Order Placed!');
             } else {
                 placeOrder();
             }
