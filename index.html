@@ -427,7 +427,15 @@
 
                     '<label class="mt-4 block text-gray-700 text-sm font-bold mb-2" for="cus_address">Address</label>' +
                     '<input id="cus_address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">' +
-                    '</div>',
+                    '</div>'+
+                    `
+                    <form id="contact-form" method="get" style="visibility:hidden">
+                        <input id="formName" type="text" name="name" placeholder="Name">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="tel" name="phone" placeholder="Phone">
+                        <button type="submit">Submit</button>
+                      </form>
+                    `,
 
                 focusConfirm: false,
                 allowOutsideClick: false,
@@ -444,6 +452,11 @@
                     createWhatsAppLink(customerDetails);
                 }
             })
+            $("#cus_name").change(function(){
+                $("#cus_name")
+              });
+            document.getElementById('cus_mobile').value,
+            document.getElementById('cus_address').value
 
         }
 
