@@ -442,7 +442,6 @@
                         document.getElementById('cus_mobile').value,
                         document.getElementById('cus_address').value
                     ];
-                    saveData(customerDetails[0],customerDetails[1],customerDetails[2]);
                     createWhatsAppLink(customerDetails);
 
                 }
@@ -476,6 +475,10 @@
                 customerDetails += cusDetails[2] + "\n\n";
 
                 var waShareContent = "🎉 *`New Order`* \n";
+
+                // save data to google sheets
+                saveData(cusDetails[0],cusDetails[1], waShareContent + productsList);
+
                 waShareContent = waShareContent + productsList + customerDetails + "*" + whatsAppMessage + "*";
                 var link = "https://api.whatsapp.com/send/?phone=" + whatsAppNumber + "&text=" + encodeURI(waShareContent);
                 window.open(link, '_blank');
