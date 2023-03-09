@@ -15,7 +15,7 @@
       document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the form from submitting normally
         var form = event.target;
-        var url = "https://script.google.com/macros/s/AKfycbwYPU8Ch4B-moYrEKhMhf9mUGh7Rw2kSkH4BszN1yScEtgOvljTmLuP4n_5mAiTzEg-Cg/exec";
+        var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
         var xhr = new XMLHttpRequest();
         xhr.open("GET", url + "?" + new FormData(form).toString());
         xhr.send();
