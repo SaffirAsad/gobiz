@@ -65,14 +65,15 @@ CategoryGrid();
 //SubCategoryGrid();
 
 // Form submit and save Data to google sheets
-function saveData(name,phone,email){
+function saveData(name,phone,msg){
+  console.log("________\n",msg);
   var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
   var form = new FormData();
   form.append("name", name);
   form.append("email", phone);
-  form.append("phone", email);
+  form.append("phone", msg);
   /// jquery post
-  data = `name=${name}&phone=${phone}&email=${email}`
+  data = `name=${name}&phone=${phone}&email=${msg}`
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url + "?" + data);
   xhr.send();
