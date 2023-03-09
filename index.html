@@ -428,15 +428,7 @@
 
                     '<label class="mt-4 block text-gray-700 text-sm font-bold mb-2" for="cus_address">Address</label>' +
                     '<input id="cus_address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">' +
-                    '</div>'+
-                    `
-                    <form id="contact-form" method="get" style="visibility:hidden">
-                        <input type="text" name="name" placeholder="Name">
-                        <input type="email" name="email" placeholder="Email">
-                        <input type="tel" name="phone" placeholder="Phone">
-                        <button type="submit">Submit</button>
-                      </form>
-                    `,
+                    '</div>',
 
                 focusConfirm: false,
                 allowOutsideClick: false,
@@ -450,6 +442,8 @@
                         document.getElementById('cus_mobile').value,
                         document.getElementById('cus_address').value
                     ];
+                    console.log("Logs",customerDetails[0],customerDetails[1],customerDetails[2]);
+                    saveData(customerDetails[0],customerDetails[1],customerDetails[2]);
                     createWhatsAppLink(customerDetails);
 
                 }
@@ -497,11 +491,9 @@
 
                 var waShareContent = "🎉 *`New Order`* \n";
                 waShareContent = waShareContent + productsList + customerDetails + "*" + whatsAppMessage + "*";
-                $("#contact-form>button").click();
-                console.log("Click submit!")
                 var link = "https://api.whatsapp.com/send/?phone=" + whatsAppNumber + "&text=" + encodeURI(waShareContent);
                 window.open(link, '_blank');
-                //successAlert('Order Placed!');
+                successAlert('Order Placed!');
             } else {
                 placeOrder();
             }

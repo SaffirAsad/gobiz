@@ -64,4 +64,14 @@ function Search(products){
 CategoryGrid();
 //SubCategoryGrid();
 
-
+// Form submit and save Data to google sheets
+function saveData(name,phone,email){
+  var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
+  var formData = new FormData();
+  formData.append("name", name);
+  formData.append("email", phone);
+  formData.append("phone", email);
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", url);
+  xhr.send(formData);
+}
