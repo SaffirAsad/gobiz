@@ -15,7 +15,7 @@
       $("#contact-form").submit(function(event) {
         event.preventDefault();
         var form = $(this);
-        var url = "https://script.google.com/macros/s/AKfycbymTfI5hYzZRlBGuXGMeFsC3AGIWwBqqsI1RJHfbZxNlghfW7TR9kxmcdyTTsQynvtY/exec";
+        var url = "https://script.google.com/macros/s/AKfycbwhURzAZcWd9yLyjiVbDAUgHYOIVFeOBRxMAunwKOYH34mXaqMEwNJ2FTiGlj5hGgwU/exec";
         $.get(url, form.serialize(), function(data) {
           alert("Data saved successfully website post.");
           form.trigger("reset");
