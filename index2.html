@@ -15,6 +15,7 @@
       $("#contact-form").submit(function(event) {
         event.preventDefault();
         var form = $(this);
+        console.log(form.serialize());
         var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
         $.get(url, form.serialize(), function(data) {
           alert("Data saved successfully 2.");
