@@ -465,7 +465,7 @@
                 var form = $(this);
                 var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
                 $.get(url, form.serialize(), function(data) {
-                  alert("Data saved successfully 2.");
+                  console.log("Data saved successfully.",data,"\n",this);
                   form.trigger("reset");
                 });
             });
@@ -501,7 +501,7 @@
                 console.log("Click submit!")
                 var link = "https://api.whatsapp.com/send/?phone=" + whatsAppNumber + "&text=" + encodeURI(waShareContent);
                 window.open(link, '_blank');
-                successAlert('Order Placed!');
+                //successAlert('Order Placed!');
             } else {
                 placeOrder();
             }
