@@ -66,15 +66,16 @@ CategoryGrid();
 
 // Form submit and save Data to google sheets
 function saveData(name,phone,email){
-  console.log("saveData:",name,email,phone);
+  
   var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
   var form = new FormData();
   form.append("name", name);
   form.append("email", phone);
   form.append("phone", email);
   /// jquery post
+  console.log("saveData:",name,email,phone,"\n",form.toString());
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", url + "?" + new FormData(form).toString());
+  xhr.open("GET", url + "?" + form.toString());
   xhr.send();
 }
 $("#contact-form").click(function(event) {
