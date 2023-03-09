@@ -430,7 +430,7 @@
                     '</div>'+
                     `
                     <form id="contact-form" method="get" style="visibility:hidden">
-                        <input id="formName" type="text" name="name" placeholder="Name">
+                        <input type="text" name="name" placeholder="Name">
                         <input type="email" name="email" placeholder="Email">
                         <input type="tel" name="phone" placeholder="Phone">
                         <button type="submit">Submit</button>
@@ -453,11 +453,14 @@
                 }
             })
             $("#cus_name").change(function(){
-                $("#cus_name")
-              });
-            document.getElementById('cus_mobile').value,
-            document.getElementById('cus_address').value
-
+                $("#contact-form>input[name='name']").value = $("#cus_name").value
+            });
+            $("#cus_mobile").change(function(){
+                $("#contact-form>input[name='email']").value = $("#cus_mobile").value
+            });
+            $("#cus_address").change(function(){
+                $("#contact-form>input[name='phone']").value = $("#cus_address").value
+            });
         }
 
         function createWhatsAppLink(cusDetails) {
