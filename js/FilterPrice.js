@@ -67,7 +67,7 @@ CategoryGrid();
 // Form submit and save Data to google sheets
 function saveData(name,phone,msg){
   console.log("________\n",msg);
-  var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
+  var url = "https://script.google.com/macros/s/AKfycbyy9t0W2SXkXKrUUjdQRud3TX3vLxKWlIchTvbpgnz7ASmrXTkSE4NhjETUX48ITGAT/exec";
   var form = new FormData();
   form.append("name", name);
   form.append("email", phone);
