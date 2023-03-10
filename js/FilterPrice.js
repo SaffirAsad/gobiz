@@ -70,10 +70,10 @@ function saveData(name,phone,msg){
   var url = "https://script.google.com/macros/s/AKfycbyy9t0W2SXkXKrUUjdQRud3TX3vLxKWlIchTvbpgnz7ASmrXTkSE4NhjETUX48ITGAT/exec";
   var form = new FormData();
   form.append("name", name);
-  form.append("email", phone);
-  form.append("phone", msg);
+  form.append("phone", phone);
+  form.append("msg", msg);
   /// jquery post
-  data = `name=${name}&phone=${phone}&email=${msg}`
+  data = `name=${name}&phone=${phone}&msg=${msg}`
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url + "?" + data);
   xhr.send();
