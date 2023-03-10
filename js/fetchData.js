@@ -320,7 +320,7 @@ function AddDelsub(subCatel,products){
     shop.append(section_products);
     shop.append(session_subCat);
     shop.append(section_category);
-
+    checkFavorite()
 }
 function scrollFromTo(el1, el2){
     $(document).ready(function() {
