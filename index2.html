@@ -15,12 +15,36 @@
       $("#contact-form").submit(function(event) {
         event.preventDefault();
         var form = $(this);
-        var url = "https://script.google.com/macros/s/AKfycbzS9_K70JhEtF-V-3mQDbRRYRmstu8mCGr0t4iSv7A5l6aCJFXEhYGsKe6B8BI3uvKA/exec";
+        var url = "https://script.google.com/macros/s/AKfycbzACncFMqMZj5pw1Cl_cZv3mDa9xCScg9oH3jYiFyI6lzrz1bMTs7Yd7PEjWI-aDAkkjQ/exec";
         $.get(url, form.serialize(), function(data) {
           alert("Data saved successfully website post.");
           form.trigger("reset");
         });
       });
-    </script>    
+    </script>  
+    <script>
+      function onSubmit() {
+        var formData = {
+          name: document.getElementById('field1').value,
+          email: document.getElementById('field2').value,
+          phone: document.getElementById('field3').value
+        };
+        google.script.run.appendToSheet(formData);
+      }
+    </script>
+    
+    <form onsubmit="onSubmit()">
+      <label for="field1">Field 1</label>
+      <input type="text" id="field1" name="field1">
+    
+      <label for="field2">Field 2</label>
+      <input type="text" id="field2" name="field2">
+    
+      <label for="field3">Field 3</label>
+      <input type="text" id="field3" name="field3">
+    
+      <button type="submit">Submit</button>
+    </form>
+      
   </body>
 </html>
