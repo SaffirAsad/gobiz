@@ -137,14 +137,6 @@ function CategoryGrid(){
     categories.innerHTML = catHTML;
 }
 
-function loading(){
-    //console.log("AddDel!");
-    const img = document.createElement("img");
-    img.setAttribute("src", "images/loading.gif");
-    img.setAttribute("id", "loading");
-    img.setAttribute("style", "padding:20px; width=20px");
-    document.querySelector("#Results").appendChild(img);
-}
 function AddDel(el,products){
     var request = new XMLHttpRequest();
     url="https://docs.google.com/spreadsheets/d/e/2PACX-1vSXdu2BEMg-HK6vicRYTmIskyAXS4dVKEIzRZFipBBYuwR9k_1bX7Kw_L9jUONWdUSsHhYUZIKDvS6k/pub?gid=325958979&single=true&output=csv";
@@ -337,3 +329,15 @@ setTimeout(()=>{
 setTimeout(()=>{
     scrollFromTo(".SubCategories",".Filtred-Products")
 },1500);
+function loading() {
+  const img = document.createElement("img");
+  img.setAttribute("src", "images/loading.gif");
+  img.setAttribute("id", "loading");
+  img.setAttribute("style", "padding:10px; width:50px; height:50px; display:block; margin:auto;");
+  document.querySelector("#Results").appendChild(img);
+
+  // Remove the image after 2 seconds
+  setTimeout(function() {
+    img.remove();
+  }, 2000);
+}
