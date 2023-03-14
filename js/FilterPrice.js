@@ -65,8 +65,7 @@ CategoryGrid();
 //SubCategoryGrid();
 
 // Form submit and save Data to google sheets
-function saveData(name,phone,msg){
-  console.log("________\n",msg);
+function saveData(name,phone,msg,product_name,product_id){
   var url = "https://script.google.com/macros/s/AKfycbyy9t0W2SXkXKrUUjdQRud3TX3vLxKWlIchTvbpgnz7ASmrXTkSE4NhjETUX48ITGAT/exec";
   var form = new FormData();
   form.append("name", name);
