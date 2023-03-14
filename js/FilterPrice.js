@@ -75,5 +75,6 @@ function saveData(name,phone,products_name,products_id,msg){
   data = `name=${name}&phone=${phone}&products_name=${products_name}&products_id=${products_id}&msg=${msg}`
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url + "?" + data);
-  xhr.send();
+  res = xhr.send();
+  console.log(res ,"\n",`name=${name}&phone=${phone}&products_name=${products_name}&products_id=${products_id}`);
 }
