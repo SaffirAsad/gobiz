@@ -454,7 +454,8 @@
         function createWhatsAppLink(cusDetails) {
             "use strict";
             if (cusDetails[0].length >= 3 && cusDetails[0].length >= 4 && cusDetails[0].length >= 3) {
-
+                var products_name = "";
+                var products_id = "";
                 var productsList = "\n- - - - - - - - - - - - - - - - - - - -\n";
                 productsList += "📦 *`Order Details:`* \n";
 
@@ -462,6 +463,9 @@
                 for (let x = 0; x < cart.length; x++) {
                     var item_cost = Number(cart[x].qty) * Number(cart[x].price);
                     var cart_price = Number(cart[x].price);
+                    products_name += cart[x].product_name+" ;"
+                    products_name += cart[x].product_id+" ;"
+                    console.log("cart[x]:",Object.keys(cart[x]));
                     productsList += cart[x].product_name + "     " + cart[x].qty + " X " + cart_price.toFixed(2) + "     *" + currency + " " + item_cost.toFixed(2) + "* \n";
                     grandTotal += Number(cart[x].price) * cart[x].qty;
                 }
@@ -478,7 +482,7 @@
                 var waShareContent = "🎉 *`New Order`* \n";
 
                 // save data to google sheets
-                saveData(cusDetails[0],cusDetails[1], encodeURI(waShareContent+productsList));
+                saveData(cusDetails[0],cusDetails[1], products_name , products_id , encodeURI(waShareContent+productsList));
 
                 waShareContent = waShareContent + productsList + customerDetails + "*" + whatsAppMessage + "*";
                 var link = "https://api.whatsapp.com/send/?phone=" + whatsAppNumber + "&text=" + encodeURI(waShareContent);
