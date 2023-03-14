@@ -465,7 +465,6 @@
                     var cart_price = Number(cart[x].price);
                     products_name += cart[x].product_name+" ;"
                     products_name += cart[x].product_id+" ;"
-                    console.log("cart[x]:",Object.keys(cart[x]));
                     productsList += cart[x].product_name + "     " + cart[x].qty + " X " + cart_price.toFixed(2) + "     *" + currency + " " + item_cost.toFixed(2) + "* \n";
                     grandTotal += Number(cart[x].price) * cart[x].qty;
                 }
