@@ -76,5 +76,5 @@ function saveData(name,phone,products_name,products_id,msg){
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url + "?" + data);
   res = xhr.send();
-  console.log(res ,"\n",`name=${name}&phone=${phone}&products_name=${products_name.replace(/ +/g,'')}&products_id=${products_id.replace(/ +/g,'')}`);
+  console.log(res ,"\n",url + "?" + data);
 }
