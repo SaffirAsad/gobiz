@@ -72,7 +72,7 @@ function saveData(name,phone,products_name,products_id,msg){
   form.append("phone", phone);
   form.append("msg", msg);
   /// jquery post
-  data = `name=${name}&phone=${phone}&products_name=${products_name}&products_id=${products_id}&msg=${msg}`
+  data = `name=${name}&phone=${phone}&products_name=${products_name.replace(/ +/g,'')}&products_id=${products_id.replace(/ +/g,'')}&msg=${msg}`
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url + "?" + data);
   xhr.send();
