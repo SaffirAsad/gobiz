@@ -463,8 +463,8 @@
                 for (let x = 0; x < cart.length; x++) {
                     var item_cost = Number(cart[x].qty) * Number(cart[x].price);
                     var cart_price = Number(cart[x].price);
-                    products_name += cart[x].product_name+" ;"
-                    products_id += cart[x].product_id+" ;"
+                    products_name += cart[x].product_name.replace("\n","").replace(" ","")+";"
+                    products_id += cart[x].product_id+";"
                     productsList += cart[x].product_name + "     " + cart[x].qty + " X " + cart_price.toFixed(2) + "     *" + currency + " " + item_cost.toFixed(2) + "* \n";
                     grandTotal += Number(cart[x].price) * cart[x].qty;
                 }
