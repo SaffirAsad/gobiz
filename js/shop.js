@@ -102,7 +102,7 @@ function addToFavCart(pid) {
         if (FavCart[index].product_id == pid) {
             FavCart[index].qty = FavCart[index].qty + 1;
             quantity_increment = true;
-            successAlert('Cart updated');
+            successFavAlert('Favorite Cart updated');
             updateFavBadge();
         }
     }
@@ -115,7 +115,7 @@ function addToFavCart(pid) {
             "product_image": product_image,
             "subtitle": subtitle
         });
-        successAlert("Item added to FavCart");
+        successFavAlert("Item added to Favorite Cart");
         updateFavBadge();
     }
     updateFavList();
@@ -189,7 +189,7 @@ function removeFromCart(i) {
             FavCart.push(FavCartList[l])
         }
     }
-    successAlert('Item Removed');
+    successFavAlert('Item Removed');
     updateFavBadge();
     updateFavList();
 }
