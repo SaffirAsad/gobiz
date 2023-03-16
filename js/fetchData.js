@@ -64,7 +64,7 @@ function ProductGrid(products,headers,min, max){
                                 <div id="${product[ProductId]}_price">${product[price]}</div>
                             </h4>
                             <div class="p-add-fav">
-                                <i id="${product[ProductId]}_favorite" class="fa-regular fa-heart" onclick="favorite('${product[ProductId]}_favorite')"></i>
+                                <i id="${product[ProductId]}_favorite" class="fa-regular fa-heart" onclick="favorite('${product[ProductId]}')"></i>
                             </div>
                         </div>
                     </div>
@@ -282,7 +282,7 @@ function AddDelsub(subCatel,products){
                         <div id="${product[ProductId]}_price">${product[price]}</div>
                     </h4>
                     <div class="p-add-fav">
-                        <i id="${product[ProductId]}_favorite" class="fa-regular fa-heart" onclick="favorite('${product[ProductId]}_favorite')"></i>
+                        <i id="${product[ProductId]}_favorite" class="fa-regular fa-heart" onclick="favorite('${product[ProductId]}')"></i>
                     </div>
                 </div>
             </div>
