@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     const closeFav = document.querySelectorAll('.navbar-close');
-    const backdropFav = document.querySelectorAll('.backdropFav');
+    const backdropFav = document.querySelectorAll('.navbar-backdropFav');
     if (closeFav.length) {
         for (var i = 0; i < closeFav.length; i++) {
             closeFav[i].addEventListener('click', function() {
