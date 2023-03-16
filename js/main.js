@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     const closeFav = document.querySelectorAll('.navbar-close');
-    const backdropFav = document.querySelectorAll('.navbar-backdropFav');
+    const backdropFav = document.querySelectorAll('.backdropFav');
     if (closeFav.length) {
         for (var i = 0; i < closeFav.length; i++) {
             closeFav[i].addEventListener('click', function() {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     if (backdropFav.length) {
-        for (var i = 0; i < backdrop.length; i++) {
+        for (var i = 0; i < backdropFav.length; i++) {
             backdropFav[i].addEventListener('click', function() {
                 for (var j = 0; j < menuFav.length; j++) {
                     menuFav[j].classList.toggle('hidden');
