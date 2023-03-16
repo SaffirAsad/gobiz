@@ -133,7 +133,7 @@ function updateFavList() {
         total_price = FavCart[j].qty * Number(FavCart[j].price);
         grandTotal += Number(total_price);
         FavCart_items += `
-                        <div class="p-4 bg-white rounded"><img class="rounded bp-2" src="${FavCart[j].product_image}>
+                        <div class="p-4 bg-white rounded"><img class="rounded bp-2" src="${FavCart[j].product_image}/></div>
                             <div class="flex mb-6 mt-1 justify-between items-center">
                                 <div>
                                     <h3 class="text-sm font-medium">${FavCart[j].product_name}</h3> 
@@ -149,7 +149,6 @@ function updateFavList() {
                                     <div id="${FavCart[j].pid}_price">${FavCart[j].price}</div>
                                 </h4>
                             </div>
-                        </div>';
                         `;
                         }
     $("#FavCart_items").html(FavCart_items);
