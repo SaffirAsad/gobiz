@@ -1,4 +1,5 @@
 const favorite = (id) => {
+    addToFavCart(id);
     const heartIcon = document.getElementById(id);
     if (heartIcon.classList.contains("fa-regular")) {
       heartIcon.classList.remove("fa-regular");
