@@ -128,6 +128,7 @@ function updateFavList() {
     var FavCart_items = "";
     var grandTotal = 0;
     for (let j = 0; j < FavCart.length; j++) {
+        console.log(FavCart)
         var total_price = 0;
         total_price = FavCart[j].qty * Number(FavCart[j].price);
         grandTotal += Number(total_price);
