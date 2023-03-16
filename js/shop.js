@@ -90,6 +90,9 @@ function updateBadge() {
     $("#empty-cart").show();
   }
 }
+
+
+
 function addToFavCart(pid) {
     "use strict";
     var productName = $("#" + pid + "_product_name").text();
@@ -124,25 +127,25 @@ function updateFavList() {
     "use strict";
     var FavCart_items = "";
     var grandTotal = 0;
-    for (let j = 0; j < cart.length; j++) {
+    for (let j = 0; j < FavCart.length; j++) {
         var total_price = 0;
-        total_price = cart[j].qty * Number(cart[j].price);
+        total_price = FavCart[j].qty * Number(FavCart[j].price);
         grandTotal += Number(total_price);
         FavCart_items += `
-                        <div class="p-4 bg-white rounded"><img class="rounded bp-2" src="${cart[j].product_image}>
+                        <div class="p-4 bg-white rounded"><img class="rounded bp-2" src="${FavCart[j].product_image}>
                             <div class="flex mb-6 mt-1 justify-between items-center">
                                 <div>
-                                    <h3 class="text-sm font-medium">${cart[j].product_name}</h3> 
-                                    <span class="text-xs text-gray-500">${cart[j].subtitle}</span>
+                                    <h3 class="text-sm font-medium">${FavCart[j].product_name}</h3> 
+                                    <span class="text-xs text-gray-500">${FavCart[j].subtitle}</span>
                                 </div>
                             </div>
                             <div class="flex mb-2 justify-between items-center"> 
                                 <div class="p-add-shop">
-                                    <button class="btn" onclick="if (!window.__cfRLUnblockHandlers) return false; addToFavCart('${cart[j].pid}')">Add</button>
+                                    <button class="btn" onclick="if (!window.__cfRLUnblockHandlers) return false; addToFavCart('${FavCart[j].pid}')">Add</button>
                                 </div>
                                 <h4 style="display: flex; width:auto">
-                                    <span id="${cart[j].pid}_currency">$</span>
-                                    <div id="${cart[j].pid}_price">${cart[j].price}</div>
+                                    <span id="${FavCart[j].pid}_currency">$</span>
+                                    <div id="${FavCart[j].pid}_price">${FavCart[j].price}</div>
                                 </h4>
                             </div>
                         </div>';
@@ -153,7 +156,7 @@ function updateFavList() {
 
 function updateFavBadge() {
     "use strict";
-    var badgeCount = cart.length;
+    var badgeCount = FavCart.length;
     if (badgeCount > 0) {
         $("#badgeFav").text(badgeCount);
         $("#badgeFav").show();
