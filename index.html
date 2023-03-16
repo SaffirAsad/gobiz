@@ -503,9 +503,7 @@
             */
         }
         
-        function createWhatsAppLink(cusDetails) {
-            "use strict";
-            if (cusDetails[0].length >= 3 && cusDetails[0].length >= 4 && cusDetails[0].length >= 3) {
+        function createWhatsAppLink() {
                 var products_name = "";
                 var products_id = "";
                 var productsList = "\n- - - - - - - - - - - - - - - - - - - -\n";
@@ -543,7 +541,7 @@
                 var link = "https://api.whatsapp.com/send/?phone=" + whatsAppNumber + "&text=" + encodeURI(waShareContent);
                 window.open(link, '_blank');
                 successAlert('Order Placed!');
-            } 
+            }
             /*else {
                 placeOrder();
             }
