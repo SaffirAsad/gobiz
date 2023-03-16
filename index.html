@@ -468,6 +468,7 @@
 
         function placeOrder() {
             createWhatsAppLink();
+        
             /*
             "use strict";
             Swal.fire({
@@ -499,10 +500,8 @@
                 }
                 
             })
-            
             */
         }
-        
         function createWhatsAppLink() {
                 var products_name = "";
                 var products_id = "";
@@ -531,7 +530,7 @@
                 var waShareContent = "🎉 *`New Order`* \n";
 
                 // save data to google sheets
-                saveData(cusDetails[0],cusDetails[1], products_name , products_id , encodeURI(waShareContent+productsList));
+                saveData(products_name , products_id , encodeURI(waShareContent+productsList));
                 
                 /*
                 old line was 
@@ -541,12 +540,6 @@
                 var link = "https://api.whatsapp.com/send/?phone=" + whatsAppNumber + "&text=" + encodeURI(waShareContent);
                 window.open(link, '_blank');
                 successAlert('Order Placed!');
-            }
-            /*else {
-                placeOrder();
-            }
-            */
-
         }
     </script>
     <script src="js/rocket-loader.min.js" data-cf-settings="5bca4c6d3ee6a9cb55becda1-|49" defer=""></script>
