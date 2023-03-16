@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-    const close = document.querySelectorAll('.navbar-close');
+    const closeFav = document.querySelectorAll('.navbar-close');
     const backdrop = document.querySelectorAll('.navbar-backdropFav');
-    if (close.length) {
-        for (var i = 0; i < close.length; i++) {
-            close[i].addEventListener('click', function() {
+    if (closeFav.length) {
+        for (var i = 0; i < closeFav.length; i++) {
+            closeFav[i].addEventListener('click', function() {
                 for (var j = 0; j < menuFav.length; j++) {
                     menuFav[j].classList.toggle('hidden');
                 }
