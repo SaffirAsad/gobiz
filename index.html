@@ -467,6 +467,8 @@
         }
 
         function placeOrder() {
+            createWhatsAppLink(customerDetails);
+            /*
             "use strict";
             Swal.fire({
                 html: '<div class="text-left mt-2"> <p class="text-md">Please fill following details: </p>' +
@@ -499,7 +501,7 @@
             })
             
         }
-
+        */
         function createWhatsAppLink(cusDetails) {
             "use strict";
             if (cusDetails[0].length >= 3 && cusDetails[0].length >= 4 && cusDetails[0].length >= 3) {
@@ -521,24 +523,30 @@
                 productsList += "\n- - - - - - - - - - - - - - - - - - - -\n";
                 productsList += "*`Total :`* " + "*" + currency + " " + grandTotal.toFixed(2) + "*";
                 productsList += "\n- - - - - - - - - - - - - - - - - - - -\n\n";
-
+                /*
                 var customerDetails = "📞 *`Customer Details:`* \n\n";
                 customerDetails += cusDetails[0] + "\n";
                 customerDetails += cusDetails[1] + "\n";
                 customerDetails += cusDetails[2] + "\n\n";
-
+                */
                 var waShareContent = "🎉 *`New Order`* \n";
 
                 // save data to google sheets
                 saveData(cusDetails[0],cusDetails[1], products_name , products_id , encodeURI(waShareContent+productsList));
-
+                
+                /*
+                old line was 
                 waShareContent = waShareContent + productsList + customerDetails + "*" + whatsAppMessage + "*";
+                */
+                waShareContent = waShareContent + productsList + "*" + whatsAppMessage + "*";
                 var link = "https://api.whatsapp.com/send/?phone=" + whatsAppNumber + "&text=" + encodeURI(waShareContent);
                 window.open(link, '_blank');
                 successAlert('Order Placed!');
-            } else {
+            } 
+            /*else {
                 placeOrder();
             }
+            */
 
         }
     </script>
