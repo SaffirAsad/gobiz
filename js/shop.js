@@ -14,7 +14,7 @@ function addToCart(pid) {
   var price = $("#" + pid + "_price").text();
   var product_image = $("#" + pid + "_product_image").attr("src");
   var subtitle = $("#" + pid + "_subtitle").text();
-  if(product_image!=undefined){
+  if(product_image==undefined){
     product = products.filter(product=>{return (product[headers[9]]==id)})[0]
     var productName = product[headers[1]];
     var price = product[headers[5]];
@@ -106,8 +106,8 @@ function addToFavCart(pid) {
     var price = $("#" + pid + "_price").text();
     var product_image = $("#" + pid + "_product_image").attr("src");
     var subtitle = $("#" + pid + "_subtitle").text();
-    if(productName!=undefined){
-      product = products.filter(product=>{return (product[headers[9]]==id)})[0]
+    if(product_image==undefined){
+      product = products.filter(product=>{return (product[headers[9]]==pid)})[0]
       var productName = product[headers[1]];
       var price = product[headers[5]];
       var product_image = product[headers[10]].split("\n")[0].replace('\"',"");
