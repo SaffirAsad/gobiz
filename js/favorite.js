@@ -1,6 +1,6 @@
 const favorite = (id) => {
-    id+="_favorite"
-    const heartIcon = document.getElementById(id);
+    Favid=id+"_favorite"
+    const heartIcon = document.getElementById(Favid);
     if (heartIcon.classList.contains("fa-regular")) {
       heartIcon.classList.remove("fa-regular");
       heartIcon.classList.add("fa-solid");
