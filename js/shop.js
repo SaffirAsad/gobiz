@@ -106,7 +106,13 @@ function addToFavCart(pid) {
     var price = $("#" + pid + "_price").text();
     var product_image = $("#" + pid + "_product_image").attr("src");
     var subtitle = $("#" + pid + "_subtitle").text();
-    
+    if(productName!=undefined){
+      product = products.filter(product=>{return (product[headers[9]]==id)})[0]
+      var productName = product[headers[1]];
+      var price = product[headers[5]];
+      var product_image = product[headers[10]].split("\n")[0].replace('\"',"");
+      var subtitle = product[headers[4]];
+    }  
     var quantity_increment = false;
     for (let index = 0; index < FavCart.length; index++) {
         if (FavCart[index].product_id == pid && pid!="") {
@@ -213,7 +219,6 @@ function updateFavListOnload(products) {
   for (let j = 0; j < solid.length; j++) {
       id = solid[j].split("_fav")[0]
       product = products.filter(product=>{return (product[headers[9]]==id)})[0]
-      console.log("Headers",headers);
       FavCart_items += `
                       <div class="p-4 bg-white rounded">
                           <img class="rounded bp-2" src="${product.URLs.split("\n")[0].replace('\"',"")}">
