@@ -175,7 +175,8 @@ function addToFavCart(pid) {
         updateFavBadge();
     }else{ 
         // remove product from favorite cart
-        removeItemFromFavCart("pid_0000003") 
+        removeItemFromFavCart(pid) 
+        successFavAlert("Item Removed from Favorite Cart");
     }
     updateFavList() 
     updateFavBadge()
