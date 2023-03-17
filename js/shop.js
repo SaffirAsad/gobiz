@@ -14,6 +14,7 @@ function addToCart(pid) {
   var price = $("#" + pid + "_price").text();
   var product_image = $("#" + pid + "_product_image").attr("src");
   var subtitle = $("#" + pid + "_subtitle").text();
+  let product = {};
   if(product_image==undefined){
     product = products.filter(product=>{return (products[headers[9]]==pid)})[0]
     var productName = product[headers[1]];
