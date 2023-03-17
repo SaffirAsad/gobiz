@@ -208,6 +208,7 @@ function updateFavListOnload(products) {
   var grandTotal = 0;
   let product = {};
   let id = "";
+  
   for (let j = 0; j < Object.keys(localStorage).length; j++) {
       id = Object.keys(localStorage)[j].split("_fav")[0]
       product = products.filter(product=>{return (product.Product_id==id)})[0]
@@ -233,7 +234,18 @@ function updateFavListOnload(products) {
                           </div>
                       </div>
                       `;
-                      }
+    FavCart.push({
+        "product_name": product.ProductName,
+        "price": product.price,
+        "product_id": product.Product_id,
+        "qty": 1,
+        "product_image": product.URLs.split("\n")[0].replace('\"',""),
+        "subtitle": product.company
+    });
+    successFavAlert("Item added to Favorite Cart");
+    updateFavBadge();
+    updateFavList();                    
+  }
   $("#FavCart_items").html(FavCart_items);
 }
 
