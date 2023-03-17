@@ -206,15 +206,15 @@ function updateFavListOnload(products) {
     
   for (let j = 0; j < solid.length; j++) {
       id = solid[j].split("_fav")[0]
-      console.log("Pid:",id,"\n",solid);
       product = products.filter(product=>{return (product.Product_id==id)})[0]
+      console.log("product:\n",product);
       FavCart_items += `
                       <div class="p-4 bg-white rounded">
                           <img class="rounded bp-2" src="${product.URLs.split("\n")[0].replace('\"',"")}">
                           <div class="flex mb-6 mt-1 justify-between items-center">
                               <div>
                                   <h3 class="text-sm font-medium">${product.ProductName}</h3> 
-                                  <span class="text-xs text-gray-500">${product.subtitle}</span>
+                                  <span class="text-xs text-gray-500">${product.company}</span>
                               </div>
                           </div>
                           <div class="flex mb-2 justify-between items-center"> 
