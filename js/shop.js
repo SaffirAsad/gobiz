@@ -202,6 +202,7 @@ function removeFromFavCart(i) {
 
 }
 function updateFavListOnload(products) {
+  console.log("load cookies!");
   "use strict";
   var FavCart_items = "";
   var grandTotal = 0;
