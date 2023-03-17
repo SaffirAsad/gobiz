@@ -106,8 +106,6 @@ function addToFavCart(pid) {
         if (FavCart[index].product_id == pid && pid!="") {
             FavCart[index].qty = FavCart[index].qty + 1;
             quantity_increment = true;
-            
-            console.log("pid",pid);
             successFavAlert('Favorite Cart updated');
             updateFavBadge();
         }
@@ -131,11 +129,9 @@ function updateFavList() {
     var FavCart_items = "";
     var grandTotal = 0;
     for (let j = 0; j < FavCart.length; j++) {
-        console.log(FavCart)
         var total_price = 0;
         total_price = FavCart[j].qty * Number(FavCart[j].price);
         grandTotal += Number(total_price);
-        console.log(FavCart[j].pid)
         FavCart_items += `
                         <div class="p-4 bg-white rounded">
                             <img class="rounded bp-2" src="${FavCart[j].product_image}">
@@ -195,14 +191,12 @@ function removeFromFavCart(i) {
             FavCart.push(FavCartList[l])
         }
     }
-    console.log("Fav",FavCart);
     successFavAlert('Item Removed');
     updateFavBadge();
     updateFavList();
 
 }
 function updateFavListOnload(products) {
-  console.log("load cookies!");
   "use strict";
   var FavCart_items = "";
   var grandTotal = 0;
@@ -212,7 +206,6 @@ function updateFavListOnload(products) {
   for (let j = 0; j < Object.keys(localStorage).length; j++) {
       id = Object.keys(localStorage)[j].split("_fav")[0]
       product = products.filter(product=>{return (product.Product_id==id)})[0]
-      console.log("product",product.URLs);
       FavCart_items += `
                       <div class="p-4 bg-white rounded">
                           <img class="rounded bp-2" src="${product.URLs.split("\n")[0].replace('\"',"")}">
