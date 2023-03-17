@@ -206,7 +206,7 @@ function updateFavListOnload(products) {
     
   for (let j = 0; j < solid.length; j++) {
       id = Object.keys(solid)[j].split("_fav")[0]
-      console.log("Pid:",id);
+      console.log("Pid:",id,"\n",solid);
       product = products.filter(product=>{return (product.Product_id==id)})[0]
       FavCart_items += `
                       <div class="p-4 bg-white rounded">
