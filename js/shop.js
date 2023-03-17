@@ -97,8 +97,42 @@ function updateBadge() {
     $("#empty-cart").show();
   }
 }
+function reduceQty(i) {
+    "use strict";
+    if (cart[i].qty == 1) {
+        removeFromCart(i);
+    } else {
+        cart[i].qty = cart[i].qty - 1;
+        updateBadge();
+        updateList();
+    }
+}
+
+function addQty(i) {
+    "use strict";
+    cart[i].qty = cart[i].qty + 1;
+    updateBadge();
+    updateList();
+}
+
+function removeFromCart(i) {
+    "use strict";
+    var cartList = cart;
+    cart = [];
+    for (let l = 0; l < cartList.length; l++) {
+        if (l == i) {} else {
+            cart.push(cartList[l])
+        }
+    }
+    successAlert('Item Removed');
+    updateBadge();
+    updateList();
+}
 
 
+/////////////////////////////////////////////////
+/////////////    Favorite Cart     //////////////
+/////////////////////////////////////////////////
 
 function addToFavCart(pid) {
     
@@ -181,20 +215,6 @@ function updateFavBadge() {
     }
 }
 
-function removeFromCart(i) {
-    "use strict";
-    var cartList = cart;
-    cart = [];
-    for (let l = 0; l < cartList.length; l++) {
-        if (l == i) {} else {
-            cart.push(cartList[l])
-        }
-    }
-    
-    successAlert('Item Removed');
-    updateBadge();
-    updateList();
-}
 function removeFromFavCart(i) {
     "use strict";
     var FavCartList = FavCart;
