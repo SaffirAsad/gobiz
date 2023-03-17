@@ -172,19 +172,19 @@ function updateFavBadge() {
     }
 }
 
-function removeFromFavCart(i) {
+function removeFromCart(i) {
     "use strict";
     var cartList = cart;
     cart = [];
     for (let l = 0; l < cartList.length; l++) {
         if (l == i) {} else {
-            FavCart.push(cartList[l])
+            cart.push(cartList[l])
         }
     }
-    console.log("Fav",);
+    
     successAlert('Item Removed');
-    updateFavBadge();
-    updateFavList();
+    updateBadge();
+    updateList();
 }
 function removeFromFavCart(i) {
     "use strict";
@@ -195,6 +195,7 @@ function removeFromFavCart(i) {
             FavCart.push(FavCartList[l])
         }
     }
+    console.log("Fav",FavCart);
     successFavAlert('Item Removed');
     updateFavBadge();
     updateFavList();
