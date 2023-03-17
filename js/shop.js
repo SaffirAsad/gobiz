@@ -14,7 +14,13 @@ function addToCart(pid) {
   var price = $("#" + pid + "_price").text();
   var product_image = $("#" + pid + "_product_image").attr("src");
   var subtitle = $("#" + pid + "_subtitle").text();
-
+  if(productName!=undefined){
+    product = products.filter(product=>{return (product[headers[9]]==id)})[0]
+    var productName = product[headers[1]];
+    var price = product[headers[5]];
+    var product_image = product[headers[10]].split("\n")[0].replace('\"',"");
+    var subtitle = product[headers[4]];
+  }   
   var quantity_increment = false;
   for (let index = 0; index < cart.length; index++) {
     if (cart[index].product_id == pid) {
@@ -206,7 +212,7 @@ function updateFavListOnload(products) {
     
   for (let j = 0; j < solid.length; j++) {
       id = solid[j].split("_fav")[0]
-      product = products.filter(product=>{return (product.Product_id==id)})[0]
+      product = products.filter(product=>{return (product[headers[9]]==id)})[0]
       console.log("Headers",headers);
       FavCart_items += `
                       <div class="p-4 bg-white rounded">
@@ -219,11 +225,11 @@ function updateFavListOnload(products) {
                           </div>
                           <div class="flex mb-2 justify-between items-center"> 
                               <div class="p-add-shop">
-                                  <button class="btn" onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart('${product.Product_id}')">Add</button>
+                                  <button class="btn" onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart('${product[headers[9]]}')">Add</button>
                               </div>
                               <h4 style="display: flex; width:auto">
-                                  <span id="${product.Product_id}_currency">$</span>
-                                  <div id="${product.Product_id}_price">${product.price}</div>
+                                  <span id="${product[headers[9]]}_currency">$</span>
+                                  <div id="${product[headers[9]]}_price">${product.price}</div>
                               </h4>
                               <a class="py-2 px-3 bg-red-500 hover:bg-red-600 rounded-full text-xs text-white transition duration-200" onclick="removeFromFavCart(${j})">X</a>
                           </div>
@@ -232,7 +238,7 @@ function updateFavListOnload(products) {
     FavCart.push({
         "product_name": product.ProductName,
         "price": product.price,
-        "product_id": product.Product_id,
+        "product_id": product[headers[9]],
         "qty": 1,
         "product_image": product.URLs.split("\n")[0].replace('\"',""),
         "subtitle": product.company
