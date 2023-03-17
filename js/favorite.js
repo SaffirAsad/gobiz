@@ -1,5 +1,5 @@
 const favorite = (id) => {
-    console.log("ClassList",$(`#${id}_favorite`).classList);
+    console.log("ClassList",document.querySelector(`#${id}_favorite`).classList);
     addToFavCart(id);
     id+="_favorite"
     const heartIcon = document.getElementById(id);
