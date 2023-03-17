@@ -12,7 +12,10 @@ const favorite = (id) => {
       heartIcon.classList.add("fa-regular");
       heartIcon.style.color = "black";
       localStorage.setItem(id, "regular");
-      addToFavCart(id);
+      // remove product from favorite cart
+      removeItemFromFavCart(id);
+      updateFavBadge();
+      successFavAlert("Item Removed from Favorite Cart");
     }
   }
   

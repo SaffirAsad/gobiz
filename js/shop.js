@@ -173,13 +173,8 @@ function addToFavCart(pid) {
         });
         successFavAlert("Item added to Favorite Cart");
         updateFavBadge();
-    }else{ 
-        // remove product from favorite cart
-        removeItemFromFavCart(pid) 
-        successFavAlert("Item Removed from Favorite Cart");
     }
     updateFavList() 
-    updateFavBadge()
 }
 function removeItemFromFavCart(id) {
     const index = FavCart.findIndex(item => item.product_id === id);
