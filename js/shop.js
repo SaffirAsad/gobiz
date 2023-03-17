@@ -148,8 +148,8 @@ function updateFavList() {
                                 <h4 style="display: flex; width:auto">
                                     <span id="${FavCart[j].pid}_currency">$</span>
                                     <div id="${FavCart[j].pid}_price">${FavCart[j].price}</div>
-                                    <a class="py-2 px-3 bg-red-500 hover:bg-red-600 rounded-full text-xs text-white transition duration-200" onclick="removeFromFavCart(${j})">X</a>
                                 </h4>
+                                <a class="py-2 px-3 bg-red-500 hover:bg-red-600 rounded-full text-xs text-white transition duration-200" onclick="removeFromFavCart(${j})">X</a>
                             </div>
                         </div>
                         `;
