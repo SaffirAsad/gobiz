@@ -1,5 +1,7 @@
 // read google sheets database
 fetchData();
+//update favorite products based on saved cookies
+updateFavListOnload(products)
 //console.log(headers)
 let minValue = document.getElementById("min-value");
 let maxValue = document.getElementById("max-value");

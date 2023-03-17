@@ -242,7 +242,6 @@ function updateFavListOnload(products) {
         "product_image": product.URLs.split("\n")[0].replace('\"',""),
         "subtitle": product.company
     });
-    successFavAlert("Item added to Favorite Cart");
     updateFavBadge();
     updateFavList();                    
   }
