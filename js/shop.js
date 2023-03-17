@@ -94,7 +94,7 @@ function updateBadge() {
 
 
 function addToFavCart(pid) {
-    console.log("pid",pid);
+    
     "use strict";
     var productName = $("#" + pid + "_product_name").text();
     var price = $("#" + pid + "_price").text();
@@ -106,6 +106,8 @@ function addToFavCart(pid) {
         if (FavCart[index].product_id == pid) {
             FavCart[index].qty = FavCart[index].qty + 1;
             quantity_increment = true;
+            
+            console.log("pid",pid);
             successFavAlert('Favorite Cart updated');
             updateFavBadge();
         }
@@ -195,4 +197,5 @@ function removeFromFavCart(i) {
     successFavAlert('Item Removed');
     updateFavBadge();
     updateFavList();
+
 }
