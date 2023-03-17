@@ -132,6 +132,7 @@ function updateFavList() {
         var total_price = 0;
         total_price = FavCart[j].qty * Number(FavCart[j].price);
         grandTotal += Number(total_price);
+        console.log(FavCart[j].pid)
         FavCart_items += `
                         <div class="p-4 bg-white rounded">
                             <img class="rounded bp-2" src="${FavCart[j].product_image}">
