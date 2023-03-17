@@ -178,9 +178,10 @@ function removeFromFavCart(i) {
     cart = [];
     for (let l = 0; l < cartList.length; l++) {
         if (l == i) {} else {
-            cart.push(cartList[l])
+            FavCart.push(cartList[l])
         }
     }
+    console.log("Fav",);
     successAlert('Item Removed');
     updateFavBadge();
     updateFavList();
