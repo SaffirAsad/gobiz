@@ -1,7 +1,5 @@
 // read google sheets database
 fetchData();
-//update favorite products based on saved cookies
-updateFavListOnload(products)
 //console.log(headers)
 let minValue = document.getElementById("min-value");
 let maxValue = document.getElementById("max-value");
@@ -62,8 +60,6 @@ function Search(products){
 }
 // Add categories
 CategoryGrid();
-//SubCategoryGrid();
-
 // Form submit and save Data to google sheets
 function saveData(products_name,products_id,msg){
   var url = "https://script.google.com/macros/s/AKfycbyy9t0W2SXkXKrUUjdQRud3TX3vLxKWlIchTvbpgnz7ASmrXTkSE4NhjETUX48ITGAT/exec";
@@ -73,3 +69,5 @@ function saveData(products_name,products_id,msg){
   xhr.open("GET", url + "?" + data);
   xhr.send();
 }
+//update favorite products based on saved cookies
+updateFavListOnload(products)
