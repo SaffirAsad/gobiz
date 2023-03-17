@@ -173,9 +173,20 @@ function addToFavCart(pid) {
         });
         successFavAlert("Item added to Favorite Cart");
         updateFavBadge();
+    }else{ 
+        // remove product from favorite cart
+        removeItemFromFavCart("pid_0000003") 
     }
-    updateFavList();
+    updateFavList() 
+    updateFavBadge()
 }
+function removeItemFromFavCart(id) {
+    const index = FavCart.findIndex(item => item.product_id === id);
+    if (index !== -1) {
+      FavCart.splice(index, 1);
+    }
+  }
+  
 function updateFavList() {
     "use strict";
     var FavCart_items = "";

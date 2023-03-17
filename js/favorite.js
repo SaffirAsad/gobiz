@@ -12,6 +12,7 @@ const favorite = (id) => {
       heartIcon.classList.add("fa-regular");
       heartIcon.style.color = "black";
       localStorage.setItem(id, "regular");
+      
     }
   }
   
