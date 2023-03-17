@@ -168,7 +168,7 @@ function updateFavBadge() {
         $("#badgeFav").text(badgeCount);
         $("#badgeFav").show();
     } else {
-        $("#badge").hide();
+        $("#badgeFav").hide();
     }
 }
 
