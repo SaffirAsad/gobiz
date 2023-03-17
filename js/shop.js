@@ -103,7 +103,7 @@ function addToFavCart(pid) {
     
     var quantity_increment = false;
     for (let index = 0; index < FavCart.length; index++) {
-        if (FavCart[index].product_id == pid) {
+        if (FavCart[index].product_id == pid && pid!="") {
             FavCart[index].qty = FavCart[index].qty + 1;
             quantity_increment = true;
             
