@@ -94,6 +94,7 @@ function updateBadge() {
 
 
 function addToFavCart(pid) {
+    console.log("pid",pid);
     "use strict";
     var productName = $("#" + pid + "_product_name").text();
     var price = $("#" + pid + "_price").text();
