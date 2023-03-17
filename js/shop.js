@@ -143,7 +143,7 @@ function updateFavList() {
                             </div>
                             <div class="flex mb-2 justify-between items-center"> 
                                 <div class="p-add-shop">
-                                    <button class="btn" onclick="if (!window.__cfRLUnblockHandlers) return false; addToFavCart('${FavCart[j].pid}')">Add</button>
+                                    <button class="btn" onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart('${FavCart[j].pid}')">Add</button>
                                 </div>
                                 <h4 style="display: flex; width:auto">
                                     <span id="${FavCart[j].pid}_currency">$</span>
