@@ -11,7 +11,7 @@ const favorite = (id) => {
       heartIcon.classList.remove("fa-solid");
       heartIcon.classList.add("fa-regular");
       heartIcon.style.color = "black";
-      localStorage.setItem(id, "regular"); 
+      localStorage.setItem(id, "regular");
     }
   }
   

@@ -202,9 +202,9 @@ function updateFavListOnload(products) {
   var grandTotal = 0;
   let product = {};
   let id = "";
-  
-  for (let j = 0; j < Object.keys(localStorage).length; j++) {
-      id = Object.keys(localStorage)[j].split("_fav")[0]
+  let solid = Object.keys(localStorage).filter(key => localStorage[key] != 'regular')
+  for (let j = 0; j < solid.length; j++) {
+      id = Object.keys(solid)[j].split("_fav")[0]
       product = products.filter(product=>{return (product.Product_id==id)})[0]
       FavCart_items += `
                       <div class="p-4 bg-white rounded">
