@@ -2,11 +2,11 @@ const favorite = (id) => {
     id+="_favorite"
     const heartIcon = document.getElementById(id);
     if (heartIcon.classList.contains("fa-regular")) {
-      addToFavCart(id);
       heartIcon.classList.remove("fa-regular");
       heartIcon.classList.add("fa-solid");
       heartIcon.style.color = "red";
       localStorage.setItem(id, "solid"); 
+      addToFavCart(id);
     } else {
       heartIcon.classList.remove("fa-solid");
       heartIcon.classList.add("fa-regular");
