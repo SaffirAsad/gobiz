@@ -201,3 +201,37 @@ function removeFromFavCart(i) {
     updateFavList();
 
 }
+function updateFavListOnload(products) {
+  "use strict";
+  var FavCart_items = "";
+  var grandTotal = 0;
+  let product = {};
+  let id = "";
+  for (let j = 0; j < Object.keys(localStorage).length; j++) {
+      id = Object.keys(localStorage)[j].split("_fav")[0]
+      product = products.filter(product=>{return (product.Product_id==id)})
+      FavCart_items += `
+                      <div class="p-4 bg-white rounded">
+                          <img class="rounded bp-2" src="${product.URLs.split("\n")[0].replace('"',"")}">
+                          <div class="flex mb-6 mt-1 justify-between items-center">
+                              <div>
+                                  <h3 class="text-sm font-medium">${product.ProductName}</h3> 
+                                  <span class="text-xs text-gray-500">${product.subtitle}</span>
+                              </div>
+                          </div>
+                          <div class="flex mb-2 justify-between items-center"> 
+                              <div class="p-add-shop">
+                                  <button class="btn" onclick="if (!window.__cfRLUnblockHandlers) return false; addToCart('${product.Product_id}')">Add</button>
+                              </div>
+                              <h4 style="display: flex; width:auto">
+                                  <span id="${product.Product_id}_currency">$</span>
+                                  <div id="${product.Product_id}_price">${product.price}</div>
+                              </h4>
+                              <a class="py-2 px-3 bg-red-500 hover:bg-red-600 rounded-full text-xs text-white transition duration-200" onclick="removeFromFavCart(${j})">X</a>
+                          </div>
+                      </div>
+                      `;
+                      }
+  $("#FavCart_items").html(FavCart_items);
+}
+

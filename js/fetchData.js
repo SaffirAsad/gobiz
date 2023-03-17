@@ -179,7 +179,7 @@ function AddDel(el,products){
     }, {});
     console.log("FiltredSubCat",FiltredSubCat);
     subCat.forEach(subCat =>{
-        console.log("subCat", subCat,"\n","subCatUrl:",FiltredSubCat[subCat])
+        //console.log("subCat", subCat,"\n","subCatUrl:",FiltredSubCat[subCat])
         //console.log("subcat :","\n", subCat,"\n",subcategoryImgUrls[num][Object.values(header)[1]]);
         //console.log('cat["categories"]',categoryImgUrls,cat["categories"]);
         subcatHTML+=`
