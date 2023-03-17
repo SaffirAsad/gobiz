@@ -51,7 +51,11 @@ function updateList() {
   "use strict";
   var cart_items = "";
   var grandTotal = 0;
+  $("#cart_items").hide()
+  $("#empty-cart").show();
   for (let j = 0; j < cart.length; j++) {
+    $("#cart_items").show()
+    $("#empty-cart").hide();
     var total_price = 0;
     total_price = cart[j].qty * Number(cart[j].price);
     grandTotal += Number(total_price);
@@ -175,7 +179,11 @@ function updateFavList() {
     "use strict";
     var FavCart_items = "";
     var grandTotal = 0;
+    $("#cart_items").hide()
+    $("#empty-cart").show();
     for (let j = 0; j < FavCart.length; j++) {
+      $("#cart_items").show()
+      $("#empty-cart").hide();
         var total_price = 0;
         total_price = FavCart[j].qty * Number(FavCart[j].price);
         grandTotal += Number(total_price);
