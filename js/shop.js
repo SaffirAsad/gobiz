@@ -211,7 +211,7 @@ function updateFavList() {
                                     <span id="${FavCart[j].pid}_currency">$</span>
                                     <div id="${FavCart[j].pid}_price">${FavCart[j].price}</div>
                                 </h4>
-                                <a class="py-2 px-3 bg-red-500 hover:bg-red-600 rounded-full text-xs text-white transition duration-200" onclick="removeFromFavCart(${j})">X</a>
+                                <a class="py-2 px-3 bg-red-500 hover:bg-red-600 rounded-full text-xs text-white transition duration-200" onclick="removeFromFavCart(${FavCart[j].product_id})">X</a>
                             </div>
                         </div>
                         `;
@@ -230,12 +230,14 @@ function updateFavBadge() {
     }
 }
 
-function removeFromFavCart(i) {
+function removeFromFavCart(id) {
     "use strict";
     var FavCartList = FavCart;
     FavCart = [];
     for (let l = 0; l < FavCartList.length; l++) {
-        if (l == i) {} else {
+        if (FavCartList.product_id == id) {
+            localStorage.setItem(id, "regular");
+        } else {
             FavCart.push(FavCartList[l])
         }
     }
