@@ -145,7 +145,6 @@ function addToFavCart(pid) {
     var price = $("#" + pid + "_price").text();
     var product_image = $("#" + pid + "_product_image").attr("src");
     var subtitle = $("#" + pid + "_subtitle").text();
-    console.log("PID:",pid);
     if(product_image==undefined){
       product = products.filter(product=>{return (product[headers[9]]==pid)})[0]
       var productName = product[headers[1]];
