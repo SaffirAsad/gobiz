@@ -274,7 +274,7 @@ function updateFavListOnload(products) {
                                   <span id="${product[headers[9]]}_currency">$</span>
                                   <div id="${product[headers[9]]}_price">${product.price}</div>
                               </h4>
-                              <a class="py-2 px-3 bg-red-500 hover:bg-red-600 rounded-full text-xs text-white transition duration-200" onclick="removeFromFavCart(${j})">X</a>
+                              <a class="py-2 px-3 bg-red-500 hover:bg-red-600 rounded-full text-xs text-white transition duration-200" onclick="removeFromFavCart('${FavCart[j].product_id}')">X</a>
                           </div>
                       </div>
                       `;
