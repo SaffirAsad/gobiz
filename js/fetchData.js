@@ -172,12 +172,12 @@ function AddDel(el,products){
     let num=0;
     let subcatHTML="";
 
-    console.log("subCat",subCat,"\n","subcategoryImgUrls",subcategoryImgUrls);
+    //console.log("subCat",subCat,"\n","subcategoryImgUrls",subcategoryImgUrls);
     let FiltredSubCat = subcategoryImgUrls.reduce((acc, { sub, suburls }) => {
         acc[sub] = suburls;
         return acc;
     }, {});
-    console.log("FiltredSubCat",FiltredSubCat);
+    //console.log("FiltredSubCat",FiltredSubCat);
     subCat.forEach(subCat =>{
         //console.log("subCat", subCat,"\n","subCatUrl:",FiltredSubCat[subCat])
         //console.log("subcat :","\n", subCat,"\n",subcategoryImgUrls[num][Object.values(header)[1]]);
