@@ -37,6 +37,7 @@ const favorite = (id) => {
       const heartIcon = heartIcons[i];
       const id = heartIcon.id;
       const status = localStorage.getItem(id);
+      console.log("id,status",id,status);
       if (status === "solid") {
         heartIcon.classList.remove("fa-regular");
         heartIcon.classList.add("fa-solid");
