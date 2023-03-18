@@ -236,6 +236,7 @@ function removeFromFavCart(id) {
     FavCart = [];
     for (let l = 0; l < FavCartList.length; l++) {
         if (FavCartList.product_id == id) {
+            console.log(id);
             localStorage.setItem(id, "regular");
         } else {
             FavCart.push(FavCartList[l])
