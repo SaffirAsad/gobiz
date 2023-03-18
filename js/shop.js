@@ -259,11 +259,11 @@ function updateFavListOnload(products) {
       product = products.filter(product=>{return (product[headers[9]]==id)})[0]
       FavCart_items += `
                       <div class="p-4 bg-white rounded">
-                          <img class="rounded bp-2" src="${product.URLs.split("\n")[0].replace('\"',"")}">
+                          <img class="rounded bp-2" src="${product[headers[10]].split("\n")[0].replace('\"',"")}">
                           <div class="flex mb-6 mt-1 justify-between items-center">
                               <div>
-                                  <h3 class="text-sm font-medium">${product.ProductName}</h3> 
-                                  <span class="text-xs text-gray-500">${product.company}</span>
+                                  <h3 class="text-sm font-medium">${product[headers[1]]}</h3> 
+                                  <span class="text-xs text-gray-500">${product[headers[4]]}</span>
                               </div>
                           </div>
                           <div class="flex mb-2 justify-between items-center"> 
@@ -272,19 +272,19 @@ function updateFavListOnload(products) {
                               </div>
                               <h4 style="display: flex; width:auto">
                                   <span id="${product[headers[9]]}_currency">$</span>
-                                  <div id="${product[headers[9]]}_price">${product.price}</div>
+                                  <div id="${product[headers[9]]}_price">${product[headers[5]]}</div>
                               </h4>
-                              <a class="py-2 px-3 bg-red-500 hover:bg-red-600 rounded-full text-xs text-white transition duration-200" onclick="removeFromFavCart('${FavCart[j].product_id}')">X</a>
+                              <a class="py-2 px-3 bg-red-500 hover:bg-red-600 rounded-full text-xs text-white transition duration-200" onclick="removeFromFavCart('${product[headers[9]]}')">X</a>
                           </div>
                       </div>
                       `;
     FavCart.push({
-        "product_name": product.ProductName,
-        "price": product.price,
+        "product_name": product[headers[1]],
+        "price": product[headers[5]],
         "product_id": product[headers[9]],
         "qty": 1,
-        "product_image": product.URLs.split("\n")[0].replace('\"',""),
-        "subtitle": product.company
+        "product_image": product[headers[10]].split("\n")[0].replace('\"',""),
+        "subtitle": product[headers[4]]
     });
     updateFavBadge();
     updateFavList();                    
