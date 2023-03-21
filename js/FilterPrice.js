@@ -71,3 +71,18 @@ function saveData(products_name,products_id,msg){
 }
 //update favorite products based on saved cookies
 updateFavListOnload(products)
+
+// Show the scroll-to-top button when the user scrolls down 20px from the top of the document
+window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("scroll-to-top-btn").style.display = "block";
+  } else {
+    document.getElementById("scroll-to-top-btn").style.display = "none";
+  }
+};
+
+// When the user clicks the scroll-to-top button, scroll to the top of the document
+document.getElementById("scroll-to-top-btn").onclick = function() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
