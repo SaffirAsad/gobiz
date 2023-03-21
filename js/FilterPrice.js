@@ -72,17 +72,32 @@ function saveData(products_name,products_id,msg){
 //update favorite products based on saved cookies
 updateFavListOnload(products)
 
-// Show the scroll-to-top button when the user scrolls down 20px from the top of the document
-window.onscroll = function() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("scroll-to-top-btn").style.display = "block";
-  } else {
-    document.getElementById("scroll-to-top-btn").style.display = "none";
-  }
-};
-
-// When the user clicks the scroll-to-top button, scroll to the top of the document
+// When the user clicks the scroll-to-top button, scroll to the top of the document with animation
 document.getElementById("scroll-to-top-btn").onclick = function() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  // Get the current scroll position
+  const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Define the animation duration and easing function
+  const duration = 500;
+  const easing = t => t * (2 - t);
+
+  // Define the starting and ending scroll positions
+  const start = scrollPos;
+  const end = 0;
+
+  // Define the start time of the animation
+  const startTime = performance.now();
+
+  // Define the animation function
+  const animateScroll = currentTime => {
+    const elapsedTime = currentTime - startTime;
+    const scrollPos = Math.round(start + (end - start) * easing(elapsedTime / duration));
+    window.scrollTo(0, scrollPos);
+    if (elapsedTime < duration) {
+      requestAnimationFrame(animateScroll);
+    }
+  };
+
+  // Start the animation
+  requestAnimationFrame(animateScroll);
 };
