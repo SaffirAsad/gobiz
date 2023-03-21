@@ -72,6 +72,16 @@ function saveData(products_name,products_id,msg){
 //update favorite products based on saved cookies
 updateFavListOnload(products)
 
+// Show the scroll-to-top button when the user scrolls down
+window.onscroll = function() {
+  const btn = document.getElementById("scroll-to-top-btn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
 // When the user clicks the scroll-to-top button, scroll to the top of the document with animation
 document.getElementById("scroll-to-top-btn").onclick = function() {
   // Get the current scroll position
