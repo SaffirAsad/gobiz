@@ -88,7 +88,7 @@ document.getElementById("scroll-to-top-btn").onclick = function() {
   const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
 
   // Define the animation duration and easing function
-  const duration = 2000;
+  const duration = 1500;
   const easing = t => t * (2 - t);
 
   // Define the starting and ending scroll positions
