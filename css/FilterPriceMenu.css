@@ -258,7 +258,7 @@ footer {
 }
 
 #scroll-to-top-btn::before {
-  content: "\9650";
+  content: "\25B2";
 }
 
 #scroll-to-top-btn:hover {
