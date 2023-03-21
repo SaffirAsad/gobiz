@@ -251,10 +251,12 @@ footer {
   text-align: center;
   border: none;
   outline: none;
-  background-color: #333;
+  background-color: #2196F3;
   color: white;
   cursor: pointer;
   border-radius: 50%;
+  animation: fadeIn 0.3s;
+  transition: background-color 0.3s;
 }
 
 #scroll-to-top-btn::before {
@@ -262,5 +264,15 @@ footer {
 }
 
 #scroll-to-top-btn:hover {
-  background-color: #555;
+  background-color: #1565C0;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
