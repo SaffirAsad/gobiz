@@ -69,8 +69,6 @@ function saveData(products_name,products_id,msg){
   xhr.open("GET", url + "?" + data);
   xhr.send();
 }
-//update favorite products based on saved cookies
-updateFavListOnload(products)
 
 // Show the scroll-to-top button when the user scrolls down
 window.onscroll = function() {
@@ -111,3 +109,5 @@ document.getElementById("scroll-to-top-btn").onclick = function() {
   // Start the animation
   requestAnimationFrame(animateScroll);
 };
+//update favorite products based on saved cookies
+updateFavListOnload(products)
