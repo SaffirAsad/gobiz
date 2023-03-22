@@ -109,5 +109,4 @@ document.getElementById("scroll-to-top-btn").onclick = function() {
   // Start the animation
   requestAnimationFrame(animateScroll);
 };
-//update favorite products based on saved cookies
-updateFavListOnload(products)
+
