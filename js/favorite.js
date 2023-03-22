@@ -44,7 +44,7 @@ const favorite = (id) => {
       }
     }
   }
-  
+
+//update favorite products based on saved cookies  
 window.onload = checkFavorite();
-//update favorite products based on saved cookies
-updateFavListOnload(products)
+window.onload  = updateFavListOnload(products)
