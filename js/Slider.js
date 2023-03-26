@@ -75,7 +75,6 @@ function sliderMaker(slider, images,pid){
         img.style.height=`${rm}px`;
       }
       img.style.width="300px";
-      
     });      
   },900);
 }
