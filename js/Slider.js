@@ -11,7 +11,8 @@ function sliderMaker(slider, images,pid){
   for (let image in images) {
     const img = document.createElement("img");
     if (s==0){img.setAttribute("id", `${pid}_product_image`);}
-    img.setAttribute("src", images[image]);
+    console.log(images[image]);
+    img.setAttribute("src", image);
     sliderTrack.appendChild(img);
   }
 
