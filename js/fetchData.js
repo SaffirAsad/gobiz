@@ -297,7 +297,7 @@ function AddDelsub(subCatel,products){
     setTimeout(()=>{
         p.forEach(product => {
             let urls=product[URLs].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
-            console.log("urls<<",urls ,"\nproduct[VideoURLs]", product[VideoURLs] ,"\n",product,count2);
+            console.log("urls<<",urls ,"\n", product[VideoURLs] ,"\n",product,count2);
             sliderMaker(document.querySelector(`#slider-container-${count2}`), urls , product[ProductId])
             count2+=1;
         });
@@ -343,11 +343,11 @@ function loading() {
   }, 2000);
 }
 function isUrl(string) {
-    try {
-      new URL(string);
-      return true;
-    } catch (e) {
-      return false;
-    }
+  try {
+    new URL(string);
+    return true;
+  } catch (e) {
+    return false;
   }
-  
+}
+
