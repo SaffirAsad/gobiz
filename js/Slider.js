@@ -1,4 +1,5 @@
 function sliderMaker(slider, images,pid){
+  console.log("images",images);
   // Get the slider container and slider track elements
   const sliderContainer = slider;
   const sliderTrack = slider.querySelector(".slider-track");
