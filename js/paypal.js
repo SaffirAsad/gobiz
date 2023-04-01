@@ -31,14 +31,6 @@ RangeSlider.prototype = {
         }
     },
 };
-
-
-
-
-
-
-
-
 //website pricing
 new RangeSlider(
     '#sites', 
