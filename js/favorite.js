@@ -47,4 +47,6 @@ const favorite = (id) => {
 
 //update favorite products based on saved cookies  
 window.onload = checkFavorite();
-window.onload = updateFavListOnload(products);
+window.onload = setTimeout(()=>{
+  updateFavListOnload(products);
+},3000);
