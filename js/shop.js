@@ -330,7 +330,7 @@ function updateFavListOnload(products) {
   var FavCart_items = "";
   var grandTotal = 0;
   let product = {};
-  let id = "";
+  let pid = "";
   let solid = Object.keys(localStorage).filter(key => localStorage[key] == 'solid')
 
   for (let j = 0; j < solid.length; j++) {
