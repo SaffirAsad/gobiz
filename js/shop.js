@@ -80,7 +80,7 @@ function updateList() {
       ')">X</a></div></div>';
   }
   cart_items +=
-    '<br> <h3 class="pl-4 pt-4 pr-4 font-bold">Grand total: ' +
+    '<br><h3 id="totalPrice" class="pl-4 pt-4 pr-4 font-bold">Grand total: ' +
     currency +
     " " +
     grandTotal.toFixed(2) +
