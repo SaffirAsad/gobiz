@@ -14,9 +14,11 @@
          <div class="rowpricing">
             <div class="colpricing">
                <div class="cardpricing">
-                  <div id="totalPrice">
-                    <p class="cure">Total: $ </p>
-                    <p contenteditable="true" class="total">1615</p>
+                  <div id="totalPrice" class="price">
+                     <div class="btnpricing">
+                        <p class="cure">Total: $ </p>
+                        <p contenteditable="true" class="total">1615</p>
+                     </div>
                   </div>
                   <div id="smart-button-container">
                      <div style="text-align: center;">
@@ -43,7 +45,7 @@
       <script>
 
          function initPayPalButton() {
-           amount = document.getElementById('totalPrice').getElementsByClassName('total')[0].innerHTML;
+          amount = document.getElementById('totalPrice').getElementsByClassName('total')[0].innerHTML;
            paypal.Buttons({
              style: {
                shape: 'rect',
