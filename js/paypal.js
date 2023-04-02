@@ -1,36 +1,5 @@
 
-function RangeSlider(selector, callback) { 
-    this.elements = document.querySelectorAll(selector || '.range-slider');
-    this.callback = callback;
-    
-    // if IE - listen for change
-    this.listenerType = /Trident|MSIE/.test(navigator.userAgent) ? 'change' : 'input';
-    
-    for (var i = 0, len = this.elements.length; i < len; i++) {
-        this._bindListener(this.elements[i]);
-    }
-};
 
-RangeSlider.prototype = {
-    _bindListener: function(el) {
-        var self = this;
-        var input = el.querySelector('input[type=range]');
-        var output = el.querySelector('.range-phrase');
-
-        this._render(el, input, output);
-
-        input.addEventListener(this.listenerType, function() {
-            self._render(el, input, output);
-        }, false);
-    },
-    _render: function(el, input, output) {
-        output.innerHTML = input.value;
-        
-        if (typeof this.callback === 'function') {
-            this.callback(el, input, output, parseInt(input.value, 10));
-        }
-    },
-};
 //website pricing
 new RangeSlider(
     '#sites', 
@@ -88,7 +57,7 @@ new RangeSlider(
 
 
 
-var price = document.getElementById('sites').getElementsByClassName('rangetotal')[0];
+//var price = document.getElementById('sites').getElementsByClassName('rangetotal')[0];
 	//video pricing
 new RangeSlider(
     '#videos', 
@@ -144,9 +113,9 @@ new RangeSlider(
     }
 );
 
- var prix = document.getElementById('videos').getElementsByClassName('rangetotal')[0];
+//var prix = document.getElementById('videos').getElementsByClassName('rangetotal')[0];
             console.log(prix.innerHTML);
-var  pricingDirectorywebsite = document.getElementById("pricing-Directorywebsite");				
+//var  pricingDirectorywebsite = document.getElementById("pricing-Directorywebsite");				
 var total = parseInt(price.innerHTML) + parseInt(prix.innerHTML);
 				   price.addEventListener('DOMSubtreeModified', function cal() {
 					
