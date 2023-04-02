@@ -78,7 +78,35 @@
                     </div>
                     <div id="cart_items"></div>
                     <div class="pt-6 p-3">
+                        <!-- whatsapp payement methode -->
                         <button onclick="if (!window.__cfRLUnblockHandlers) return false; placeOrder()" id="place-order" class="block px-4 py-3 mb-3 rounded text-white text-md text-center font-semibold bg-blue-500 hover:bg-blue-600 " data-cf-modified-5bca4c6d3ee6a9cb55becda1-="">Place WhatsApp Order</button>
+                        
+                        <!-- Paypal payement methode -->
+                        <div class="containerpricing">
+                            <div class="rowpricing">
+                               <div class="colpricing">
+                                  <div class="cardpricing">
+
+                                     <div id="totalPrice" class="range-slider pricing" data-i18n="{
+                                        &quot;askOffer&quot;: &quot;Küsi pakkumist&quot;,
+                                        &quot;askOfferURL&quot;: &quot;#&quot;,
+                                        &quot;perPerson&quot;: &quot;6€ / inimene kuus&quot;
+                                        }">
+                                        <div class="btnpricing">
+                                           <p class="cure">Total: $ </p>
+                                           <p contenteditable="true" class="total">1615</p>
+                                        </div>
+                                     </div>
+                                     <div id="smart-button-container">
+                                        <div style="text-align: center;">
+                                           <div id="paypal-button-container"></div>
+                                        </div>
+                                     </div>
+
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
                     </div>
                     <div id="empty-cart" class="pt-6 p-3">
                         <p class="px-4 py-4 font-bold mb-4 text-center text-gray-600">Your cart is empty.
@@ -302,6 +330,7 @@
     <script src="js/rocket-loader.min.js" data-cf-settings="5bca4c6d3ee6a9cb55becda1-|49" defer=""></script>
     <!-- Script.js -->
     <script src="js/main.js" type="5bca4c6d3ee6a9cb55becda1-text/javascript"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&amp;enable-funding=venmo&amp;currency=USD" data-sdk-integration-source="button-factory" data-uid-auto="uid_zhuullmilfiumcwcjhldzromymouxr"></script>
     <script src="js/shop.js"></script>
     <script src="js/Select.js"></script> 
     <script src="js/fetchData.js"></script>
@@ -309,6 +338,7 @@
     <script src="js/detectPhone.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/favorite.js"></script>
+    <script src="js/paypal.js"></script>
 </body>
 </html>
 
