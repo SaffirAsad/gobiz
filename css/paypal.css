@@ -115,32 +115,6 @@ h4 {
   font-size: 1.8em;
 }
 
-.box1 {
-  min-width: 120px;
-  margin: 15px 0;
-  margin-bottom: 1px;
-  clear: none;
-  color: grey;
-  text-align: left!important;
-  font-weight: 200;
-  font-size: 0.9em;
-  display: flex;
-}
-
-#boxe1 {
-font-size: 15px;
-  font-weight: 1;
-  margin: 0;
-}
-
-.phras{
-font-size: 15px;
-  font-weight: 1;
-  margin: 0;
-   clear:left;
- float: left;
-}
-
 #currentValue {
 font-size: 20px;
   font-weight: 1;
