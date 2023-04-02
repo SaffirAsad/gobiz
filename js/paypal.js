@@ -10,7 +10,7 @@ $('label').on('click', function(){
 });
 
 function initPayPalButton() {
-    var amount = document.querySelector('#mainTotalPrice').querySelector(".total").innerHTML || NaN;
+    var amount = document.querySelector('#mainTotalPrice').querySelector(".total").innerHTML || 0;
     paypal.Buttons({
         style: {
         shape: 'rect',
