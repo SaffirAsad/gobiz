@@ -155,7 +155,7 @@ function updateList() {
       ')">X</a></div></div>';
   }
   cart_items +=
-    `<div class="btnpricing" id="totalPrice">
+    `<div class="totalPrice" id="totalPrice">
         <p class="cure">Total Price: ${currency} </p>
         <p class="total">${grandTotal.toFixed(2)}</p>
     </div>`;
@@ -329,11 +329,10 @@ function updateFavListOnload(products) {
   let product = {};
   let id = "";
   let solid = Object.keys(localStorage).filter(key => localStorage[key] == 'solid')
-  console.log("solid",solid)
+
   for (let j = 0; j < solid.length; j++) {
       id = solid[j].split("_fav")[0]
       product = products.filter(product=>{return (product[headers[9]]==id)})[0]
-      console.log("solid",solid[j]);
       FavCart_items += `
                       <div class="p-4 bg-white rounded">
                           <img class="rounded bp-2" src="${product[headers[10]].split("\n")[0].replace('\"',"")}">
