@@ -6,6 +6,7 @@ var currency = "$";
 $("#badge").hide();
 $("#badgeFav").hide();
 $("#place-order").hide();
+$(".cardpricing").hide();
 $("#empty-cart").show();
 
 function addToCart(pid) {
@@ -95,9 +96,11 @@ function updateBadge() {
     $("#badge").text(badgeCount);
     $("#badge").show();
     $("#place-order").show();
+    $(".cardpricing").show();
   } else {
     $("#badge").hide();
     $("#place-order").hide();
+    $(".cardpricing").hide();
     $("#empty-cart").show();
   }
 }
