@@ -155,7 +155,7 @@ function updateList() {
       ')">X</a></div></div>';
   }
   cart_items +=
-    `<div class="btnpricing" style="width: 100%;">
+    `<div class="btnpricing" id="totalPrice">
         <p class="cure">Total Price: ${currency} </p>
         <p class="total">${grandTotal.toFixed(2)}</p>
     </div>`;
