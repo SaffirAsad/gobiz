@@ -14,16 +14,7 @@
          <div class="rowpricing">
             <div class="colpricing">
                <div class="cardpricing">
-                  <div id="videos" class="range-slider pricing" data-i18n="{
-                     &quot;askOffer&quot;: &quot;Küsi pakkumist&quot;,
-                     &quot;askOfferURL&quot;: &quot;#&quot;,
-                     &quot;perPerson&quot;: &quot;6€ / inimene kuus&quot;
-                     }">
-                     <div class="btnpricing">
-                        <p class="cure">Total: $ </p>
-                        <p contenteditable="true" class="totale">1615</p>
-                     </div>
-                  </div>
+                  
                   <div id="smart-button-container">
                      <div style="text-align: center;">
                         <div id="paypal-button-container"></div>
@@ -47,7 +38,9 @@
       </script>
       <script src="https://www.paypal.com/sdk/js?client-id=sb&amp;enable-funding=venmo&amp;currency=USD" data-sdk-integration-source="button-factory" data-uid-auto="uid_zhuullmilfiumcwcjhldzromymouxr"></script>
       <script>
+
          function initPayPalButton() {
+           amount = 0.5;
            paypal.Buttons({
              style: {
                shape: 'rect',
@@ -57,7 +50,7 @@
              },
              createOrder: function(data, actions) {
                return actions.order.create({
-                 purchase_units: [{"amount":{"currency_code":"USD","value": document.getElementById('videos').getElementsByClassName('totale')[0].innerHTML}}]
+                 purchase_units: [{"amount":{"currency_code":"USD","value": amount}}]
                });
              },
              onApprove: function(data, actions) {
