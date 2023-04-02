@@ -1,335 +1,128 @@
-<html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leads Pricing</title>
-
-  <link rel="stylesheet" href="css/paypal.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;display=swap" rel="stylesheet">
- <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.0/themes/smoothness/jquery-ui.css" rel="stylesheet">
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
-</head>
-<body data-new-gr-c-s-check-loaded="14.1102.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1102.0"> 
-<div class="containerpricing">
-  <div class="rowpricing">
-      <div class="colpricing">
-          <div class="cardpricing">
-              <div id="videos" class="range-slider pricing" data-i18n="{
-                      &quot;askOffer&quot;: &quot;Küsi pakkumist&quot;,
-                      &quot;askOfferURL&quot;: &quot;#&quot;,
-                      &quot;perPerson&quot;: &quot;6€ / inimene kuus&quot;
-                  }">
-  <div class="btnpricing">    
-    <p class="cure">Total: $ </p>
-    <p contenteditable="true" class="totale">1615</p> 
-  </div>
-</div>
-
-         
-<div id="smart-button-container">
-<div style="text-align: center;">
-<div id="paypal-button-container"><div id="zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu" class="paypal-buttons paypal-buttons-context-iframe paypal-buttons-label-paypal paypal-buttons-layout-vertical" data-paypal-smart-button-version="5.0.361" style="height: 162px; transition: all 0.2s ease-in-out 0s;"><style nonce="">
-                  #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu {
-                      position: relative;
-                      display: inline-block;
-                      width: 100%;
-                      min-height: 35px;
-                      min-width: 200px;
-                      max-width: 750px;
-                      font-size: 0;
-                  }
-
-                  #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu > iframe {
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      width: 100%;
-                      height: 100%;
-                  }
-
-                  #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu > iframe.component-frame {
-                      z-index: 100;
-                  }
-
-                  #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu > iframe.prerender-frame {
-                      transition: opacity .2s linear;
-                      z-index: 200;
-                  }
-
-                  #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu > iframe.visible {
-                      opacity: 1;
-                  }
-
-                  #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu > iframe.invisible {
-                      opacity: 0;
-                      pointer-events: none;
-                  }
-
-                  #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu > .smart-menu {
-                      position: absolute;
-                      z-index: 300;
-                      top: 0;
-                      left: 0;
-                      width: 100%;
-                  }
-              </style><iframe allowtransparency="true" name="__zoid__paypal_buttons__eyJzZW5kZXIiOnsiZG9tYWluIjoiaHR0cHM6Ly9nb29iaXoubmV0bGlmeS5hcHAifSwibWV0YURhdGEiOnsid2luZG93UmVmIjp7InR5cGUiOiJwYXJlbnQiLCJkaXN0YW5jZSI6MH19LCJyZWZlcmVuY2UiOnsidHlwZSI6InJhdyIsInZhbCI6IntcInVpZFwiOlwiem9pZC1wYXlwYWwtYnV0dG9ucy11aWRfZWQ5NTBkNzBhZV9tZGk2bWplNm50dVwiLFwiY29udGV4dFwiOlwiaWZyYW1lXCIsXCJ0YWdcIjpcInBheXBhbC1idXR0b25zXCIsXCJjaGlsZERvbWFpbk1hdGNoXCI6e1wiX190eXBlX19cIjpcInJlZ2V4XCIsXCJfX3ZhbF9fXCI6XCJcXFxcLnBheXBhbFxcXFwuKGNvbXxjbikoOlxcXFxkKyk/JFwifSxcInZlcnNpb25cIjpcIjEwXzFfMFwiLFwicHJvcHNcIjp7XCJzdHlsZVwiOntcImN1c3RvbVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJsYWJlbFwiOlwicGF5cGFsXCIsXCJsYXlvdXRcIjpcInZlcnRpY2FsXCIsXCJjb2xvclwiOlwiZ29sZFwiLFwic2hhcGVcIjpcInJlY3RcIixcInRhZ2xpbmVcIjpmYWxzZSxcImhlaWdodFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwZXJpb2RcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwibWVudVBsYWNlbWVudFwiOlwiYmVsb3dcIn0sXCJjcmVhdGVPcmRlclwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzk2YjQ1YjljMzlfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImNyZWF0ZU9yZGVyXCJ9fSxcIm9uQXBwcm92ZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzE3YmIwMjA5NTlfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcIm9uQXBwcm92ZVwifX0sXCJjc3BOb25jZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJmdW5kaW5nU291cmNlXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInN0b3JhZ2VTdGF0ZVwiOntcImdldFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzBlM2ZlMTU4M2ZfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImdldFwifX0sXCJzZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF85MTE5ZGM2MWYyX21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJzZXRcIn19fSxcInNlc3Npb25TdGF0ZVwiOntcImdldFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2Q2ZGVkNGFmOWZfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImdldFwifX0sXCJzZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF82NGVmM2Y3YmFhX21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJzZXRcIn19fSxcImNvbXBvbmVudHNcIjpbXCJidXR0b25zXCJdLFwibG9jYWxlXCI6e1wiY291bnRyeVwiOlwiRlJcIixcImxhbmdcIjpcImZyXCJ9LFwiY3JlYXRlQmlsbGluZ0FncmVlbWVudFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjcmVhdGVTdWJzY3JpcHRpb25cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwib25Db21wbGV0ZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nQ2hhbmdlXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uU2hpcHBpbmdBZGRyZXNzQ2hhbmdlXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uU2hpcHBpbmdPcHRpb25zQ2hhbmdlXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uQ2FuY2VsXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uQ2xpY2tcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZ2V0UHJlcmVuZGVyRGV0YWlsc1wiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2YxOTI0NjI2ODNfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImdldFByZXJlbmRlckRldGFpbHNcIn19LFwiZ2V0UG9wdXBCcmlkZ2VcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF80ZTlhNzMzNDlhX21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJnZXRQb3B1cEJyaWRnZVwifX0sXCJvbkluaXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF80NTBkYjYyMGQ3X21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJvbkluaXRcIn19LFwiZ2V0UXVlcmllZEVsaWdpYmxlRnVuZGluZ1wiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzA3ZTQ5NDE5YjJfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImdldFF1ZXJpZWRFbGlnaWJsZUZ1bmRpbmdcIn19LFwiY2xpZW50SURcIjpcIkFaRHhqRFNjRnBRdGpXVE9VdFdLYnlOX2JEdDRPZ3FhRjRlWVhsZXdmQlA0LThhcVgzUGlWOGUxR1dVNmxpQjJDVVhsa0E1OWtKWEU3TTZSXCIsXCJjbGllbnRBY2Nlc3NUb2tlblwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYXJ0bmVyQXR0cmlidXRpb25JRFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJtZXJjaGFudFJlcXVlc3RlZFBvcHVwc0Rpc2FibGVkXCI6ZmFsc2UsXCJlbmFibGVUaHJlZURvbWFpblNlY3VyZVwiOmZhbHNlLFwic2RrQ29ycmVsYXRpb25JRFwiOlwiZjQ3ODg1N2M0MDI0OVwiLFwic3RvcmFnZUlEXCI6XCJ1aWRfYWRjMGY2NmZiMl9tdG02bnRxNm1qeVwiLFwic2Vzc2lvbklEXCI6XCJ1aWRfNDY5ZmUxYmFkOF9tZGk2bXRjNm1qcVwiLFwiYnV0dG9uTG9jYXRpb25cIjpcImdvb2Jpei5uZXRsaWZ5LmFwcFwiLFwiYnV0dG9uU2Vzc2lvbklEXCI6XCJ1aWRfNjUwNDNmZTI1MV9tZGk2bWplNm50dVwiLFwiZW5hYmxlVmF1bHRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZW52XCI6XCJzYW5kYm94XCIsXCJhbW91bnRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwic3RhZ2VIb3N0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImJ1dHRvblNpemVcIjpcIm1lZGl1bVwiLFwiYXBpU3RhZ2VIb3N0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImZ1bmRpbmdFbGlnaWJpbGl0eVwiOntcInBheXBhbFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwicGF5bGF0ZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwicHJvZHVjdHNcIjp7XCJwYXlJbjNcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmFyaWFudFwiOm51bGx9LFwicGF5SW40XCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhcmlhbnRcIjpudWxsfSxcInBheWxhdGVyXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhcmlhbnRcIjpudWxsfX19LFwiY2FyZFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcImJyYW5kZWRcIjp0cnVlLFwiaW5zdGFsbG1lbnRzXCI6ZmFsc2UsXCJ2ZW5kb3JzXCI6e1widmlzYVwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwibWFzdGVyY2FyZFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwiYW1leFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwiZGlzY292ZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJoaXBlclwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjpmYWxzZX0sXCJlbG9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJqY2JcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6dHJ1ZX19LFwiZ3Vlc3RFbmFibGVkXCI6ZmFsc2V9LFwidmVubW9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIml0YXVcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImNyZWRpdFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYXBwbGVwYXlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInNlcGFcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImlkZWFsXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJiYW5jb250YWN0XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJnaXJvcGF5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJlcHNcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInNvZm9ydFwiOntcImVsaWdpYmxlXCI6dHJ1ZX0sXCJteWJhbmtcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInAyNFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwid2VjaGF0cGF5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJwYXl1XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJibGlrXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJ0cnVzdGx5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJveHhvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJib2xldG9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImJvbGV0b2JhbmNhcmlvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJtZXJjYWRvcGFnb1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwibXVsdGliYW5jb1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwic2F0aXNwYXlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInBhaWR5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX19LFwicGxhdGZvcm1cIjpcImRlc2t0b3BcIixcInJlbWVtYmVyZWRcIjpbXSxcImV4cGVyaW1lbnRcIjp7XCJlbmFibGVWZW5tb1wiOmZhbHNlLFwiZW5hYmxlVmVubW9BcHBMYWJlbFwiOmZhbHNlfSxcInBheW1lbnRSZXF1ZXN0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImZsb3dcIjpcInB1cmNoYXNlXCIsXCJyZW1lbWJlclwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2UzY2QxM2JmMGFfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcInJlbWVtYmVyXCJ9fSxcImN1cnJlbmN5XCI6XCJVU0RcIixcImludGVudFwiOlwiY2FwdHVyZVwiLFwiYnV5ZXJDb3VudHJ5XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImNvbW1pdFwiOnRydWUsXCJ2YXVsdFwiOmZhbHNlLFwiZW5hYmxlRnVuZGluZ1wiOltcInZlbm1vXCJdLFwiZGlzYWJsZUZ1bmRpbmdcIjpbXSxcImRpc2FibGVDYXJkXCI6W10sXCJtZXJjaGFudElEXCI6W10sXCJyZW5kZXJlZEJ1dHRvbnNcIjpbXCJwYXlwYWxcIixcInNvZm9ydFwiLFwiY2FyZFwiXSxcImNzcFwiOntcIm5vbmNlXCI6XCJcIn0sXCJub25jZVwiOlwiXCIsXCJnZXRQYWdlVXJsXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfNWE0Y2ZmOTJjNl9tZGk2bWplNm50dVwiLFwibmFtZVwiOlwiZ2V0UGFnZVVybFwifX0sXCJ1c2VySURUb2tlblwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjbGllbnRNZXRhZGF0YUlEXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImRlYnVnXCI6ZmFsc2UsXCJ0ZXN0XCI6e1wiYWN0aW9uXCI6XCJjaGVja291dFwifSxcIndhbGxldFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYXltZW50TWV0aG9kTm9uY2VcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwicGF5bWVudE1ldGhvZFRva2VuXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImJyYW5kZWRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYXBwbGVQYXlTdXBwb3J0XCI6ZmFsc2UsXCJzdXBwb3J0c1BvcHVwc1wiOnRydWUsXCJzdXBwb3J0ZWROYXRpdmVCcm93c2VyXCI6ZmFsc2UsXCJ1c2VyRXhwZXJpZW5jZUZsb3dcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYXBwbGVQYXlcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZXhwZXJpZW5jZVwiOlwiXCIsXCJhbGxvd0JpbGxpbmdQYXltZW50c1wiOnRydWUsXCJjcmVhdGVWYXVsdFNldHVwVG9rZW5cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9fSxcImV4cG9ydHNcIjp7XCJpbml0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMWI2NTQ3ZjA4N19tZGk2bWplNm50dVwiLFwibmFtZVwiOlwiaW5pdFwifX0sXCJjbG9zZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzQ4NWFlYzM4MzNfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImNsb3NlOjptZW1vaXplZFwifX0sXCJjaGVja0Nsb3NlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfOTYwMmZjYmVmN19tZGk2bWplNm50dVwiLFwibmFtZVwiOlwiY2hlY2tDbG9zZVwifX0sXCJyZXNpemVcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF83NjI4YWUxNjY2X21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJTZVwifX0sXCJvbkVycm9yXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMmM3MDUzYzMwZF9tZGk2bWplNm50dVwiLFwibmFtZVwiOlwiSWVcIn19LFwic2hvd1wiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzY4NDIwMzFjYWJfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImhlXCJ9fSxcImhpZGVcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8zMDBjOTkyMjQ0X21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJnZVwifX0sXCJleHBvcnRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8xODYyY2YzMTRiX21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJVZVwifX19fSJ9fQ__" title="PayPal" allowpaymentrequest="allowpaymentrequest" scrolling="no" id="jsx-iframe-7c5830d128" class="component-frame visible" style="background-color: transparent; border: none;"></iframe><div id="smart-menu" class="smart-menu"></div><div id="installments-modal" class="installments-modal"></div><iframe name="__detect_close_uid_46dfb48405_mdi6mje6ntu__" style="display: none;"></iframe></div></div>
-    </div>
-</div>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-$('label').on('click', function(){
-var color = $(this).next().css('color');
-  console.log(color);
-  if (color == 'rgb(177, 177, 177)') {
-    $(this).next().addClass('grey');
-  }
-  else { 
-    $(this).next().removeClass('grey');
-  }
-});
-</script>
-<script src="https://www.paypal.com/sdk/js?client-id=sb&amp;enable-funding=venmo&amp;currency=USD" data-sdk-integration-source="button-factory" data-uid-auto="uid_zhuullmilfiumcwcjhldzromymouxr"></script>
-<script>
-function initPayPalButton() {
-  paypal.Buttons({
-    style: {
-      shape: 'rect',
-      color: 'gold',
-      layout: 'vertical',
-      label: 'paypal',
-    },
-    createOrder: function(data, actions) {
-      return actions.order.create({
-        purchase_units: [{"amount":{"currency_code":"USD","value": document.getElementById('videos').getElementsByClassName('totale')[0].innerHTML}}]
-      });
-    },
-    onApprove: function(data, actions) {
-      return actions.order.capture().then(function(orderData) {
-        // Full available details
-        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-        // Show a success message within this page, e.g.
-        const element = document.getElementById('paypal-button-container');
-        element.innerHTML = '';
-        element.innerHTML = '<h3>Thank you for your payment!</h3>';
-        // Or go to another URL:  actions.redirect('thank_you.html');
-      });
-    },
-    onError: function(err) {
-      console.log(err);
-    }
-  }).render('#paypal-button-container');
-}
-initPayPalButton();
-</script>
-                 
-</body>
-</html>
-<!--
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leads Pricing</title>
-
-    <link rel="stylesheet" href="css/paypal.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
-	 <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.0/themes/smoothness/jquery-ui.css" rel="stylesheet">
-
-
-</head>
-<body> 
-  <div class="containerpricing">
-    <div class="rowpricing">
-        <div class="colpricing">
-            <div class="cardpricing">
-                <div 
-                    id="sites" 
-                    class="range-slider pricing"
-                    data-i18n='{
-                        "askOffer": "Recevez une offre",
-                        "askOfferURL": "#",
-                        "upTo1": "One website for $75", 
-                        "upTo2": "(Save $10) with $70 each", 
-                        "upTo3": "(Save $30) with $65 each", 
-								"upTo4": "(Save $30) with $65 each", 
-                        "upTo5": "(Save $20 on each)", 
-								 "upTo6": "(Save $40 on each)", 
-								  "upTo7": "(Save $20 on each)", 
-								   "upTo8": "(Save $20 on each)", 
-									 "upTo9": "(Save $20 on each)", 
-                        "upToMax": "Kuni 1000 vara/tööriista"
-                    }'
-                >
-                    
-                    <div>
-                        <span class="range-phrase"></span>
-								  <div class="indis">
-                        <p class="units"></p> <p class="rangetotal"></p><p class="pricing-detail"></p>
-								</div>
-                    </div>
-                    
-
-                    
-                    
-                    <input type="range" min="0" max="21" step="1" value="1" id="range">
-						  
-						  
-						  
-						  
-                </div>
-					 
-					 
-                <div
-                    id="videos" 
-                    class="range-slider pricing"
-                    data-i18n='{
-                        "askOffer": "Küsi pakkumist",
-                        "askOfferURL": "#",
-                        "perPerson": "6€ / inimene kuus"
-                    }'
-                >
-					 
-					   <div>
-                        <span class="range-phrase"></span>
-                    </div>
-				
-
-	 <div><p class="rangetotal"></p> </div> 
-
-	 <p class="pricing-detail"></p>
-                    
-                  
-                <input type="range" min="0" max="21" step="1" value="1" id="rangevideo">
-					 
-				
-						  
-  <div id="type">
-    <div class="bump">
-	 
-	 
-	 
-      <div class="box1">
-        <input type="checkbox" id="Directorywebsite" value = "">
-        <label op1="" id="lab" for="Directorywebsite" class="check-box"></label>
-        <h4 id="cl"></h4>     
-      </div> 
-		
-		 <div id="boxe1" style="display:none" >
-	         <div class="phras" >$<p id="pricing-Directorywebsite"></p> for </div> <span id="currentValue">0</span>
-	                  units </div>
-	  
-				     <input  type="range" min="0" max="21" step="1" value="1" id="rangeDirectorywebsite" style="display:none" oninput="myFunction(this.value)">
-
-
-
-
-      <div class="box1">
-        <input type="checkbox" id="Flyers">
-        <label for="Flyers" class="check-box"></label>
-        <h4 id="cl">Quality Buyer Leads</h4>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Leads Pricing</title>
+      <link rel="stylesheet" href="css/paypal.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;display=swap" rel="stylesheet">
+      <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.0/themes/smoothness/jquery-ui.css" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   </head>
+   <body data-new-gr-c-s-check-loaded="14.1102.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1102.0">
+      <div class="containerpricing">
+         <div class="rowpricing">
+            <div class="colpricing">
+               <div class="cardpricing">
+                  <div id="videos" class="range-slider pricing" data-i18n="{
+                     &quot;askOffer&quot;: &quot;Küsi pakkumist&quot;,
+                     &quot;askOfferURL&quot;: &quot;#&quot;,
+                     &quot;perPerson&quot;: &quot;6€ / inimene kuus&quot;
+                     }">
+                     <div class="btnpricing">
+                        <p class="cure">Total: $ </p>
+                        <p contenteditable="true" class="totale">1615</p>
+                     </div>
+                  </div>
+                  <div id="smart-button-container">
+                     <div style="text-align: center;">
+                        <div id="paypal-button-container">
+                           <div id="zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu" class="paypal-buttons paypal-buttons-context-iframe paypal-buttons-label-paypal paypal-buttons-layout-vertical" data-paypal-smart-button-version="5.0.361" style="height: 162px; transition: all 0.2s ease-in-out 0s;">
+                              <style nonce="">
+                                 #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu {
+                                 position: relative;
+                                 display: inline-block;
+                                 width: 100%;
+                                 min-height: 35px;
+                                 min-width: 200px;
+                                 max-width: 750px;
+                                 font-size: 0;
+                                 }
+                                 #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu > iframe {
+                                 position: absolute;
+                                 top: 0;
+                                 left: 0;
+                                 width: 100%;
+                                 height: 100%;
+                                 }
+                                 #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu > iframe.component-frame {
+                                 z-index: 100;
+                                 }
+                                 #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu > iframe.prerender-frame {
+                                 transition: opacity .2s linear;
+                                 z-index: 200;
+                                 }
+                                 #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu > iframe.visible {
+                                 opacity: 1;
+                                 }
+                                 #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu > iframe.invisible {
+                                 opacity: 0;
+                                 pointer-events: none;
+                                 }
+                                 #zoid-paypal-buttons-uid_ed950d70ae_mdi6mje6ntu > .smart-menu {
+                                 position: absolute;
+                                 z-index: 300;
+                                 top: 0;
+                                 left: 0;
+                                 width: 100%;
+                                 }
+                              </style>
+                              <iframe allowtransparency="true" name="__zoid__paypal_buttons__eyJzZW5kZXIiOnsiZG9tYWluIjoiaHR0cHM6Ly9nb29iaXoubmV0bGlmeS5hcHAifSwibWV0YURhdGEiOnsid2luZG93UmVmIjp7InR5cGUiOiJwYXJlbnQiLCJkaXN0YW5jZSI6MH19LCJyZWZlcmVuY2UiOnsidHlwZSI6InJhdyIsInZhbCI6IntcInVpZFwiOlwiem9pZC1wYXlwYWwtYnV0dG9ucy11aWRfZWQ5NTBkNzBhZV9tZGk2bWplNm50dVwiLFwiY29udGV4dFwiOlwiaWZyYW1lXCIsXCJ0YWdcIjpcInBheXBhbC1idXR0b25zXCIsXCJjaGlsZERvbWFpbk1hdGNoXCI6e1wiX190eXBlX19cIjpcInJlZ2V4XCIsXCJfX3ZhbF9fXCI6XCJcXFxcLnBheXBhbFxcXFwuKGNvbXxjbikoOlxcXFxkKyk/JFwifSxcInZlcnNpb25cIjpcIjEwXzFfMFwiLFwicHJvcHNcIjp7XCJzdHlsZVwiOntcImN1c3RvbVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJsYWJlbFwiOlwicGF5cGFsXCIsXCJsYXlvdXRcIjpcInZlcnRpY2FsXCIsXCJjb2xvclwiOlwiZ29sZFwiLFwic2hhcGVcIjpcInJlY3RcIixcInRhZ2xpbmVcIjpmYWxzZSxcImhlaWdodFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwZXJpb2RcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwibWVudVBsYWNlbWVudFwiOlwiYmVsb3dcIn0sXCJjcmVhdGVPcmRlclwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzk2YjQ1YjljMzlfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImNyZWF0ZU9yZGVyXCJ9fSxcIm9uQXBwcm92ZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzE3YmIwMjA5NTlfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcIm9uQXBwcm92ZVwifX0sXCJjc3BOb25jZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJmdW5kaW5nU291cmNlXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInN0b3JhZ2VTdGF0ZVwiOntcImdldFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzBlM2ZlMTU4M2ZfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImdldFwifX0sXCJzZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF85MTE5ZGM2MWYyX21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJzZXRcIn19fSxcInNlc3Npb25TdGF0ZVwiOntcImdldFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2Q2ZGVkNGFmOWZfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImdldFwifX0sXCJzZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF82NGVmM2Y3YmFhX21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJzZXRcIn19fSxcImNvbXBvbmVudHNcIjpbXCJidXR0b25zXCJdLFwibG9jYWxlXCI6e1wiY291bnRyeVwiOlwiRlJcIixcImxhbmdcIjpcImZyXCJ9LFwiY3JlYXRlQmlsbGluZ0FncmVlbWVudFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjcmVhdGVTdWJzY3JpcHRpb25cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwib25Db21wbGV0ZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nQ2hhbmdlXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uU2hpcHBpbmdBZGRyZXNzQ2hhbmdlXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uU2hpcHBpbmdPcHRpb25zQ2hhbmdlXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uQ2FuY2VsXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uQ2xpY2tcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZ2V0UHJlcmVuZGVyRGV0YWlsc1wiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2YxOTI0NjI2ODNfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImdldFByZXJlbmRlckRldGFpbHNcIn19LFwiZ2V0UG9wdXBCcmlkZ2VcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF80ZTlhNzMzNDlhX21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJnZXRQb3B1cEJyaWRnZVwifX0sXCJvbkluaXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF80NTBkYjYyMGQ3X21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJvbkluaXRcIn19LFwiZ2V0UXVlcmllZEVsaWdpYmxlRnVuZGluZ1wiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzA3ZTQ5NDE5YjJfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImdldFF1ZXJpZWRFbGlnaWJsZUZ1bmRpbmdcIn19LFwiY2xpZW50SURcIjpcIkFaRHhqRFNjRnBRdGpXVE9VdFdLYnlOX2JEdDRPZ3FhRjRlWVhsZXdmQlA0LThhcVgzUGlWOGUxR1dVNmxpQjJDVVhsa0E1OWtKWEU3TTZSXCIsXCJjbGllbnRBY2Nlc3NUb2tlblwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYXJ0bmVyQXR0cmlidXRpb25JRFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJtZXJjaGFudFJlcXVlc3RlZFBvcHVwc0Rpc2FibGVkXCI6ZmFsc2UsXCJlbmFibGVUaHJlZURvbWFpblNlY3VyZVwiOmZhbHNlLFwic2RrQ29ycmVsYXRpb25JRFwiOlwiZjQ3ODg1N2M0MDI0OVwiLFwic3RvcmFnZUlEXCI6XCJ1aWRfYWRjMGY2NmZiMl9tdG02bnRxNm1qeVwiLFwic2Vzc2lvbklEXCI6XCJ1aWRfNDY5ZmUxYmFkOF9tZGk2bXRjNm1qcVwiLFwiYnV0dG9uTG9jYXRpb25cIjpcImdvb2Jpei5uZXRsaWZ5LmFwcFwiLFwiYnV0dG9uU2Vzc2lvbklEXCI6XCJ1aWRfNjUwNDNmZTI1MV9tZGk2bWplNm50dVwiLFwiZW5hYmxlVmF1bHRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZW52XCI6XCJzYW5kYm94XCIsXCJhbW91bnRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwic3RhZ2VIb3N0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImJ1dHRvblNpemVcIjpcIm1lZGl1bVwiLFwiYXBpU3RhZ2VIb3N0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImZ1bmRpbmdFbGlnaWJpbGl0eVwiOntcInBheXBhbFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwicGF5bGF0ZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwicHJvZHVjdHNcIjp7XCJwYXlJbjNcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmFyaWFudFwiOm51bGx9LFwicGF5SW40XCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhcmlhbnRcIjpudWxsfSxcInBheWxhdGVyXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhcmlhbnRcIjpudWxsfX19LFwiY2FyZFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcImJyYW5kZWRcIjp0cnVlLFwiaW5zdGFsbG1lbnRzXCI6ZmFsc2UsXCJ2ZW5kb3JzXCI6e1widmlzYVwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwibWFzdGVyY2FyZFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwiYW1leFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwiZGlzY292ZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJoaXBlclwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjpmYWxzZX0sXCJlbG9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJqY2JcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6dHJ1ZX19LFwiZ3Vlc3RFbmFibGVkXCI6ZmFsc2V9LFwidmVubW9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIml0YXVcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImNyZWRpdFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYXBwbGVwYXlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInNlcGFcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImlkZWFsXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJiYW5jb250YWN0XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJnaXJvcGF5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJlcHNcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInNvZm9ydFwiOntcImVsaWdpYmxlXCI6dHJ1ZX0sXCJteWJhbmtcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInAyNFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwid2VjaGF0cGF5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJwYXl1XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJibGlrXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJ0cnVzdGx5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJveHhvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJib2xldG9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImJvbGV0b2JhbmNhcmlvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJtZXJjYWRvcGFnb1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwibXVsdGliYW5jb1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwic2F0aXNwYXlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInBhaWR5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX19LFwicGxhdGZvcm1cIjpcImRlc2t0b3BcIixcInJlbWVtYmVyZWRcIjpbXSxcImV4cGVyaW1lbnRcIjp7XCJlbmFibGVWZW5tb1wiOmZhbHNlLFwiZW5hYmxlVmVubW9BcHBMYWJlbFwiOmZhbHNlfSxcInBheW1lbnRSZXF1ZXN0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImZsb3dcIjpcInB1cmNoYXNlXCIsXCJyZW1lbWJlclwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2UzY2QxM2JmMGFfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcInJlbWVtYmVyXCJ9fSxcImN1cnJlbmN5XCI6XCJVU0RcIixcImludGVudFwiOlwiY2FwdHVyZVwiLFwiYnV5ZXJDb3VudHJ5XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImNvbW1pdFwiOnRydWUsXCJ2YXVsdFwiOmZhbHNlLFwiZW5hYmxlRnVuZGluZ1wiOltcInZlbm1vXCJdLFwiZGlzYWJsZUZ1bmRpbmdcIjpbXSxcImRpc2FibGVDYXJkXCI6W10sXCJtZXJjaGFudElEXCI6W10sXCJyZW5kZXJlZEJ1dHRvbnNcIjpbXCJwYXlwYWxcIixcInNvZm9ydFwiLFwiY2FyZFwiXSxcImNzcFwiOntcIm5vbmNlXCI6XCJcIn0sXCJub25jZVwiOlwiXCIsXCJnZXRQYWdlVXJsXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfNWE0Y2ZmOTJjNl9tZGk2bWplNm50dVwiLFwibmFtZVwiOlwiZ2V0UGFnZVVybFwifX0sXCJ1c2VySURUb2tlblwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjbGllbnRNZXRhZGF0YUlEXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImRlYnVnXCI6ZmFsc2UsXCJ0ZXN0XCI6e1wiYWN0aW9uXCI6XCJjaGVja291dFwifSxcIndhbGxldFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYXltZW50TWV0aG9kTm9uY2VcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwicGF5bWVudE1ldGhvZFRva2VuXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImJyYW5kZWRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYXBwbGVQYXlTdXBwb3J0XCI6ZmFsc2UsXCJzdXBwb3J0c1BvcHVwc1wiOnRydWUsXCJzdXBwb3J0ZWROYXRpdmVCcm93c2VyXCI6ZmFsc2UsXCJ1c2VyRXhwZXJpZW5jZUZsb3dcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYXBwbGVQYXlcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZXhwZXJpZW5jZVwiOlwiXCIsXCJhbGxvd0JpbGxpbmdQYXltZW50c1wiOnRydWUsXCJjcmVhdGVWYXVsdFNldHVwVG9rZW5cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9fSxcImV4cG9ydHNcIjp7XCJpbml0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMWI2NTQ3ZjA4N19tZGk2bWplNm50dVwiLFwibmFtZVwiOlwiaW5pdFwifX0sXCJjbG9zZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzQ4NWFlYzM4MzNfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImNsb3NlOjptZW1vaXplZFwifX0sXCJjaGVja0Nsb3NlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfOTYwMmZjYmVmN19tZGk2bWplNm50dVwiLFwibmFtZVwiOlwiY2hlY2tDbG9zZVwifX0sXCJyZXNpemVcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF83NjI4YWUxNjY2X21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJTZVwifX0sXCJvbkVycm9yXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMmM3MDUzYzMwZF9tZGk2bWplNm50dVwiLFwibmFtZVwiOlwiSWVcIn19LFwic2hvd1wiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzY4NDIwMzFjYWJfbWRpNm1qZTZudHVcIixcIm5hbWVcIjpcImhlXCJ9fSxcImhpZGVcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8zMDBjOTkyMjQ0X21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJnZVwifX0sXCJleHBvcnRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8xODYyY2YzMTRiX21kaTZtamU2bnR1XCIsXCJuYW1lXCI6XCJVZVwifX19fSJ9fQ__" title="PayPal" allowpaymentrequest="allowpaymentrequest" scrolling="no" id="jsx-iframe-7c5830d128" class="component-frame visible" style="background-color: transparent; border: none;"></iframe>
+                              <div id="smart-menu" class="smart-menu"></div>
+                              <div id="installments-modal" class="installments-modal"></div>
+                              <iframe name="__detect_close_uid_46dfb48405_mdi6mje6ntu__" style="display: none;"></iframe>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-		 <h6>Average cost of $1.5 per $10,000 of the selling price</h6>
-		 
-      <div class="box1">
-        <input type="checkbox" id="BusinessCards">
-        <label for="BusinessCards" class="check-box"></label>
-        <h4>Receive Seller Leads</h4>
-      </div>
-			 <h6>Average cost of $2.5 per $10,000 of the selling price</h6>
-			 
-		    <div class="box1">
-        <input type="checkbox" id="Businessards">
-        <label for="usinessCards" class="check-box"></label>
-        <h4> Add Lead-Collector Chatbot </h4>
-      </div>
-		
-		    <div class="box1">
-        <input type="checkbox" id="BusnessCards">
-        <label for="BsinessCards" class="check-box"></label>
-        <h4> Add Loan Calcuator</h4>
-      </div>
-		
-		    <div class="box1">
-        <input type="checkbox" id="BusinessCads">
-        <label for="BusinessCrds" class="check-box"></label>
-        <h4> </h4>
-      </div>
-      
-    </div>
-	   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		
-		
-
-  </div>
-    <div class="btnpricing">    
-      <p class="cure">Total: $ </p>
-      <p contenteditable="true" class="totale"> </p> 
-    </div>
-  </div>
-
-					 
-	<div id="smart-button-container">
-  <div style="text-align: center;">
-  <div id="paypal-button-container"></div>
-      </div>
-  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-<script>
-  $('label').on('click', function(){
-  var color = $(this).next().css('color');
-    console.log(color);
-    if (color == 'rgb(177, 177, 177)') {
-      $(this).next().addClass('grey');
-    }
-    else { 
-      $(this).next().removeClass('grey');
-    }
-  });
-</script>
-<script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
-<script>
-  function initPayPalButton() {
-    paypal.Buttons({
-      style: {
-        shape: 'rect',
-        color: 'gold',
-        layout: 'vertical',
-        label: 'paypal',
-      },
-      createOrder: function(data, actions) {
-        return actions.order.create({
-          purchase_units: [{"amount":{"currency_code":"USD","value": document.getElementById('videos').getElementsByClassName('totale')[0].innerHTML}}]
-        });
-      },
-      onApprove: function(data, actions) {
-        return actions.order.capture().then(function(orderData) {
-          // Full available details
-          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-          // Show a success message within this page, e.g.
-          const element = document.getElementById('paypal-button-container');
-          element.innerHTML = '';
-          element.innerHTML = '<h3>Thank you for your payment!</h3>';
-          // Or go to another URL:  actions.redirect('thank_you.html');
-        });
-      },
-      onError: function(err) {
-        console.log(err);
-      }
-    }).render('#paypal-button-container');
-  }
-  initPayPalButton();
-</script>
-<script  src="js/paypal.js"></script>
-</body>
+      <script>
+         $('label').on('click', function(){
+         var color = $(this).next().css('color');
+           console.log(color);
+           if (color == 'rgb(177, 177, 177)') {
+             $(this).next().addClass('grey');
+           }
+           else { 
+             $(this).next().removeClass('grey');
+           }
+         });
+      </script>
+      <script src="https://www.paypal.com/sdk/js?client-id=sb&amp;enable-funding=venmo&amp;currency=USD" data-sdk-integration-source="button-factory" data-uid-auto="uid_zhuullmilfiumcwcjhldzromymouxr"></script>
+      <script>
+         function initPayPalButton() {
+           paypal.Buttons({
+             style: {
+               shape: 'rect',
+               color: 'gold',
+               layout: 'vertical',
+               label: 'paypal',
+             },
+             createOrder: function(data, actions) {
+               return actions.order.create({
+                 purchase_units: [{"amount":{"currency_code":"USD","value": document.getElementById('videos').getElementsByClassName('totale')[0].innerHTML}}]
+               });
+             },
+             onApprove: function(data, actions) {
+               return actions.order.capture().then(function(orderData) {
+                 // Full available details
+                 console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                 // Show a success message within this page, e.g.
+                 const element = document.getElementById('paypal-button-container');
+                 element.innerHTML = '';
+                 element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                 // Or go to another URL:  actions.redirect('thank_you.html');
+               });
+             },
+             onError: function(err) {
+               console.log(err);
+             }
+           }).render('#paypal-button-container');
+         }
+         initPayPalButton();
+      </script>
+   </body>
 </html>
- -->                   

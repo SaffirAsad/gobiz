@@ -9,6 +9,97 @@ body {
 }
 
 
+.containerpricing {
+  margin: 0 auto 0;
+  height: 100%;
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardpricing {
+  border-radius: 34px;
+  background-color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.pricing-title {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.totale {
+margin:0;
+display: inline!important;
+font-size: 34px;
+  font-weight: 700;
+}
+
+.cure {
+  display: inline!important;
+font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+.pricing-detail {
+  color: #afbbc7;
+  margin: 0;
+}
+
+.range-phrase {
+  display: inline-block;
+  min-width: 90px;
+  padding: 0.11rem 0.5rem;
+  margin: 8px 0;
+  color: #a0aebd;
+  border: 2px solid #c1cad4;
+  border-radius: 6px;
+  background-color: #f7f8f9;
+}
+
+.tog{
+  width: 20%;
+}
+
+.range-val {
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  box-shadow: none;
+  background-color: #f6d961;
+  transition: background-color 200ms ease-in-out, box-shadow 160ms ease-in-out;
+  padding: auto;
+  margin: 18px 0;
+}
+
+.rowpricing {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+
+.colpricing {
+  flex-basis: 0;
+  flex-grow: 1;
+  width: 100%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .btnpricing {
   display: flex;
   align-items: center;
