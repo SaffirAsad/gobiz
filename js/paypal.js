@@ -10,7 +10,6 @@ $('label').on('click', function(){
 });
 
 function initPayPalButton() {
-    var amount = 0;
     paypal.Buttons({
         style: {
         shape: 'rect',
@@ -20,7 +19,7 @@ function initPayPalButton() {
         },
         createOrder: function(data, actions) {
         return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"USD","value": amount}}]
+            purchase_units: [{"amount":{"currency_code":"USD","value": document.querySelector('#mainTotalPrice').querySelector(".total").innerHTML}}]
         });
         },
         onApprove: function(data, actions) {
