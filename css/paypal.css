@@ -41,7 +41,7 @@ body {
   padding: 3rem 2rem;
 }
 
-.totale {
+.total {
 margin:0;
 display: inline!important;
 font-size: 34px;
@@ -55,7 +55,7 @@ font-size: 28px;
   margin: 0;
 }
 
-.totalPrice {
+.btnpricing {
   display: flex;
   align-items: center;
   justify-content: center;
