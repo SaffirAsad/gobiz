@@ -10,7 +10,7 @@ else {
 });
 
 function initPayPalButton() {
-var amount = document.querySelector('#mainTotalPrice').querySelector(".total").innerHTML;
+var amount = 100;// document.querySelector('#mainTotalPrice').querySelector(".total").innerHTML;
 paypal.Buttons({
     style: {
     shape: 'rect',
