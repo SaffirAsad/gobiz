@@ -3,12 +3,87 @@ var FavCart = [];
 var whatsAppNumber = "919159345508";
 var whatsAppMessage = "Thanks for shopping with us. Pre Payment Required";
 var currency = "$";
+
 $("#badge").hide();
 $("#badgeFav").hide();
 $("#place-order").hide();
 $(".cardpricing").hide();
 $("#empty-cart").show();
 
+function placeOrder() {
+    createWhatsAppLink();
+    /*
+    "use strict";
+    Swal.fire({
+        html: '<div class="text-left mt-2"> <p class="text-md">Please fill following details: </p>' +
+            '<label class="mt-6 block text-gray-700 text-sm font-bold mb-2" for="cus_name">Full Name</label>' +
+            '<input id="cus_name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">' +
+
+            '<label class="mt-4 block text-gray-700 text-sm font-bold mb-2" for="cus_mobile">Mobile</label>' +
+            '<input id="cus_mobile" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">' +
+
+            '<label class="mt-4 block text-gray-700 text-sm font-bold mb-2" for="cus_address">Address</label>' +
+            '<input id="cus_address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">' +
+            '</div>',
+
+        focusConfirm: false,
+        allowOutsideClick: false,
+        showCancelButton: true,
+        confirmButtonColor: '#17BB84',
+        confirmButtonText: 'Confirm',
+        cancelButtonText: "Close",
+        preConfirm: () => {
+            var customerDetails = [
+                document.getElementById('cus_name').value,
+                document.getElementById('cus_mobile').value,
+                document.getElementById('cus_address').value
+            ];
+            createWhatsAppLink(customerDetails);
+
+        }
+        
+    })
+    */
+}
+function createWhatsAppLink() {
+        var products_name = "";
+        var products_id = "";
+        var productsList = "\n- - - - - - - - - - - - - - - - - - - -\n";
+        productsList += "📦 *`Order Details:`* \n";
+
+        var grandTotal = 0;
+        for (let x = 0; x < cart.length; x++) {
+            var item_cost = Number(cart[x].qty) * Number(cart[x].price);
+            var cart_price = Number(cart[x].price);
+            products_name += cart[x].product_name.replace("\n","").replace(" ","")+";"
+            products_id += cart[x].product_id+";"
+            productsList += cart[x].product_name + "     " + cart[x].qty + " X " + cart_price.toFixed(2) + "     *" + currency + " " + item_cost.toFixed(2) + "* \n";
+            grandTotal += Number(cart[x].price) * cart[x].qty;
+        }
+
+        productsList += "\n- - - - - - - - - - - - - - - - - - - -\n";
+        productsList += "*`Total :`* " + "*" + currency + " " + grandTotal.toFixed(2) + "*";
+        productsList += "\n- - - - - - - - - - - - - - - - - - - -\n\n";
+        /*
+        var customerDetails = "📞 *`Customer Details:`* \n\n";
+        customerDetails += cusDetails[0] + "\n";
+        customerDetails += cusDetails[1] + "\n";
+        customerDetails += cusDetails[2] + "\n\n";
+        */
+        var waShareContent = "🎉 *`New Order`* \n";
+
+        // save data to google sheets
+        saveData(products_name , products_id , encodeURI(waShareContent+productsList));
+        
+        /*
+        old line was 
+        waShareContent = waShareContent + productsList + customerDetails + "*" + whatsAppMessage + "*";
+        */
+        waShareContent = waShareContent + productsList + "*" + whatsAppMessage + "*";
+        var link = "https://api.whatsapp.com/send/?phone=" + whatsAppNumber + "&text=" + encodeURI(waShareContent);
+        window.open(link, '_blank');
+        successAlert('Order Placed!');
+}
 function addToCart(pid) {
   "use strict";
   var productName = $("#" + pid + "_product_name").text();
@@ -135,7 +210,6 @@ function removeFromCart(i) {
     updateList();
 }
 
-
 /////////////////////////////////////////////////
 /////////////    Favorite Cart     //////////////
 /////////////////////////////////////////////////
@@ -183,7 +257,7 @@ function removeItemFromFavCart(id) {
       FavCart.splice(index, 1);
     }
   }
-  
+
 function updateFavList() {
     "use strict";
     var FavCart_items = "";
