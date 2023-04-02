@@ -333,8 +333,8 @@ function updateFavListOnload(products) {
   let pid = "";
   let solid = Object.keys(localStorage).filter(key => localStorage[key] == 'solid')
 
-  for (let j = 0; j < solid.length; j++) {
-      pid = solid[j].split("_fav")[0]
+  for (let j = 0; j < solid.length-1; j++) {
+      pid = solid[j];//.split("_fav")[0]
       console.log("product",j,pid);
       product = products.filter(product=>{return (product[headers[9]]==pid)})[0]
       FavCart_items += `
