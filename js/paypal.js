@@ -10,7 +10,7 @@ else {
 });
 
 function initPayPalButton() {
-amount = document.getElementById('totalPrice')[0].innerHTML;
+var amount = document.getElementById('totalPrice')[0].innerHTML;
 paypal.Buttons({
     style: {
     shape: 'rect',
