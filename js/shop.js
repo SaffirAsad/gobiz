@@ -163,7 +163,6 @@ function updateList() {
       </div>
     </div>`;
   $("#cart_items").html(cart_items);
-  try{initPayPalButton()}catch(err){}
 }
 
 function updateBadge() {
