@@ -156,8 +156,9 @@ function updateList() {
   }
   cart_items +=
     `<div class="totalPrice" id="totalPrice">
-        <p class="cure" style="margin-right:10px;">Total Price: ${currency} </p>
+        <p class="cure" style="margin-right:10px;">Total:</p>
         <p class="total">${grandTotal.toFixed(2)}</p>
+        <p class="cure">${currency}</p>
     </div>`;
   $("#cart_items").html(cart_items);
 }
