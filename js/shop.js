@@ -80,11 +80,10 @@ function updateList() {
       ')">X</a></div></div>';
   }
   cart_items +=
-    '<br><h3 id="totalPrice" class="pl-4 pt-4 pr-4 font-bold">Grand total: ' +
-    currency +
-    " " +
-    grandTotal.toFixed(2) +
-    "</h3>";
+    `<div class="btnpricing" style="width: 100%;">
+        <p class="cure">Total Price: ${currency} </p>
+        <p class="total">${grandTotal.toFixed(2)}</p>
+    </div>`;
   $("#cart_items").html(cart_items);
 }
 
