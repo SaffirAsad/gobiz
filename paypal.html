@@ -14,7 +14,10 @@
          <div class="rowpricing">
             <div class="colpricing">
                <div class="cardpricing">
-                  
+                  <div id="totalPrice">
+                    <p class="cure">Total: $ </p>
+                    <p contenteditable="true" class="total">1615</p>
+                  </div>
                   <div id="smart-button-container">
                      <div style="text-align: center;">
                         <div id="paypal-button-container"></div>
@@ -40,7 +43,7 @@
       <script>
 
          function initPayPalButton() {
-           amount = 0.5;
+           amount = document.getElementById('totalPrice').getElementsByClassName('total')[0].innerHTML;
            paypal.Buttons({
              style: {
                shape: 'rect',
