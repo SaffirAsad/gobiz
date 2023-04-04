@@ -323,7 +323,6 @@ function removeFromFavCart(id) {
     successFavAlert('Item Removed');
     updateFavBadge();
     updateFavList();
-
 }
 function updateFavListOnload(products) {
   "use strict";
@@ -336,7 +335,7 @@ function updateFavListOnload(products) {
   for (let j = 0; j < solid.length-1; j++) {
       pid = solid[j];//.split("_fav")[0]
       product = products.filter(product=>{return (product[headers[9]]==pid)})[0]
-      console.log("product",j,pid,"\n",product);
+      if(product == undefined){continue}
       FavCart_items += `
                       <div class="p-4 bg-white rounded">
                           <img class="rounded bp-2" src="${product[headers[10]].split("\n")[0].replace('\"',"")}">
@@ -367,7 +366,8 @@ function updateFavListOnload(products) {
         "subtitle": product[headers[4]]
     });
     updateFavBadge();
-    updateFavList();                    
+    updateFavList(); 
+    checkFavorite()                   
   }
   $("#FavCart_items").html(FavCart_items);
 }

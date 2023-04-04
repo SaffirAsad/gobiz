@@ -8,7 +8,6 @@ function sliderMaker(slider,videos, images,pid){
   //console.log("slider",slider);
   // Loop through the image URLs in the object and create img elements
   let s=0;
-  console.log("");
   for (let image in images) {
     const div = document.createElement("div");
     const img = document.createElement("img");
