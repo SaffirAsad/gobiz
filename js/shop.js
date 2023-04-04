@@ -322,7 +322,7 @@ function removeFromFavCart(id) {
     }
     successFavAlert('Item Removed');
     updateFavBadge();
-    updateFavList();
+    favorite(id);
 }
 function updateFavListOnload(products) {
   "use strict";
@@ -366,8 +366,7 @@ function updateFavListOnload(products) {
         "subtitle": product[headers[4]]
     });
     updateFavBadge();
-    updateFavList(); 
-    favorite(id);                 
+    updateFavList();                  
   }
   $("#FavCart_items").html(FavCart_items);
 }
