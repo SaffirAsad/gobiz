@@ -30,8 +30,8 @@ function sliderMaker(slider,videos, images,pid){
   }
 
   // Set the width of the slider track based on the number of images and videos
-  let maxIndex = numImages + videos.length-1;
   const numImages = Object.keys(images).length;
+  let maxIndex = numImages + videos.length-1;
   sliderTrack.style.width = `${(maxIndex)*100}%`;
 
   // Initialize the slider with the first image

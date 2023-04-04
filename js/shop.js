@@ -322,7 +322,7 @@ function removeFromFavCart(id) {
     }
     successFavAlert('Item Removed');
     updateFavBadge();
-    favorite(id);
+    updateFavList();
 }
 function updateFavListOnload(products) {
   "use strict";
