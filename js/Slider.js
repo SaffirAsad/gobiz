@@ -31,7 +31,7 @@ function sliderMaker(slider,videos, images,pid){
 
   // Set the width of the slider track based on the number of images
   const numImages = Object.keys(images).length;
-  sliderTrack.style.width = `${numImages * 100}%`;
+  sliderTrack.style.width = `${(numImages+videos.length)*100}%`;
 
   // Initialize the slider with the first image
   let currentIndex = 0;
@@ -41,7 +41,7 @@ function sliderMaker(slider,videos, images,pid){
   let maxIndex = sliderImgs.length - 1;
   function slideTo(index) {
     currentIndex = index;
-    sliderTrack.style.transform = `translateX(-${(currentIndex * 100)/numImages}%)`;
+    sliderTrack.style.transform = `translateX(-${(currentIndex * 100)/(numImages+videos.length)}%)`;
   }
 
   sliderBtnPrev.addEventListener("click", () => {
@@ -76,7 +76,8 @@ function sliderMaker(slider,videos, images,pid){
     });
   });
 
-  imgs= sliderContainer.querySelectorAll("div.slider-track>img");
+  imgs= sliderContainer.querySelectorAll("div.slider-track img");
+  videos= sliderContainer.querySelectorAll("div.slider-track video");
   let rm=0;
   setTimeout(()=>{
     imgs.forEach(img=>{
@@ -91,4 +92,7 @@ function sliderMaker(slider,videos, images,pid){
       img.style.width="300px";
     });      
   },900);
+  videos.forEach(video=>{
+    video.style.width="300px";
+  })
 }
