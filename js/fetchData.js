@@ -299,6 +299,7 @@ function AddDelsub(subCatel,products){
         p.forEach(product => {
             let urls=product[URLs].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
             let videos = product[headers[11]].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
+            console.log("img:",urls,'pid',product[ProductId]);
             sliderMaker(document.querySelector(`#slider-container-${count2}`),videos, urls , product[ProductId])
             count2+=1;
         });
