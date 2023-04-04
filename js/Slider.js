@@ -29,19 +29,19 @@ function sliderMaker(slider,videos, images,pid){
     sliderTrack.appendChild(div);
   }
 
-  // Set the width of the slider track based on the number of images
+  // Set the width of the slider track based on the number of images and videos
+  let maxIndex = numImages + videos.length-1;
   const numImages = Object.keys(images).length;
-  sliderTrack.style.width = `${(numImages+videos.length)*100}%`;
+  sliderTrack.style.width = `${(maxIndex)*100}%`;
 
   // Initialize the slider with the first image
   let currentIndex = 0;
   const sliderImgs = sliderTrack.querySelectorAll("img");
   sliderImgs[currentIndex].classList.add("active");
 
-  let maxIndex = numImages+videos.length;
   function slideTo(index) {
     currentIndex = index;
-    sliderTrack.style.transform = `translateX(-${(currentIndex * 100)/(numImages+videos.length)}%)`;
+    sliderTrack.style.transform = `translateX(-${(currentIndex * 100)/maxIndex}%)`;
   }
 
   sliderBtnPrev.addEventListener("click", () => {
