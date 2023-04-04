@@ -38,7 +38,7 @@ function sliderMaker(slider,videos, images,pid){
   const sliderImgs = sliderTrack.querySelectorAll("img");
   sliderImgs[currentIndex].classList.add("active");
 
-  let maxIndex = sliderImgs.length - 1;
+  let maxIndex = numImages+videos.length;
   function slideTo(index) {
     currentIndex = index;
     sliderTrack.style.transform = `translateX(-${(currentIndex * 100)/(numImages+videos.length)}%)`;
