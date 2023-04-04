@@ -31,7 +31,7 @@ function sliderMaker(slider,videos, images,pid){
 
   // Set the width of the slider track based on the number of images and videos
   const numImages = Object.keys(images).length;
-  let maxIndex = numImages + videos.length-1;
+  let maxIndex = numImages + videos.length;
   sliderTrack.style.width = `${(maxIndex)*100}%`;
 
   // Initialize the slider with the first image
@@ -48,12 +48,12 @@ function sliderMaker(slider,videos, images,pid){
     if (currentIndex > 0) {
       slideTo(currentIndex - 1);
     } else {
-      slideTo(maxIndex);
+      slideTo(maxIndex-1);
     }
   });
 
   sliderBtnNext.addEventListener("click", () => {
-    if (currentIndex < maxIndex) {
+    if (currentIndex < maxIndex-1) {
       slideTo(currentIndex + 1);
     } else {
       slideTo(0);
