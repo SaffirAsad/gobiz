@@ -81,8 +81,9 @@ function ProductGrid(products,headers,min, max){
     setTimeout(()=>{
         products.forEach(product => {
             let urls=product[URLs].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
+            let videos = product[headers[11]].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
             //console.log("urls<<",urls);
-            sliderMaker(document.querySelector(`#slider-container-${count2}`), urls, product[ProductId])
+            sliderMaker(document.querySelector(`#slider-container-${count2}`),videos, urls, product[ProductId])
             count2+=1;
         });
     },900);
@@ -297,8 +298,8 @@ function AddDelsub(subCatel,products){
     setTimeout(()=>{
         p.forEach(product => {
             let urls=product[URLs].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
-            console.log("urls<<",urls,"\n","product[VideoURLs]\n", product[VideoURLs] ,"\n");
-            sliderMaker(document.querySelector(`#slider-container-${count2}`), urls , product[ProductId])
+            let videos = product[headers[11]].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
+            sliderMaker(document.querySelector(`#slider-container-${count2}`),videos, urls , product[ProductId])
             count2+=1;
         });
     },900);
