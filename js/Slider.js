@@ -9,10 +9,12 @@ function sliderMaker(slider, images,pid){
   // Loop through the image URLs in the object and create img elements
   let s=0;
   for (let image in images) {
+    const div = document.createElement("div");
     const img = document.createElement("img");
     if (s==0){img.setAttribute("id", `${pid}_product_image`);}
     img.setAttribute("src", images[image]);
-    sliderTrack.appendChild(img);
+    div.appendChild(img);
+    sliderTrack.appendChild(div);
   }
 
   // Set the width of the slider track based on the number of images
