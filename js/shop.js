@@ -335,8 +335,8 @@ function updateFavListOnload(products) {
 
   for (let j = 0; j < solid.length-1; j++) {
       pid = solid[j];//.split("_fav")[0]
-      console.log("product",j,pid);
       product = products.filter(product=>{return (product[headers[9]]==pid)})[0]
+      console.log("product",j,pid,"\n",product);
       FavCart_items += `
                       <div class="p-4 bg-white rounded">
                           <img class="rounded bp-2" src="${product[headers[10]].split("\n")[0].replace('\"',"")}">
