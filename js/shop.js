@@ -367,7 +367,7 @@ function updateFavListOnload(products) {
     });
     updateFavBadge();
     updateFavList(); 
-    checkFavorite()                   
+    favorite(id);                 
   }
   $("#FavCart_items").html(FavCart_items);
 }

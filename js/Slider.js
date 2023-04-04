@@ -1,5 +1,5 @@
 function sliderMaker(slider,videos, images,pid){
-  console.log("videos",videos);
+  //console.log("videos",videos);
   // Get the slider container and slider track elements
   const sliderContainer = slider;
   const sliderTrack = slider.querySelector(".slider-track");
@@ -8,10 +8,22 @@ function sliderMaker(slider,videos, images,pid){
   //console.log("slider",slider);
   // Loop through the image URLs in the object and create img elements
   let s=0;
+  for(i=0;i<videos.length;i++){
+    console.log("videos:"+i,videos[i]);
+    const videodiv = document.createElement("div");
+    const video = document.createElement('video');
+    video.src = videos[i];
+    video.autoplay = true;
+    video.loop = true;
+    video.muted = true;
+    videodiv.appendChild(video);
+    sliderTrack.appendChild(videodiv);
+  }
+  
   for (let image in images) {
     const div = document.createElement("div");
     const img = document.createElement("img");
-    if (s==0){img.setAttribute("id", `${pid}_product_image`);}
+    img.setAttribute("id", `${pid}_product_image`);
     img.setAttribute("src", images[image]);
     div.appendChild(img);
     sliderTrack.appendChild(div);
