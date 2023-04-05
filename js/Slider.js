@@ -20,22 +20,17 @@ function sliderMaker(slider,videos, images,pid){
     source.type = "video/mp4";
     video.id = video_id
     video.appendChild(source)
-
     const playButton = document.createElement('img');
     playButton.src = '/images/play.png';
-    playButton.style.width = '50%';
-    playButton.style.height = '50%';
+    playButton.style.width = '30%';
+    playButton.style.height = '30%';
     playButton.style.cursor = 'pointer';
     PlayButton.class="play-button";
     playButton.addEventListener('click', () => {
       video.play();
-      overlay.style.display = 'none';
     });
-
     video.appendChild(PlayButton)
     videodiv.appendChild(video);
-
-    videodiv.appendChild(playButton);
     sliderTrack.appendChild(videodiv);
   }
   
@@ -47,16 +42,15 @@ function sliderMaker(slider,videos, images,pid){
     div.appendChild(img);
     sliderTrack.appendChild(div);
   }
+
   // Set the width of the slider track based on the number of images and videos
   const numImages = Object.keys(images).length;
   let maxIndex = numImages + videos.length;
   sliderTrack.style.width = `${(maxIndex)*100}%`;
-
   // Initialize the slider with the first image
   let currentIndex = 0;
   const sliderImgs = sliderTrack.querySelectorAll("img");
   sliderImgs[currentIndex].classList.add("active");
-
   function slideTo(index) {
     currentIndex = index;
     sliderTrack.style.transform = `translateX(-${(currentIndex * 100)/maxIndex}%)`;
