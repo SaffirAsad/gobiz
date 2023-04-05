@@ -26,7 +26,7 @@ function sliderMaker(slider,videos, images,pid){
     videodiv.appendChild(video);
 
     const playButton = document.createElement('img');
-    playButton.src = 'play-button.png';
+    playButton.src = '/images/play.png';
     playButton.style.width = '50%';
     playButton.style.height = '50%';
     playButton.style.cursor = 'pointer';
