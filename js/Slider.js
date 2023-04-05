@@ -9,6 +9,7 @@ function sliderMaker(slider,videos, images,pid){
   // Loop through the image URLs in the object and create img elements
   let s=0;
   for(i=0;i<videos.length;i++){
+    video_id = `video-${pid}-${i}`
     console.log("videos:"+i,videos[i]);
     const videodiv = document.createElement("div");
     const video = document.createElement('video');
@@ -16,9 +17,13 @@ function sliderMaker(slider,videos, images,pid){
     video.preload="auto";
     const source = document.createElement('source');
     source.src = videos[i];source.type = "video/mp4";
+    video.id = video_id
     video.appendChild(source)
     videodiv.appendChild(video);
     sliderTrack.appendChild(videodiv);
+    const player = new Plyr(video_id, {
+      controls: ['play-large']
+    });
   }
   
   for (let image in images) {
@@ -29,7 +34,6 @@ function sliderMaker(slider,videos, images,pid){
     div.appendChild(img);
     sliderTrack.appendChild(div);
   }
-
   // Set the width of the slider track based on the number of images and videos
   const numImages = Object.keys(images).length;
   let maxIndex = numImages + videos.length;
