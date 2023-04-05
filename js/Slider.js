@@ -15,6 +15,7 @@ function sliderMaker(slider,videos, images,pid){
     const video = document.createElement('video');
     video.muted = true;
     video.preload="auto";
+    video.controls = true;
     const source = document.createElement('source');
     source.src = "https://www.w3schools.com/tags/movie.mp4"; //videos[i];
     source.type = "video/mp4";
