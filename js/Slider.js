@@ -20,20 +20,21 @@ function sliderMaker(slider,videos, images,pid){
     source.type = "video/mp4";
     video.id = video_id
     video.appendChild(source)
-    const PlayButton = document.createElement("div");
-    PlayButton.class="play-button";
-    video.appendChild(PlayButton)
-    videodiv.appendChild(video);
 
     const playButton = document.createElement('img');
     playButton.src = '/images/play.png';
     playButton.style.width = '50%';
     playButton.style.height = '50%';
     playButton.style.cursor = 'pointer';
+    PlayButton.class="play-button";
     playButton.addEventListener('click', () => {
       video.play();
       overlay.style.display = 'none';
     });
+
+    video.appendChild(PlayButton)
+    videodiv.appendChild(video);
+
     videodiv.appendChild(playButton);
     sliderTrack.appendChild(videodiv);
   }
