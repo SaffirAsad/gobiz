@@ -28,6 +28,12 @@ function sliderMaker(slider,videos, images,pid){
     const player = new Plyr(video_id, {
       controls: ['play-large']
     });
+    sliderTrack.appendChild(`
+      <video class="video" width="300" height="300">
+        <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+        <div class="play-button"></div>
+      </video>
+    `);
   }
   
   for (let image in images) {
