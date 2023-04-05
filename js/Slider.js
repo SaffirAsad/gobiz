@@ -25,17 +25,6 @@ function sliderMaker(slider,videos, images,pid){
     video.appendChild(PlayButton)
     videodiv.appendChild(video);
 
-    const overlay = document.createElement('div');
-    overlay.style.position = 'absolute';
-    overlay.style.top = '0';
-    overlay.style.left = '0';
-    overlay.style.width = '100%';
-    overlay.style.height = '100%';
-    overlay.style.background = 'rgba(0,0,0,0.5)';
-    overlay.style.display = 'flex';
-    overlay.style.alignItems = 'center';
-    overlay.style.justifyContent = 'center';
-
     const playButton = document.createElement('img');
     playButton.src = 'play-button.png';
     playButton.style.width = '50%';
