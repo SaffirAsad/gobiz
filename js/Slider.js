@@ -24,16 +24,30 @@ function sliderMaker(slider,videos, images,pid){
     PlayButton.class="play-button";
     video.appendChild(PlayButton)
     videodiv.appendChild(video);
-    sliderTrack.appendChild(videodiv);
-    const player = new Plyr(video_id, {
-      controls: ['play-large']
+
+    const overlay = document.createElement('div');
+    overlay.style.position = 'absolute';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.background = 'rgba(0,0,0,0.5)';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+
+    const playButton = document.createElement('img');
+    playButton.src = 'play-button.png';
+    playButton.style.width = '50%';
+    playButton.style.height = '50%';
+    playButton.style.cursor = 'pointer';
+    playButton.addEventListener('click', () => {
+      video.play();
+      overlay.style.display = 'none';
     });
-    sliderTrack.appendChild(`
-      <video class="video" width="300" height="300">
-        <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
-        <div class="play-button"></div>
-      </video>
-    `);
+    overlay.appendChild(playButton);
+    videodiv.appendChild(overlay);
+    sliderTrack.appendChild(videodiv);
   }
   
   for (let image in images) {
