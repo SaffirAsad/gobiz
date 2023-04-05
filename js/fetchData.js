@@ -4,6 +4,7 @@ function fetchData() {
     request.open('GET', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSXdu2BEMg-HK6vicRYTmIskyAXS4dVKEIzRZFipBBYuwR9k_1bX7Kw_L9jUONWdUSsHhYUZIKDvS6k/pub?output=csv', false);
     request.send();
     if (request.status >= 200 && request.status < 400) {
+        DataBaseText = request.responseText;
         var data = request.responseText.split('\r\n');
         headers = data[0].split(',');
         products = [];

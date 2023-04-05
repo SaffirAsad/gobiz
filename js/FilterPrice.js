@@ -1,4 +1,5 @@
 // read google sheets database
+var DataBaseText ='';
 fetchData();
 //console.log(headers)
 let minValue = document.getElementById("min-value");
