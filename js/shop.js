@@ -323,6 +323,7 @@ function removeFromFavCart(id) {
     successFavAlert('Item Removed');
     updateFavBadge();
     updateFavList();
+    //update coockies
     favorite(id);
 }
 function updateFavListOnload(products) {
