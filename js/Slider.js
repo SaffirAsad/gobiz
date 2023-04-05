@@ -34,8 +34,7 @@ function sliderMaker(slider,videos, images,pid){
       video.play();
       overlay.style.display = 'none';
     });
-    overlay.appendChild(playButton);
-    videodiv.appendChild(overlay);
+    videodiv.appendChild(playButton);
     sliderTrack.appendChild(videodiv);
   }
   
