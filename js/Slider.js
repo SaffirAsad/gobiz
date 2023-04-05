@@ -13,6 +13,7 @@ function sliderMaker(slider,videos, images,pid){
     const videodiv = document.createElement("div");
     const video = document.createElement('video');
     video.muted = true;
+    video.preload="auto";
     const source = document.createElement('source');
     source.src = videos[i];source.type = "video/mp4";
     video.appendChild(source)
