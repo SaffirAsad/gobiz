@@ -20,6 +20,9 @@ function sliderMaker(slider,videos, images,pid){
     source.type = "video/mp4";
     video.id = video_id
     video.appendChild(source)
+    const PlayButton = document.createElement("div");
+    PlayButton.class="play-button";
+    video.appendChild(PlayButton)
     videodiv.appendChild(video);
     sliderTrack.appendChild(videodiv);
     const player = new Plyr(video_id, {
