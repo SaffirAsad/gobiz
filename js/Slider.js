@@ -20,6 +20,7 @@ function sliderMaker(slider,videos, images,pid){
     source.type = "video/mp4";
     video.id = video_id
     video.appendChild(source)
+    /*
     const playButton = document.createElement('img');
     playButton.src = '/images/play.png';
     playButton.style.width = '30%';
@@ -30,6 +31,7 @@ function sliderMaker(slider,videos, images,pid){
       video.play();
     });
     video.appendChild(PlayButton)
+    */
     videodiv.appendChild(video);
     sliderTrack.appendChild(videodiv);
   }
