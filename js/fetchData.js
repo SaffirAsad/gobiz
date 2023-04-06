@@ -5,7 +5,8 @@ function fetchData() {
     request.send();
     if (request.status >= 200 && request.status < 400) {
         DataBaseText = request.responseText;
-        var data = request.responseText.split('\r\n');
+        // i did set the data to each cell in google sheets[in case multiple line] with {alt+Enter} == as text '\r\n' 
+        var data = request.responseText.replace("\r\nhttps","\nhttps").split('\r\n');
         headers = data[0].split(',');
         products = [];
         for (var i = 1; i < data.length; i++) {
