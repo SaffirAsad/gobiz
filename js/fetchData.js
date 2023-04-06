@@ -19,6 +19,7 @@ function fetchData() {
             product[headers[j]] = productData[j];
             }
             products.push(product);
+            console.log(product[headers[11]],'\n');
         }
     } else {
         console.error('Error while fetching data from Google Sheet');
