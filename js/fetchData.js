@@ -82,8 +82,11 @@ function ProductGrid(products,headers,min, max){
     count2=0;
     setTimeout(()=>{
         products.forEach(product => {
-            let urls=product[URLs].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
-            let videos = product[headers[11]].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
+            //let urls=product[URLs].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
+            //let videos = product[headers[11]].split(`\"`).filter(function (el){return el!="";})[0].split(`\n`)
+            // replaced with this
+            let urls=product[URLs].replace(/['"]/g,'').split(`\n`)
+            let videos = product[VideoURLs].replace(/['"]/g,'').split(`\n`)
             //console.log("urls<<",urls);
             sliderMaker(document.querySelector(`#slider-container-${count2}`),videos, urls, product[ProductId])
             count2+=1;
@@ -301,6 +304,7 @@ function AddDelsub(subCatel,products){
         p.forEach(product => {
             let urls=product[URLs].replace(/['"]/g,'').split(`\n`)
             let videos = product[VideoURLs].replace(/['"]/g,'').split(`\n`)
+            console.log("videos",videos);
             sliderMaker(document.querySelector(`#slider-container-${count2}`),videos, urls , product[ProductId])
             count2+=1;
         });
