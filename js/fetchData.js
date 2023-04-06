@@ -17,9 +17,9 @@ function fetchData() {
             var product = {};
             for (var j = 0; j < headers.length; j++) {
             product[headers[j]] = productData[j];
+            if(j==11){console.log(productData[j],product[headers[12]].length,'\n');}
             }
             products.push(product);
-            console.log(product[headers[11]],product[headers[11]].length,'\n');
         }
     } else {
         console.error('Error while fetching data from Google Sheet');
