@@ -17,7 +17,7 @@ function fetchData() {
             var product = {};
             for (var j = 0; j < headers.length; j++) {
             product[headers[j]] = productData[j];
-            if(j==11){console.log(productData[j],product[headers[11]].split("\n").length,'\n');}
+            if(j==11){console.log(product[headers[11]].split("\n").length,productData[j],'\n');}
             }
             products.push(product);
         }
