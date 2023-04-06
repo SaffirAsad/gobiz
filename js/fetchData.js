@@ -304,7 +304,7 @@ function AddDelsub(subCatel,products){
         p.forEach(product => {
             let urls=product[URLs].replace(/['"]/g,'').split(`\n`)
             let videos = product[VideoURLs].replace(/['"]/g,'').split(`\n`)
-            console.log("videos",videos);
+            console.log("videos",product[VideoURLs]);
             sliderMaker(document.querySelector(`#slider-container-${count2}`),videos, urls , product[ProductId])
             count2+=1;
         });
