@@ -1,3 +1,10 @@
+// loading...
+window,scrollTo(0,0);
+window.addEventListener("load", function () {
+  const loading = document.querySelector("#loading");
+  loading.style.display = "none";
+});
+// 
 document.getElementById("year").innerHTML=new Date().getFullYear();
 function successAlert(msg) {
     "use strict";
@@ -21,3 +28,4 @@ function successFavAlert(msg) {
         timer: 1500
     })
 }
+
