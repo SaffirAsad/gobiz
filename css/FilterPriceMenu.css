@@ -115,11 +115,6 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 /* Costum Select Style */
-body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-}
-
 h1 {
   text-align: center;
   margin-bottom: 20px;
