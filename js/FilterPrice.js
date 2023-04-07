@@ -1,4 +1,5 @@
 // loading...
+window,scrollTo(0,0);
 window.addEventListener("load", function () {
   const loading = document.querySelector("#loading");
   loading.style.display = "none";
