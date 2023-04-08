@@ -89,11 +89,9 @@ document.getElementById("scroll-to-top-btn").onclick = function() {
   // Define the animation duration and easing function
   const duration = 1500;
   const easing = t => t * (2 - t);
-
   // Define the starting and ending scroll positions
   const start = scrollPos;
   const end = 0;
-
   // Define the start time of the animation
   const startTime = performance.now();
 
