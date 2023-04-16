@@ -35,6 +35,8 @@
     <script src="js/sweetalert.all.js" type="5bca4c6d3ee6a9cb55becda1-text/javascript"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Price Filter Style ****************  -->
+    <script src="https://cdn.auth0.com/js/auth0/9.20.0/auth0.min.js"></script>
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
     <link rel="stylesheet" href="css/FilterPriceMenu.css" />
 </head>
 
@@ -58,6 +60,9 @@
                             <img class="h-10" src="images/IMG-61540f1f99026-logo.png.png" alt="GoStore" width="auto">
                         </a>
                     </div>
+
+                    <button id="btn-login" disabled="true" onclick="login()">Log in</button>
+                    <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
                     
                     <div class="flex">
                         <button id="navbar-burger" class="navbar-burger flex items-center">
@@ -234,6 +239,10 @@
             </div>
             <button id="scroll-to-top-btn"> </button>
     </footer>
+    <!-- Add this HTML to your application's UI -->
+    <button id="login-button">Sign In</button>
+
+    <!-- Include the Auth0 SDK in your HTML file -->
     <script src="js/script.js" type="5bca4c6d3ee6a9cb55becda1-text/javascript"></script>
     <script src="js/rocket-loader.min.js" data-cf-settings="5bca4c6d3ee6a9cb55becda1-|49" defer=""></script>
     <!-- Script.js -->
