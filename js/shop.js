@@ -384,9 +384,7 @@ window.addEventListener("load", function () {
 var auth0 = new Auth0({
 domain: 'goobizstore.eu.auth0.com',
 clientID: 'DvCnnvY4INUdGTCLAwJajH16Ozpdhr08',
-redirectUri: 'http://localhost:3000/callback', // Replace with your actual callback URL
-audience: 'https://api.example.com', // Replace with your actual API audience
-responseType: 'token id_token',
+redirectUri: 'http://goobiz.netlify.app/',    
 scope: 'openid profile'
 });
 
