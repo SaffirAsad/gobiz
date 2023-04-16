@@ -389,7 +389,7 @@ scope: 'openid profile'
 });
 
 // Add click event listener to the sign-in button
-document.getElementById('login-button').addEventListener('click', function() {
+document.getElementById('btn-login').addEventListener('click', function() {
 // Trigger the Auth0 authentication flow
 auth0.authorize();
 }); 
