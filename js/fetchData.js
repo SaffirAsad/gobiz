@@ -338,18 +338,7 @@ setTimeout(()=>{
 setTimeout(()=>{
     scrollFromTo(".SubCategories",".Filtred-Products")
 },1500);
-function loading() {
-  const img = document.createElement("img");
-  img.setAttribute("src", "images/loading.gif");
-  img.setAttribute("id", "loading");
-  img.setAttribute("style", "padding:10px; width:50px; height:50px; display:block; margin:auto;");
-  document.querySelector("#Results").appendChild(img);
 
-  // Remove the image after 2 seconds
-  setTimeout(function() {
-    img.remove();
-  }, 2000);
-}
 function isUrl(string) {
   try {
     new URL(string);
