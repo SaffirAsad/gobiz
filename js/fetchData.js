@@ -37,7 +37,7 @@ function ProductGrid(products,headers,min, max){
     var Color = Object.values(headers)[8];
     var	ProductId = Object.values(headers)[9];	
     var URLs = Object.values(headers)[10];
-
+    var VideoURLs = Object.values(headers)[11];
     const productsGrid = document.querySelector('#Filtred-Products');
     let productsHTML = '';
     let count=0;
